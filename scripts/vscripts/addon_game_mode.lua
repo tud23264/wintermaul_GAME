@@ -65,7 +65,7 @@ function CMyMod:InitGameMode()
 end
 
 -- sets abilitypoints to 0 and sets skills to lvl1 at start.
-function CHoldoutGameMode:OnPlayerPicked( event )
+function CMyMod:OnPlayerPicked( event )
 	local spawnedUnit = event.hero
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
