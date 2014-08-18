@@ -14,12 +14,12 @@ end
 
 --essential. loads the unit and model needed into memory
 function Precache( context )
-		PrecacheUnitByNameAsync( "npc_dota_wintermaul_scouts", context )
+		--[[PrecacheUnitByNameAsync( "npc_dota_wintermaul_scouts", context )
         PrecacheModel( "npc_dota_wintermaul_scouts", context )
 		for i =1,30 do
 			PrecacheUnitByNameAsync( CREATURETOSPAWN[i], context )
 			PrecacheModel( CREATURETOSPAWN[i], context )
-		end
+		end]]
 		--PrecacheUnitByNameAsync( CREATURETOSPAWN[WAVE], context )
         --PrecacheModel( CREATURETOSPAWN[WAVE], context )
 	--[[
@@ -40,6 +40,15 @@ end
 
 
 function CMyMod:InitGameMode()
+
+
+	self._entAncient = Entities:FindByName( nil, "dota_goodguys_fort" )
+	if not self._entAncient then
+		print( "Ancient entity not found!" )
+	else 
+		print( "Antient entity found!" )
+	
+	end
 	
 	GameRules:SetTimeOfDay( 0.75 )
 	GameRules:SetHeroRespawnEnabled( false )
@@ -63,11 +72,14 @@ function CMyMod:InitGameMode()
 	BuildingHelper:BlockGridNavSquares(MAPSIZE)
 	
 	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CMyMod, 'OnEntityKilled' ), self )
+	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CMyMod, "OnPlayerPicked" ), self )
+	
 	
 	--sets the first think
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 15 )
-	print( "Template addon is loaded." )
-	print(SPAWNLOCATION[1])
+	print( "Wintermaul is loaded." )
+	print( "First spawning location loaded: " )
+	print(SPAWNLOCATION[1] )
 end
 
 -- sets abilitypoints to 0 and sets skills to lvl1 at start.
@@ -114,30 +126,48 @@ end
 
 function CMyMod:OnEntityKilled( event )
 	ENEMIESLEFT = ENEMIESLEFT - 1
-	print(ENEMIESLEFT)
+	print( string.format( "Enemies remaining: %d", ENEMIESLEFT ) )
 	if ENEMIESLEFT == 0 then
 		WAVE = WAVE + 1
-		--print("Next wave: " + WAVE)
+		print( string.format( "wave: %d", WAVE ) )
 		GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 35 )
 		if WAVE == 5 or WAVE == 14 or WAVE == 23 or WAVE == 27 then
 			print("FLYINGWAVE")
-			ENEMIESLEFT = 144 --change this later
+			ENEMIESLEFT = 210 --ammount for air waves
+		elseif WAVE == 30 then
+			print("BOSSWAVE")
+			ENEMIESLEFT = 12 --ammount for boss waves
 		else
-			ENEMIESLEFT = 144 --amount for ground waves
+			print("GROUNDWAVE")
+			ENEMIESLEFT = 210 --amount for ground waves
 		end
 		
 	end
 end
 
+
+-- Checks for defeat for ancient death because we dont have a life system yet.
+--[[function CMyMod:_CheckForDefeat()
+	if GameRules:State_Get() ~= DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+		return
+	end
+	
+	if self._entAncient:GetHealth() <= 0 then
+		GameRules:MakeTeamLose( DOTA_TEAM_GOODGUYS )
+		return
+	end
+end]]
+
+
 -- this is the thinker. it thinks
 function CMyMod:OnThink()
 	--idk what this stuff does was in the template
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		print( "Template addon script is running." )
+		print( "Wintermaul spawningscript is running." )
 	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
 		return nil
 	end
-		self.spawnunits()
+	self.spawnunits()	
 	--every 30 seconds call this function again	
 	--return 30000
 end

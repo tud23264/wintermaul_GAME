@@ -1839,7 +1839,7 @@
 		"Level"						"1"
 		"ModelScale" 					".9"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		//"vscripts"					"holdout_ai_attack_ancient.lua"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -1910,7 +1910,7 @@
 		"Level"						"1"
 		"ModelScale" 					".6"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -1993,7 +1993,7 @@
 		"Level"						"1"
 		"ModelScale" 					".7"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -2064,7 +2064,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1.5"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2136,7 +2136,7 @@
 		"Level"						"1"
 		"ModelScale" 					".8"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2208,7 +2208,7 @@
 		"Level"						"1"
 		"ModelScale" 					".9"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2280,7 +2280,7 @@
 		"Level"						"1"
 		"ModelScale" 					".9"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2352,7 +2352,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2424,7 +2424,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2496,7 +2496,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2568,7 +2568,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2640,7 +2640,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2712,7 +2712,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2784,7 +2784,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1.2"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2856,7 +2856,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1.4"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -2928,7 +2928,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3000,7 +3000,7 @@
 		"Level"						"1"
 		"ModelScale" 					"2"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3072,7 +3072,7 @@
 		"Level"						"1"
 		"ModelScale" 					"0.7"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3144,7 +3144,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3216,7 +3216,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3288,7 +3288,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3360,7 +3360,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1.5"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3432,7 +3432,7 @@
 		"Level"						"1"
 		"ModelScale" 					"4"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3504,7 +3504,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1.2"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3576,7 +3576,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3648,7 +3648,7 @@
 		"Level"						"1"
 		"ModelScale" 					"2.5"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3720,7 +3720,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1.3"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3792,7 +3792,7 @@
 		"Level"						"1"
 		"ModelScale" 					"3"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3864,7 +3864,7 @@
 		"Level"						"1"
 		"ModelScale" 					"5"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
@@ -3936,7 +3936,7 @@
 		"Level"						"1"
 		"ModelScale" 					"1.5"
 		"IsNeutralUnitType"			"1"
-		"vscripts"					"holdout_ai_attack_ancient.lua"
+		
 		
 
 		// Abilities
