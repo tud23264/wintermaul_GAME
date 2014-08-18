@@ -1,7 +1,7 @@
 wintermaul TD
 ===============
 
-go here for buildinghelper:
+Go here for buildinghelper:
 https://github.com/Myll4/Dota-2-Building-Helper
 
 Go here for random barebone functions:
