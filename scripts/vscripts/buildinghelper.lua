@@ -12,6 +12,7 @@ BH_UNITS = {}
 FORCE_UNITS_AWAY = false
 FIRE_GAME_EVENTS = false
 BH_Z=129
+BLACKLIST = {"top_nobuild", "left_nobuild", "right_nobuild", "bot_nobuild_right", "bot_nobuild_left", "mid_nobuild", "top_nobuild_left_1","top_nobuild_left_2","top_nobuild_right_1","top_nobuild_right_2","mid_nobuild_left","mid_nobuild_right"}
 
 if BuildingHelper == nil then
 	print('[BUILDING HELPER] Creating Building Helper')
@@ -146,6 +147,75 @@ function BuildingHelper:BlockGridNavSquares(nMapLength)
 	end
 	print("Total GridNav squares added: " .. #GRIDNAV_SQUARES)
 end
+
+--new shit added here
+
+function BuildingHelper:GetBadAreas()
+	local bad_area = {}
+	local i = 1
+    while BLACKLIST[i] do
+      print(BLACKLIST[i])
+	  table.insert(bad_area, Entities:FindByName(nil, BLACKLIST[i]))
+	  print(bad_area[i]:GetName())
+      i = i + 1
+    end
+	print(bad_area[1])
+	return bad_area
+end
+
+function BuildingHelper:GetBadVectors()
+	local bad_areas = self:GetBadAreas()
+	local bad_vectors = {}
+	local i = 1
+	local j = 1
+	while bad_areas[i] do
+	  print(bad_areas[i]:GetOrigin())
+      print(bad_areas[i]:GetOrigin()+bad_areas[i]:GetBoundingMins())
+	  bad_vectors[j] = bad_areas[i]:GetOrigin()+bad_areas[i]:GetBoundingMins()
+	  j = j + 1
+	  print(bad_areas[i]:GetOrigin()+bad_areas[i]:GetBoundingMaxs())
+	  bad_vectors[j] = bad_areas[i]:GetOrigin()+bad_areas[i]:GetBoundingMaxs()
+	  j = j + 1
+      i = i + 1
+	  
+    end
+	return bad_vectors
+end
+function BuildingHelper:BlockBadSquares(nMapLength)
+	local halfLength = nMapLength/2
+	local bad_vectors = self:GetBadVectors()
+	print(bad_vectors[1].x)
+	print(bad_vectors[1].y)
+	print(bad_vectors[2].x)
+	print(bad_vectors[2].y)
+	-- Check the center of each square on the map to see if it's blocked by the GridNav.
+	for x=-halfLength+32, halfLength-32, 64 do
+		for y=halfLength-32, -halfLength+32,-64 do
+			if  (x> bad_vectors[1].x and x<bad_vectors[2].x) and (y> bad_vectors[1].y and y<bad_vectors[2].y) or 	
+				(x> bad_vectors[3].x and x<bad_vectors[4].x) and (y> bad_vectors[3].y and y<bad_vectors[4].y) or 
+				(x> bad_vectors[5].x and x<bad_vectors[6].x) and (y> bad_vectors[5].y and y<bad_vectors[6].y) or 
+				(x> bad_vectors[7].x and x<bad_vectors[8].x) and (y> bad_vectors[7].y and y<bad_vectors[8].y) or 
+				(x> bad_vectors[9].x and x<bad_vectors[10].x) and (y> bad_vectors[9].y and y<bad_vectors[10].y) or 
+				(x> bad_vectors[11].x and x<bad_vectors[12].x) and (y> bad_vectors[11].y and y<bad_vectors[12].y) or
+				(x> bad_vectors[13].x and x<bad_vectors[14].x) and (y> bad_vectors[13].y and y<bad_vectors[14].y) or 
+				(x> bad_vectors[15].x and x<bad_vectors[16].x) and (y> bad_vectors[15].y and y<bad_vectors[16].y) or
+				(x> bad_vectors[17].x and x<bad_vectors[18].x) and (y> bad_vectors[17].y and y<bad_vectors[18].y) or 
+				(x> bad_vectors[19].x and x<bad_vectors[20].x) and (y> bad_vectors[19].y and y<bad_vectors[20].y) or
+				(x> bad_vectors[21].x and x<bad_vectors[22].x) and (y> bad_vectors[21].y and y<bad_vectors[22].y) or 
+				(x> bad_vectors[23].x and x<bad_vectors[24].x) and (y> bad_vectors[23].y and y<bad_vectors[24].y) then
+				--print("square was blocked")
+				--print(x)
+				--print(y)
+	
+				table.insert(GRIDNAV_SQUARES, Vector(x,y,BH_Z))
+			end
+		end
+	end
+	print("blocked bad squares")
+end
+
+--end new shit
+
 
 function BuildingHelper:SetForceUnitsAway(bForceAway)
 	FORCE_UNITS_AWAY=bForceAway

@@ -42,13 +42,13 @@ end
 function CMyMod:InitGameMode()
 
 
-	self._entAncient = Entities:FindByName( nil, "dota_goodguys_fort" )
+	--[[self._entAncient = Entities:FindByName( nil, "dota_goodguys_fort" )
 	if not self._entAncient then
 		print( "Ancient entity not found!" )
 	else 
 		print( "Antient entity found!" )
 	
-	end
+	end]]
 	
 	GameRules:SetTimeOfDay( 0.75 )
 	GameRules:SetHeroRespawnEnabled( false )
@@ -70,7 +70,7 @@ function CMyMod:InitGameMode()
 	GameRules:GetGameModeEntity():SetCustomHeroMaxLevel( 1 )
 	GameRules:GetGameModeEntity():SetUseCustomHeroLevels ( true )
 	BuildingHelper:BlockGridNavSquares(MAPSIZE)
-	
+	BuildingHelper:BlockBadSquares(MAPSIZE)
 	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CMyMod, 'OnEntityKilled' ), self )
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CMyMod, "OnPlayerPicked" ), self )
 	
@@ -168,6 +168,7 @@ function CMyMod:OnThink()
 		return nil
 	end
 	self.spawnunits()	
+	return 30
 	--every 30 seconds call this function again	
 	--return 30000
 end
