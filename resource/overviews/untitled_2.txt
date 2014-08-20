@@ -4,6 +4,6 @@ untitled_2
 	pos_x -10726
 	pos_y 10767
 	scale 16.000
-	zoom 1.050
+	zoom 1.490
 }
 

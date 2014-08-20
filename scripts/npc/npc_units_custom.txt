@@ -227,11 +227,18 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/buildings/building_racks_melee_reference.mdl"// Model.
+		"Model"						"models/buildings/building_racks_melee_reference.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		
+		// Precache
+		//----------------------------------------------------------------
+		"precache"
+		{
+			"model"					"models/buildings/building_racks_melee_reference.vmdl"
+		}
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -320,11 +327,18 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/buildings/building_racks_ranged_reference.mdl"// Model.
+		"Model"						"models/buildings/building_racks_ranged_reference.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		
+		// Precache
+		//----------------------------------------------------------------
+		"precache"
+		{
+			"model"					"models/buildings/building_racks_ranged_reference.vmdl"
+		}
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1380,11 +1394,18 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/buildings/building_racks_melee_reference.mdl"// Model.
+		"Model"						"models/buildings/building_racks_melee_reference.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		
+		// Precache
+		//----------------------------------------------------------------
+		"precache"
+		{
+			"model"					"models/buildings/building_racks_melee_reference.vmdl"
+		}
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1465,15 +1486,7 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/props_structures/good_statue008.vmdl"
-		}
 	}
-	
-	
 	
 	"gaias_box"
 	{
@@ -1485,6 +1498,13 @@
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		
+		// Precache
+		//----------------------------------------------------------------
+		"precache"
+		{
+			"model"					"models/buildings/building_racks_ranged_reference.vmdl"
+		}
 		
 		// Abilities
 		//----------------------------------------------------------------
