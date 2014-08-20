@@ -150,7 +150,7 @@ end
 
 --new shit added here
 
-function BuildingHelper:GetBadAreas()
+--[[function BuildingHelper:GetBadAreas()
 	local bad_area = {}
 	local i = 1
     while BLACKLIST[i] do
@@ -212,7 +212,7 @@ function BuildingHelper:BlockBadSquares(nMapLength)
 		end
 	end
 	print("blocked bad squares")
-end
+end]]
 
 --end new shit
 
