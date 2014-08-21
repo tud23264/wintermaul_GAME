@@ -12,7 +12,8 @@ BH_UNITS = {}
 FORCE_UNITS_AWAY = false
 FIRE_GAME_EVENTS = false
 BH_Z=129
-BLACKLIST = {"top_nobuild", "left_nobuild", "right_nobuild", "bot_nobuild_right", "bot_nobuild_left", "mid_nobuild", "top_nobuild_left_1","top_nobuild_left_2","top_nobuild_right_1","top_nobuild_right_2","mid_nobuild_left","mid_nobuild_right"}
+BLACKLIST = {"top_nobuild", "left_nobuild", "right_nobuild", "bottom_right_nobuild", "bottom_left_nobuild", "mid_nobuild", "top_left_nobuild","top_right_nobuild",
+			"small_nobuild_1","small_nobuild_2","small_nobuild_3","small_nobuild_4","small_nobuild_5","small_nobuild_6","small_nobuild_7","small_nobuild_8","small_nobuild_9",}
 
 if BuildingHelper == nil then
 	print('[BUILDING HELPER] Creating Building Helper')
@@ -150,7 +151,7 @@ end
 
 --new shit added here
 
---[[function BuildingHelper:GetBadAreas()
+function BuildingHelper:GetBadAreas()
 	local bad_area = {}
 	local i = 1
     while BLACKLIST[i] do
@@ -202,7 +203,12 @@ function BuildingHelper:BlockBadSquares(nMapLength)
 				(x> bad_vectors[17].x and x<bad_vectors[18].x) and (y> bad_vectors[17].y and y<bad_vectors[18].y) or 
 				(x> bad_vectors[19].x and x<bad_vectors[20].x) and (y> bad_vectors[19].y and y<bad_vectors[20].y) or
 				(x> bad_vectors[21].x and x<bad_vectors[22].x) and (y> bad_vectors[21].y and y<bad_vectors[22].y) or 
-				(x> bad_vectors[23].x and x<bad_vectors[24].x) and (y> bad_vectors[23].y and y<bad_vectors[24].y) then
+				(x> bad_vectors[23].x and x<bad_vectors[24].x) and (y> bad_vectors[23].y and y<bad_vectors[24].y) or 
+				(x> bad_vectors[25].x and x<bad_vectors[26].x) and (y> bad_vectors[25].y and y<bad_vectors[26].y) or
+				(x> bad_vectors[27].x and x<bad_vectors[28].x) and (y> bad_vectors[27].y and y<bad_vectors[28].y) or 
+				(x> bad_vectors[29].x and x<bad_vectors[30].x) and (y> bad_vectors[29].y and y<bad_vectors[30].y) or
+				(x> bad_vectors[31].x and x<bad_vectors[32].x) and (y> bad_vectors[31].y and y<bad_vectors[32].y) or 
+				(x> bad_vectors[33].x and x<bad_vectors[34].x) and (y> bad_vectors[33].y and y<bad_vectors[34].y) then
 				--print("square was blocked")
 				--print(x)
 				--print(y)
@@ -212,7 +218,7 @@ function BuildingHelper:BlockBadSquares(nMapLength)
 		end
 	end
 	print("blocked bad squares")
-end]]
+end
 
 --end new shit
 
