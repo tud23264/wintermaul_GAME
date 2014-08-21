@@ -14,12 +14,13 @@ end
 
 --essential. loads the unit and model needed into memory
 function Precache( context )
-		--[[PrecacheUnitByNameAsync( "npc_dota_wintermaul_scouts", context )
-        PrecacheModel( "npc_dota_wintermaul_scouts", context )
+		
+        
+		PrecacheModel( "npc_dota_wintermaul_scouts", context )
 		for i =1,30 do
 			PrecacheUnitByNameAsync( CREATURETOSPAWN[i], context )
 			PrecacheModel( CREATURETOSPAWN[i], context )
-		end]]
+		end
 		--PrecacheUnitByNameAsync( CREATURETOSPAWN[WAVE], context )
         --PrecacheModel( CREATURETOSPAWN[WAVE], context )
 	--[[
