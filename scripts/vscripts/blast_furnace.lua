@@ -5,7 +5,7 @@ BUILD_TIME=1.0
 function getBuildingPoint(keys)
 	local point = BuildingHelper:AddBuildingToGrid(keys.target_points[1], 2, keys.caster)
 	if point ~= -1 then
-		local tower = CreateUnitByName("blast_furnace", point, false, nil, nil, keys.caster:GetTeam())
+		local tower = CreateUnitByName("blast_furnace", point, false, nil, nil, DOTA_TEAM_GOODGUYS)
 		BuildingHelper:AddBuilding(tower)
 		tower:UpdateHealth(BUILD_TIME,true,.85)
 		tower:SetHullRadius(64)

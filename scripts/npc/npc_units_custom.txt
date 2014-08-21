@@ -1299,6 +1299,13 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
+		// Precache
+		//----------------------------------------------------------------
+		"precache"
+		{
+			"model"					"models/props_structures/good_statue008.vmdl"
+		}
+		
 		// Abilities
 		//----------------------------------------------------------------
 		
@@ -1313,20 +1320,20 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"5"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"3"		// Damage range min.
+		"AttackDamageMax"			"6"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/neutral_fx/ghost_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Attributes
@@ -1360,8 +1367,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"StatusHealth"				"500"		// Base health.
+		"StatusHealthRegen"			"0"			// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusStartingMana"		"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -1378,12 +1385,7 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/props_structures/good_statue008.vmdl"
-		}
+		
 	}
 	
 	
@@ -1394,7 +1396,7 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/buildings/building_racks_melee_reference.vmdl"// Model.
+		"Model"						"models/props_structures/good_base_wall006.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
@@ -1404,7 +1406,7 @@
 		//----------------------------------------------------------------
 		"precache"
 		{
-			"model"					"models/buildings/building_racks_melee_reference.vmdl"
+			"model"					"models/props_structures/good_base_wall006.vmdl"
 		}
 		
 		// Abilities
@@ -1421,14 +1423,14 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"5"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"38"		// Damage range min.
+		"AttackDamageMax"			"47"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
@@ -1468,7 +1470,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
+		"StatusHealth"				"600"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusStartingMana"		"0"			// Base mana.
@@ -1493,7 +1495,7 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/buildings/building_racks_ranged_reference.mdl"// Model.
+		"Model"						"models/props_gameplay/red_box.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
@@ -1503,7 +1505,7 @@
 		//----------------------------------------------------------------
 		"precache"
 		{
-			"model"					"models/buildings/building_racks_ranged_reference.vmdl"
+			"model"					"models/props_gameplay/red_box.vmdl"
 		}
 		
 		// Abilities
@@ -1520,20 +1522,20 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"5"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"76"		// Damage range min.
+		"AttackDamageMax"			"100"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_crystalmaiden/maiden_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Attributes
@@ -1567,7 +1569,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
+		"StatusHealth"				"1500"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusStartingMana"		"0"			// Base mana.
@@ -1593,11 +1595,19 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/aegis.mdl"// Model.
+		"Model"						"models/props_structures/tower_good.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		
+		// Precache
+		//----------------------------------------------------------------
+		"precache"
+		{
+			"model"					"models/props_structures/tower_good.vmdl"
+		}
+		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1613,20 +1623,20 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"5"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"361"		// Damage range min.
+		"AttackDamageMax"			"460"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_drow/drow_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Attributes
@@ -1660,7 +1670,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
+		"StatusHealth"				"4000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusStartingMana"		"0"			// Base mana.
@@ -1686,11 +1696,18 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/aegis.mdl"// Model.
+		"Model"						"models/props_structures/good_base_wall006.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		
+		// Precache
+		//----------------------------------------------------------------
+		"precache"
+		{
+			"model"					"models/props_structures/good_base_wall006.vmdl"
+		}
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1706,14 +1723,14 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"5"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"460"		// Damage range min.
+		"AttackDamageMax"			"500"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
@@ -1753,7 +1770,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
+		"StatusHealth"				"5000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusStartingMana"		"0"			// Base mana.
@@ -1779,11 +1796,18 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/cheese.mdl"// Model.
+		"Model"						"models/props_structures/good_ancient001.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		
+		// Precache
+		//----------------------------------------------------------------
+		"precache"
+		{
+			"model"					"models/props_structures/good_ancient001.vmdl"
+		}
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1799,20 +1823,20 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"5"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"601"		// Damage range min.
+		"AttackDamageMax"			"651"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_enchantress/enchantress_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Attributes
@@ -1827,7 +1851,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"5"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1846,7 +1870,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
+		"StatusHealth"				"6000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusStartingMana"		"0"			// Base mana.
