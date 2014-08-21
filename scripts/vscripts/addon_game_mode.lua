@@ -71,6 +71,7 @@ function CMyMod:InitGameMode()
 	GameRules:GetGameModeEntity():SetUseCustomHeroLevels ( true )
 	BuildingHelper:BlockGridNavSquares(MAPSIZE)
 	--BuildingHelper:BlockBadSquares(MAPSIZE)
+	
 	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CMyMod, 'OnEntityKilled' ), self )
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CMyMod, "OnPlayerPicked" ), self )
 	
@@ -94,8 +95,6 @@ function CMyMod:OnPlayerPicked( event )
 		end
 	end
 end
-
-
 
 -- spawns units
 function CMyMod:spawnunits()
