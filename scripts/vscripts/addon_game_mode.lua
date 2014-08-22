@@ -77,7 +77,7 @@ function CMyMod:InitGameMode()
 	
 	
 	--sets the first think
-	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 15 )
+	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 71 )
 	print( "Wintermaul is loaded." )
 	print( "First spawning location loaded: " )
 	print(SPAWNLOCATION[1] )
@@ -142,7 +142,7 @@ function CMyMod:OnEntityKilled( event )
 			print("GROUNDWAVE")
 			ENEMIESLEFT = 144 --amount for ground waves
 		end
-		self.spawnunits()
+		--self.spawnunits()
 		
 	end
 end
@@ -168,14 +168,14 @@ function CMyMod:OnThink()
 		print( "Wintermaul spawningscript is running." )
 		if WAVE == 0 then
 			WAVE = WAVE+1
-			self.spawnunits()
+
 		end
 	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
 		return nil
 	end
 	
-	
-	return 30
+	self.spawnunits()
+	return nil
 	--every 30 seconds call this function again	
 	--return 30000
 end
