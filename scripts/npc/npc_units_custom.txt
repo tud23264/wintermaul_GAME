@@ -2450,7 +2450,7 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
-//=================================================================================
+	//=================================================================================
 	// Wave creeps
 	//=================================================================================
 	
@@ -4497,7 +4497,7 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
 	//wave 29 Armored wisps -- WISP DOESNT WORK --
-	"npc_dota_wintermaul_armored wisp"
+	"npc_dota_wintermaul_armored_wisp"
 	{										
 		// General
 		//----------------------------------------------------------------
