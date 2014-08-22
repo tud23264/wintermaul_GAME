@@ -132,12 +132,7 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/buildings/building_plain_reference.vmdl"
-		}
+		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -233,12 +228,7 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/buildings/building_racks_melee_reference.vmdl"
-		}
+		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -333,12 +323,7 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/buildings/building_racks_ranged_reference.vmdl"
-		}
+		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1299,12 +1284,7 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/props_structures/good_statue008.vmdl"
-		}
+		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1402,12 +1382,7 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/props_structures/good_base_wall006.vmdl"
-		}
+		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1501,12 +1476,7 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/props_gameplay/red_box.vmdl"
-		}
+		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1601,12 +1571,7 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/props_structures/tower_good.vmdl"
-		}
+		
 		
 		
 		// Abilities
@@ -1702,12 +1667,7 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/props_structures/good_base_wall006.vmdl"
-		}
+		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1802,12 +1762,7 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
-		// Precache
-		//----------------------------------------------------------------
-		"precache"
-		{
-			"model"					"models/props_structures/good_ancient001.vmdl"
-		}
+		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -2596,12 +2551,7 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 		
-		// Precache
-		//-------------------------------------------------------------------------------------------------------------
-		"precache"
-		{
-			"model"			"models/heroes/kunkka/kunkka.vmdl"
-		}
+		
 
 		// Creature Data
 		//----------------------------------------------------------------------------------------------------------------------
