@@ -77,7 +77,7 @@ function CMyMod:InitGameMode()
 	
 	
 	--sets the first think
-	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 71 )
+	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 15 )
 	print( "Wintermaul is loaded." )
 	print( "First spawning location loaded: " )
 	print(SPAWNLOCATION[1] )
@@ -142,7 +142,7 @@ function CMyMod:OnEntityKilled( event )
 			print("GROUNDWAVE")
 			ENEMIESLEFT = 144 --amount for ground waves
 		end
-		--self.spawnunits()
+		self.spawnunits()
 		
 	end
 end
@@ -175,7 +175,7 @@ function CMyMod:OnThink()
 	end
 	
 	
-	return nil
+	return 30
 	--every 30 seconds call this function again	
 	--return 30000
 end
