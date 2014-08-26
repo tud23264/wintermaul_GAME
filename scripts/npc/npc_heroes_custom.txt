@@ -40,7 +40,7 @@
 		"Ability4"					"build_earths_soul"					// Ability 4
 		"Ability5"					"build_ground_pounder"					// Ability 5
 		"Ability6"					"build_gaia"				// Ability 6
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
 		"MovementSpeed"				"522"
 		"MovementTurnRate"			"1.0"
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
