@@ -48,7 +48,7 @@ function Activate()
 end
 
 function CMyMod:InitGameMode()
-	print( "Template addon is loaded." )
+	print( "Addon is loaded." )
 	print(SPAWNLOCATION[1])
 	BuildingHelper:BlockGridNavSquares(MAPSIZE)
 	

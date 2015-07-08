@@ -1,3 +1,10 @@
-"AddonInfo"
+"AddonInfo" 
 {
+  "TeamCount" "9"
+  "maps"      "untitled_2"
+  "IsPlayable"  "1"
+  "untitled_2"
+  {
+          "MaxPlayers"                    "9"
+  }
 }
