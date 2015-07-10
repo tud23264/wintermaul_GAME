@@ -154,7 +154,6 @@ function CMyMod:OnPlayerPicked( event )
 				else
 					PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e):SetLevel(1)
 					PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():SetAbilityPoints(0)
-					print( string.format( "Added skill %d", e+1 ))
 				end
 			end
 		end
