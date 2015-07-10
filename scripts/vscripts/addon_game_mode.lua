@@ -3,6 +3,7 @@
 MAPSIZE = 16384
 NUMBERTOSPAWN = 8 --How many to spawn
 SPAWNLOCATION = {"red_spawn_1","red_spawn_2","blue_spawn_1","blue_spawn_2","teal_spawn_1","teal_spawn_2","orange_spawn_1","orange_spawn_2","yellow_spawn_1","yellow_spawn_2","purple_spawn_1","purple_spawn_2","green_spawn_1","green_spawn_2","grey_spawn_1","grey_spawn_2","pink_spawn_1","pink_spawn_2"}--table of spawn locations in order
+
 WAYPOINTNAME = {"pc_red","pc_red","pc_blue_1","pc_blue_2","pc_teal","pc_teal","pc_orange","pc_orange","pc_yellow_1","pc_yellow_2","pc_purple","pc_purple","pc_green_top","pc_green_top","pc_grey","pc_grey","pc_pink_top","pc_pink_top",}--table to waypoints after spawn location(after this units will know where to go)
 CREATURETOSPAWN = {"npc_dota_wintermaul_scouts","npc_dota_wintermaul_engineers","npc_dota_wintermaul_night_ranger","npc_dota_wintermaul_barbarians","npc_dota_wintermaul_drake","npc_dota_wintermaul_stalker","npc_dota_wintermaul_water_runner","npc_dota_wintermaul_ice_troll","npc_dota_wintermaul_wolf_rider","npc_dota_wintermaul_hovercraft","npc_dota_wintermaul_goblin_machine","npc_dota_wintermaul_frosty_reptile","npc_dota_wintermaul_demonic_pets","npc_dota_wintermaul_matured_dragon","npc_dota_wintermaul_ice_shard_golem","npc_dota_wintermaul_eternal_spirit","npc_dota_wintermaul_supply_tank","npc_dota_wintermaul_walking_corpse","npc_dota_wintermaul_totem_carriers","npc_dota_wintermaul_unholy_knight","npc_dota_wintermaul_crystal_mage","npc_dota_wintermaul_frozen_infernal","npc_dota_wintermaul_dragon","npc_dota_wintermaul_polar_bear","npc_dota_wintermaul_posessed_hunter","npc_dota_wintermaul_corrupt_chieftain","npc_dota_wintermaul_ancient_dragon","npc_dota_wintermaul_spider_fiend","npc_dota_wintermaul_armored wisp","npc_dota_wintermaul_duke_wintermaul"}--eventually will be the table of all unit names we need to spawn.
 
@@ -140,14 +141,21 @@ function CMyMod:InitGameMode()
 	print(SPAWNLOCATION[1] )
 end
 
--- sets abilitypoints to 0 and sets skills to lvl1 at start.
+-- sets ability points to 0 and sets skills to lvl1 at start.
 function CMyMod:OnPlayerPicked( event )
 	local spawnedUnit = event.hero
+
+	
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
-			for e=0,5 do -- "0" is Ability 1 and "5" is ability 6. so it checks abilities 1 through 6 (if a builder has less than 6 abilitis this breaks)
-				PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e):SetLevel(1)
-				PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():SetAbilityPoints(0)
+			for e=0,15 do -- "0" is Ability 1 and "15" is ability 6. so it checks abilities 1 through 6 (if a builder has less than 6 abilities this breaks)
+				if (PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e) ==nil) then
+					break
+				else
+					PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e):SetLevel(1)
+					PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():SetAbilityPoints(0)
+					print( string.format( "Added skill %d", e+1 ))
+				end
 			end
 		end
 	end
@@ -192,10 +200,10 @@ function CMyMod:OnEntityKilled( event )
 		GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 35 )
 		if WAVE == 5 or WAVE == 14 or WAVE == 23 or WAVE == 27 then
 			print("FLYINGWAVE")
-			ENEMIESLEFT = 144 --ammount for air waves
+			ENEMIESLEFT = 144 --amount for air waves
 		elseif WAVE == 30 then
 			print("BOSSWAVE")
-			ENEMIESLEFT = 12 --ammount for boss waves
+			ENEMIESLEFT = 12 --amount for boss waves
 		else
 			print("GROUNDWAVE")
 			ENEMIESLEFT = 144 --amount for ground waves
