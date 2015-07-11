@@ -4158,8 +4158,8 @@
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	}
-	//wave 25 Posessed hunters
-	"npc_dota_wintermaul_posessed_hunter"
+	//wave 25 Possessed hunters
+	"npc_dota_wintermaul_possessed_hunter"
 	{										
 		// General
 		//----------------------------------------------------------------
