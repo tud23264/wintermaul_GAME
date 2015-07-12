@@ -3,13 +3,10 @@
 MAPSIZE = 16384
 NUMBERTOSPAWN = 8 --How many to spawn
 
-GAIAPRECACHE = {"build_nature_pool","terran_protector","gaias_box","earths_soul","ground_pounder","gaia"}
+GAIAPRECACHE = {"nature_pool","terran_protector","gaias_box","earths_soul","ground_pounder","gaia"}
 CRYSTALPRECACHE = {"crystal_shooter","crystal_blaster","crystal_fury","crystal_slower","crystal_buster","crystal_dissolver"}
 POWERPRECACHE = {"shock_tower","storm_caller","chain_lightning_caster","thunder_rod","sparkler","battery"}
 FORGEPRECACHE = {"flare_tower","flame_dancer","meteor_watcher","blast_furnace","incinerator","flame_staff"}
-
-WAVE = 1
-ENEMIESLEFT = 144
 
 MAX_NUMBER_OF_TEAMS = 9                -- How many potential teams can be in this game mode?
 USE_CUSTOM_TEAM_COLORS = true          -- Should we use custom team colors?
@@ -47,32 +44,27 @@ end
 
 --essential. loads the unit and model needed into memory
 function Precache( context )
+		for i =1,#dota_wintermaul.Wave do -- load in wave unit models
+			PrecacheUnitByNameSync( dota_wintermaul.Wave[i].NPCName, context )
+		end
 		
-        
-		PrecacheModel( "npc_dota_wintermaul_scouts", context )
-		for i =1,30 do
-			PrecacheUnitByNameAsync( CREATURETOSPAWN[i], context )
-			PrecacheModel( CREATURETOSPAWN[i], context )
-		end
-		PrecacheModel( "nature_pool", context )
+		-- Perhaps we should prechache the towers from the heroes which are only picked by the players, not all of them? Check Green TD code
+		
+		--PrecacheModel( "nature_pool", context )
 		for i =1,6 do
-			PrecacheUnitByNameAsync( GAIAPRECACHE[i], context)
-			PrecacheModel( GAIAPRECACHE[i], context )
+			PrecacheUnitByNameSync( GAIAPRECACHE[i], context)
 		end
-		PrecacheModel( "shock_tower", context )
+		--PrecacheModel( "shock_tower", context )
 		for i =1,6 do
-			PrecacheUnitByNameAsync( POWERPRECACHE[i], context)
-			PrecacheModel( POWERPRECACHE[i], context )
+			PrecacheUnitByNameSync( POWERPRECACHE[i], context)
 		end
-		PrecacheModel( "flare_tower", context )
+		--PrecacheModel( "flare_tower", context )
 		for i =1,6 do
-			PrecacheUnitByNameAsync( FORGEPRECACHE[i], context)
-			PrecacheModel( FORGEPRECACHE[i], context )
+			PrecacheUnitByNameSync( FORGEPRECACHE[i], context)
 		end
-		PrecacheModel( "crystal_shooter", context )
+		--PrecacheModel( "crystal_shooter", context )
 		for i =1,6 do
-			PrecacheUnitByNameAsync( CRYSTALPRECACHE[i], context)
-			PrecacheModel( CRYSTALPRECACHE[i], context )
+			PrecacheUnitByNameSync( CRYSTALPRECACHE[i], context)
 		end
 		
 		--PrecacheUnitByNameAsync( CREATURETOSPAWN[WAVE], context )
@@ -95,8 +87,15 @@ end
 
 
 function CMyMod:InitGameMode()
+	self._WaveNumber = 1
+	
+	kv = LoadKeyValues( "scripts/maps/wintermaul_map_config.txt" )
+	kv = kv or {} -- Handle the case where there is not key values file
 
-
+	self._SpawnData = kv["Spawns"]
+	self._WaveData = kv["Waves"]
+	self._ItemData = kv["ItemDrops"]
+	
 	--[[self._entAncient = Entities:FindByName( nil, "dota_goodguys_fort" )
 	if not self._entAncient then
 		print( "Ancient entity not found!" )
@@ -130,21 +129,18 @@ function CMyMod:InitGameMode()
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CMyMod, "OnPlayerPicked" ), self )
 	
 	
-	--sets the first think
+	
+	--sets the first think...Does it do this every 71 seconds??? Eks
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 71 )
 	print( "Wintermaul is loaded." )
-	print( "First spawning location loaded: " )
-	print(SPAWNLOCATION[1] )
 end
 
 -- sets ability points to 0 and sets skills to lvl1 at start.
-function CMyMod:OnPlayerPicked( event )
-	local spawnedUnit = event.hero
-
+function CMyMod:OnPlayerPicked()
 	
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
-			for e=0,15 do -- "0" is Ability 1 and "15" is ability 6. so it checks abilities 1 through 6 (if a builder has less than 6 abilities this breaks)
+			for e=0,15 do -- 
 				if (PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e) ==nil) then
 					break
 				else
@@ -160,51 +156,40 @@ end
 
 -- spawns units
 function CMyMod:spawnunits()
-		print("trying to spawn.")
-		local waypointlocation
-		local spawnlocation
-		local i = 1
-		local j = 1
-		while 18>=i do
-			print(SPAWNLOCATION[i])
-			--finds one of the twelve places to spawn
-			spawnLocation = Entities:FindByName( nil, SPAWNLOCATION[i] )
-			--finds where the unit should go after spawn
-			waypointlocation = Entities:FindByName ( nil, WAYPOINTNAME[i])
-			while NUMBERTOSPAWN>=j do
-					--hscript CreateUnitByName( string name, vector origin, bool findOpenSpot, hscript, hscript, int team)
-					--spawns the creature in an area around the spawner 
-					local creature = CreateUnitByName( CREATURETOSPAWN[WAVE] , spawnLocation:GetAbsOrigin() + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS )
-					--print ("create unit has run")
-					creature:SetInitialGoalEntity( waypointlocation )
-					j = j + 1
-			end
-			print ("nextspawn")
-			i=i+1
-			j=1
-		end
+	print("trying to spawn.")
+	
+	for i=1,#self._SpawnData do -- For each spawn location
+	
+		-- What does the first argument do on FindByName? Remember to check... Eks.
+		local spawnLocation = Entities:FindByName( nil, self._SpawnData[i].SpawnerName )
+		local waypointLocation = Entities:FindByName( nil, self._SpawnData[i].Waypoint )
 		
+		local currentWaveData = self.WaveData[self._WaveNumber]
+		
+		-- Room to program the SpawnInterval here (future work)
+		for j=1,currentWaveData.UnitsPerSpawn do
+			--hscript CreateUnitByName( string name, vector origin, bool findOpenSpot, hscript, hscript, int team)
+			--spawns the creature in an area around the spawner 
+			local creature = CreateUnitByName( currentWaveData.NPCName , spawnLocation:GetAbsOrigin() + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS )
+			--print ("create unit has run")
+			creature:SetInitialGoalEntity( waypointlocation )
+		end
+		print ("nextspawn")
+	end
+	self._EnemiesRemaining = currentWaveData.TotalUnitstoSpawn
 end 
 
-function CMyMod:OnEntityKilled( event )
-	ENEMIESLEFT = ENEMIESLEFT - 1
-	print( string.format( "Enemies remaining: %d", ENEMIESLEFT ) )
-	if ENEMIESLEFT == 0 then
-		WAVE = WAVE + 1
-		print( string.format( "wave: %d", WAVE ) )
-		GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 35 )
-		if WAVE == 5 or WAVE == 14 or WAVE == 23 or WAVE == 27 then
-			print("FLYINGWAVE")
-			ENEMIESLEFT = 144 --amount for air waves
-		elseif WAVE == 30 then
-			print("BOSSWAVE")
-			ENEMIESLEFT = 12 --amount for boss waves
-		else
-			print("GROUNDWAVE")
-			ENEMIESLEFT = 144 --amount for ground waves
-		end
-		--self.spawnunits()
+function CMyMod:OnEntityKilled()
+	local mobsLeft = self._EnemiesRemaining - 1
+	self._EnemiesRemaining = mobsLeft
+	print( string.format( "Enemies remaining: %d", mobsLeft ) )
+	if mobsLeft == 0 then
+		self._Wave = self._Wave + 1
+		print( string.format( "wave: %d", self._Wave ) )
 		
+		-- This function should spawn the next wave in...Global 
+		GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 35 )
+
 	end
 end
 
@@ -226,7 +211,7 @@ end]]
 function CMyMod:OnThink()
 	--idk what this stuff does was in the template
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		print( "Wintermaul spawningscript is running." )
+		print( "Wintermaul spawning script is running." )
 		--if WAVE == 0 then
 		--	WAVE = WAVE+1
 		--
