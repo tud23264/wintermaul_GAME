@@ -1,4 +1,14 @@
--- Generated from template
+--[[
+Wintermaul
+
+	Underscore prefix such as "_function()" denotes a local function and is used to improve readability
+	
+	Variable Prefix Examples
+		"fl"	Float
+		"n"		Int
+		"v"		Table
+		"b"		Boolean
+]]
 
 MAPSIZE = 16384
 NUMBERTOSPAWN = 8 --How many to spawn
@@ -44,38 +54,8 @@ end
 
 --essential. loads the unit and model needed into memory
 function Precache( context )
-		for i =1,#dota_wintermaul.Wave do -- load in wave unit models
-			PrecacheUnitByNameSync( dota_wintermaul.Wave[i].NPCName, context )
-		end
-		
-		-- Perhaps we should prechache the towers from the heroes which are only picked by the players, not all of them? Check Green TD code
-		
-		--PrecacheModel( "nature_pool", context )
-		for i =1,6 do
-			PrecacheUnitByNameSync( GAIAPRECACHE[i], context)
-		end
-		--PrecacheModel( "shock_tower", context )
-		for i =1,6 do
-			PrecacheUnitByNameSync( POWERPRECACHE[i], context)
-		end
-		--PrecacheModel( "flare_tower", context )
-		for i =1,6 do
-			PrecacheUnitByNameSync( FORGEPRECACHE[i], context)
-		end
-		--PrecacheModel( "crystal_shooter", context )
-		for i =1,6 do
-			PrecacheUnitByNameSync( CRYSTALPRECACHE[i], context)
-		end
-		
-		--PrecacheUnitByNameAsync( CREATURETOSPAWN[WAVE], context )
-        --PrecacheModel( CREATURETOSPAWN[WAVE], context )
-	--[[
-		Precache things we know we'll use.  Possible file types include (but not limited to):
-			PrecacheResource( "model", "*.vmdl", context )
-			PrecacheResource( "soundfile", "*.vsndevts", context )
-			PrecacheResource( "particle", "*.vpcf", context )
-			PrecacheResource( "particle_folder", "particles/folder", context )
-	]]
+	
+	print( "Precaching is complete." )
 end
 
 function Activate()
@@ -87,28 +67,14 @@ end
 
 
 function CMyMod:InitGameMode()
-	self._WaveNumber = 1
+	self._nWaveNumber = 1
 	
-	kv = LoadKeyValues( "scripts/maps/wintermaul_map_config.txt" )
-	kv = kv or {} -- Handle the case where there is not key values file
-
-	self._SpawnData = kv["Spawns"]
-	self._WaveData = kv["Waves"]
-	self._ItemData = kv["ItemDrops"]
-	
-	--[[self._entAncient = Entities:FindByName( nil, "dota_goodguys_fort" )
-	if not self._entAncient then
-		print( "Ancient entity not found!" )
-	else 
-		print( "Antient entity found!" )
-	
-	end]]
-	
+	self:_ReadGameConfiguration()
 	GameRules:SetTimeOfDay( 0.75 )
 	GameRules:SetHeroRespawnEnabled( false )
 	GameRules:SetUseUniversalShopMode( true )
 	GameRules:SetHeroSelectionTime( 30.0 )
-	GameRules:SetPreGameTime( 60.0 )
+	GameRules:SetPreGameTime( 10.0 )
 	GameRules:SetPostGameTime( 60.0 )
 	GameRules:SetTreeRegrowTime( 60.0 )
 	--GameRules:SetHeroMinimapIconSize( 600 )
@@ -135,6 +101,46 @@ function CMyMod:InitGameMode()
 	print( "Wintermaul is loaded." )
 end
 
+-- Read and assign configurable keyvalues if applicable
+function CMyMod:_ReadGameConfiguration()
+	local kv = LoadKeyValues( "scripts/maps/wintermaul_map_config.txt" )
+	kv = kv or {} -- Handle the case where there is not keyvalues file
+
+	self:_ReadSpawnsConfiguration( kv["Spawns"] )
+	self:_ReadWaveConfigurations( kv["Waves"])
+end
+
+
+-- Verify valid spawns are defined and build a table with them from the keyvalues file
+function CMyMod:_ReadSpawnsConfiguration( kvSpawns )
+	self._vSpawnsList = {}
+	if type( kvSpawns ) ~= "table" then
+		return
+	end
+	for _,sp in pairs( kvSpawns ) do			-- Note "_" used as a shortcut to create a temporary throwaway variable
+		print(sp)
+		table.insert( self._vSpawnsList, {
+			szSpawnerName = sp.SpawnerName or "",
+			szFirstWaypoint = sp.Waypoint or ""
+		} )
+	end
+end
+
+-- Set number of rounds without requiring index in text file
+function CMyMod:_ReadWaveConfigurations( kv )
+	self._vWaveList = {}
+	while true do
+		local szWaveName = string.format("Wave%d", #self._vWaveList + 1 )
+		local kvWaveData = kv[ szWaveName ]
+		if kvWaveData == nil then
+			return
+		end
+		local roundObj = CHoldoutGameWave()
+		roundObj:ReadConfiguration( kvWaveData, self, #self._vWaveList + 1 )
+		table.insert( self._vWaveList, roundObj )
+	end
+end
+
 -- sets ability points to 0 and sets skills to lvl1 at start.
 function CMyMod:OnPlayerPicked()
 	
@@ -152,19 +158,17 @@ function CMyMod:OnPlayerPicked()
 	end
 end
 
-
-
 -- spawns units
 function CMyMod:spawnunits()
 	print("trying to spawn.")
 	
-	for i=1,#self._SpawnData do -- For each spawn location
-	
+	for i=1,#self._vSpawnsList do -- For each spawn location
+
 		-- What does the first argument do on FindByName? Remember to check... Eks.
-		local spawnLocation = Entities:FindByName( nil, self._SpawnData[i].SpawnerName )
-		local waypointLocation = Entities:FindByName( nil, self._SpawnData[i].Waypoint )
+		local spawnLocation = Entities:FindByName( nil, self._vSpawnsList[i].SpawnerName )
+		local waypointLocation = Entities:FindByName( nil, self._vSpawnsList[i].Waypoint )
 		
-		local currentWaveData = self.WaveData[self._WaveNumber]
+		local currentWaveData = self._vWaveList[self._nWaveNumber]
 		
 		-- Room to program the SpawnInterval here (future work)
 		for j=1,currentWaveData.UnitsPerSpawn do
@@ -184,8 +188,8 @@ function CMyMod:OnEntityKilled()
 	self._EnemiesRemaining = mobsLeft
 	print( string.format( "Enemies remaining: %d", mobsLeft ) )
 	if mobsLeft == 0 then
-		self._Wave = self._Wave + 1
-		print( string.format( "wave: %d", self._Wave ) )
+		self._nWaveNumber = self._nWaveNumber + 1
+		print( string.format( "wave: %d", self._nWaveNumber ) )
 		
 		-- This function should spawn the next wave in...Global 
 		GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 35 )
@@ -220,7 +224,7 @@ function CMyMod:OnThink()
 		return nil
 	end
 	
-	self.spawnunits()
+	self:spawnunits()
 	return nil
 	--every 30 seconds call this function again	
 	--return 30000
