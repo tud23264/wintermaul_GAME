@@ -127,7 +127,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_scouts"
@@ -141,7 +141,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_engineers"
@@ -155,7 +155,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_night_ranger"
@@ -169,7 +169,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_barbarians"
@@ -183,7 +183,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_drake"
@@ -197,7 +197,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_stalker"
@@ -211,7 +211,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_water_runner"
@@ -225,7 +225,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_ice_troll"
@@ -239,7 +239,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_wolf_rider"
@@ -253,7 +253,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_hovercraft"
@@ -267,7 +267,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_goblin_machine"
@@ -281,7 +281,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_frost_reptile"
@@ -295,7 +295,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_"
@@ -309,7 +309,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_"
@@ -323,7 +323,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_ice_shard_golem"
@@ -337,7 +337,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_eternal_spirit"
@@ -351,7 +351,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_supply_tank"
@@ -365,7 +365,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_walking_corpse"
@@ -379,7 +379,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_totem_carriers"
@@ -393,7 +393,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_unholy_knight"
@@ -407,7 +407,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_crystal_mage"
@@ -421,7 +421,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_frozen_infernal"
@@ -435,7 +435,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_dragon"
@@ -449,7 +449,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_polar_bear"
@@ -463,7 +463,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_possessed_hunter"
@@ -477,7 +477,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_currupt_chieftain"
@@ -491,7 +491,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_ancient_dragon"
@@ -505,7 +505,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_spider_fiend"
@@ -519,7 +519,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_armored_wisp"
@@ -533,7 +533,7 @@
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
-			"RoundDescription"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_duke_wintermaul"
