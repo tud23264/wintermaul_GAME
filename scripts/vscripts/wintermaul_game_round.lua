@@ -13,14 +13,11 @@ function CWintermaulGameRound:ReadConfiguration( kv, gameMode, roundNumber )
 	self._szRoundQuestTitle = kv.round_quest_title or "#DOTA_Quest_Wintermaul_Round"
 	self._szRoundTitle = kv.round_title or string.format( "Round%d", roundNumber )
 
-	self._nMaxGold = tonumber( kv.MaxGold or 0 )
-	self._nBagCount = tonumber( kv.BagCount or 0 )
-	self._nBagVariance = tonumber( kv.BagVariance or 0 )
-	self._nFixedXP = tonumber( kv.FixedXP or 0 )
-
 	self._vSpawners = {}
 	for k, v in pairs( kv ) do
+		print(type(v))
 		if type( v ) == "table" and v.NPCName then
+			print("Spongebob")
 			local spawner = CWintermaulGameSpawner()
 			spawner:ReadConfiguration( k, v, self )
 			self._vSpawners[ k ] = spawner
@@ -43,24 +40,17 @@ function CWintermaulGameRound:Begin()
 	self._vEnemiesRemaining = {}
 	self._vEventHandles = {
 		ListenToGameEvent( "npc_spawned", Dynamic_Wrap( CWintermaulGameRound, "OnNPCSpawned" ), self ),
-		ListenToGameEvent( "entity_killed", Dynamic_Wrap( CWintermaulGameRound, "OnEntityKilled" ), self ),
-		ListenToGameEvent( "dota_item_picked_up", Dynamic_Wrap( CWintermaulGameRound, 'OnItemPickedUp' ), self ),
-		ListenToGameEvent( "dota_Wintermaul_revive_complete", Dynamic_Wrap( CWintermaulGameRound, 'OnWintermaulReviveComplete' ), self )
+		ListenToGameEvent( "entity_killed", Dynamic_Wrap( CWintermaulGameRound, "OnEntityKilled" ), self )
 	}
 
 	self._vPlayerStats = {}
 	for nPlayerID = 0, DOTA_MAX_TEAM_PLAYERS-1 do
+		-- Put player stats here
 		self._vPlayerStats[ nPlayerID ] = {
 			nCreepsKilled = 0,
-			nGoldBagsCollected = 0,
-			nPriorRoundDeaths = PlayerResource:GetDeaths( nPlayerID ),
-			nPlayersResurrected = 0
 		}
 	end
 
-	self._nGoldRemainingInRound = self._nMaxGold
-	self._nGoldBagsRemaining = self._nBagCount
-	self._nGoldBagsExpired = 0
 	self._nCoreUnitsTotal = 0
 	for _, spawner in pairs( self._vSpawners ) do
 		spawner:Begin()
@@ -73,7 +63,6 @@ function CWintermaulGameRound:Begin()
 		title =  self._szRoundQuestTitle
 	})
 	self._entQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_ROUND, self._nRoundNumber )
-	self._entQuest:SetTextReplaceString( self._gameMode:GetDifficultyString() )
 
 	self._entKillCountSubquest = SpawnEntityFromTableSynchronous( "subquest_base", {
 		show_progress_bar = true,
@@ -92,7 +81,7 @@ function CWintermaulGameRound:End()
 
 	for _,unit in pairs( FindUnitsInRadius( DOTA_TEAM_BADGUYS, Vector( 0, 0, 0 ), nil, FIND_UNITS_EVERYWHERE, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false )) do
 		if not unit:IsTower() then
-			UTIL_RemoveImmediate( unit )
+			UTIL_Remove( unit )
 		end
 	end
 
@@ -101,36 +90,15 @@ function CWintermaulGameRound:End()
 	end
 
 	if self._entQuest then
-		UTIL_RemoveImmediate( self._entQuest )
+		UTIL_Remove( self._entQuest )
 		self._entQuest = nil
 		self._entKillCountSubquest = nil
-	end
-
-	local nTowers = 0
-	local nTowersStanding = 0
-	for _,unit in pairs( FindUnitsInRadius( DOTA_TEAM_GOODGUYS, Vector( 0, 0, 0 ), nil, FIND_UNITS_EVERYWHERE, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_BUILDING, DOTA_UNIT_TARGET_FLAG_DEAD, FIND_ANY_ORDER, false ) ) do
-		if unit:IsTower() then
-			nTowers = nTowers + 1
-			if unit:IsAlive() then
-				nTowersStanding = nTowersStanding + 1
-			end
-		end
-	end
-	local nTowersStandingGoldReward = self._gameMode:ComputeTowerBonusGold( nTowers, nTowersStanding )
-	for nPlayerID = 0, DOTA_MAX_TEAM_PLAYERS-1 do
-		if PlayerResource:HasSelectedHero( nPlayerID ) then
-			PlayerResource:ModifyGold( nPlayerID, nTowersStandingGoldReward, true, DOTA_ModifyGold_Unspecified )
-		end
 	end
 
 	local roundEndSummary = {
 		nRoundNumber = self._nRoundNumber - 1,
 		nRoundDifficulty = GameRules:GetCustomGameDifficulty(),
-		roundName = self._szRoundTitle,
-		nTowers = nTowers,
-		nTowersStanding = nTowersStanding,
-		nTowersStandingGoldReward = nTowersStandingGoldReward,
-		nGoldBagsExpired = self._nGoldBagsExpired
+		roundName = self._szRoundTitle
 	}
 
 	local playerSummaryCount = 0
@@ -142,12 +110,11 @@ function CWintermaulGameRound:End()
 			local playerStats = self._vPlayerStats[ nPlayerID ]
 			roundEndSummary[ szPlayerPrefix .. "HeroName" ] = PlayerResource:GetSelectedHeroName( nPlayerID )
 			roundEndSummary[ szPlayerPrefix .. "CreepKills" ] = playerStats.nCreepsKilled
-			roundEndSummary[ szPlayerPrefix .. "GoldBagsCollected" ] = playerStats.nGoldBagsCollected
-			roundEndSummary[ szPlayerPrefix .. "Deaths" ] = PlayerResource:GetDeaths( nPlayerID ) - playerStats.nPriorRoundDeaths
-			roundEndSummary[ szPlayerPrefix .. "PlayersResurrected" ] = playerStats.nPlayersResurrected
+			-- Have other tower stats here eg most valuable tower
+
 		end
 	end
-	FireGameEvent( "Wintermaul_show_round_end_summary", roundEndSummary )
+	-- Fire in game event (eg summary of last round)
 end
 
 
@@ -155,11 +122,6 @@ function CWintermaulGameRound:Think()
 	for _, spawner in pairs( self._vSpawners ) do
 		spawner:Think()
 	end
-end
-
-
-function CWintermaulGameRound:ChooseRandomSpawnInfo()
-	return self._gameMode:ChooseRandomSpawnInfo()
 end
 
 
@@ -185,6 +147,8 @@ end
 -- Rather than use the xp granting from the units keyvalues file,
 -- we let the round determine the xp per unit to grant as a flat value.
 -- This is done to make tuning of rounds easier.
+
+-- Think about changing this to GOLD
 function CWintermaulGameRound:GetXPPerCoreUnit()
 	if self._nCoreUnitsTotal == 0 then
 		return 0
@@ -223,8 +187,6 @@ function CWintermaulGameRound:OnEntityKilled( event )
 	end	
 	if killedUnit.Wintermaul_IsCore then
 		self._nCoreUnitsKilled = self._nCoreUnitsKilled + 1
-		self:_CheckForGoldBagDrop( killedUnit )
-		self._gameMode:CheckForLootItemDrop( killedUnit )
 		if self._entKillCountSubquest then
 			self._entKillCountSubquest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, self._nCoreUnitsKilled )
 		end
@@ -232,71 +194,13 @@ function CWintermaulGameRound:OnEntityKilled( event )
 
 	local attackerUnit = EntIndexToHScript( event.entindex_attacker or -1 )
 	if attackerUnit then
+		-- Here we need some way of using the tower ID to update round
 		local playerID = attackerUnit:GetPlayerOwnerID()
 		local playerStats = self._vPlayerStats[ playerID ]
 		if playerStats then
 			playerStats.nCreepsKilled = playerStats.nCreepsKilled + 1
 		end
 	end
-end
-
-
-function CWintermaulGameRound:OnWintermaulReviveComplete( event )
-	local castingHero = EntIndexToHScript( event.caster )
-	if castingHero then
-		local nPlayerID = castingHero:GetPlayerOwnerID()
-		local playerStats = self._vPlayerStats[ nPlayerID ]
-		if playerStats then
-			playerStats.nPlayersResurrected = playerStats.nPlayersResurrected + 1
-		end
-	end
-end
-
-
-function CWintermaulGameRound:OnItemPickedUp( event )
-	if event.itemname == "item_bag_of_gold" then
-		local playerStats = self._vPlayerStats[ event.PlayerID ]
-		if playerStats then
-			playerStats.nGoldBagsCollected = playerStats.nGoldBagsCollected + 1
-		end
-	end
-end
-
-
-function CWintermaulGameRound:_CheckForGoldBagDrop( killedUnit )
-	if self._nGoldRemainingInRound <= 0 then
-		return
-	end
-
-	local nGoldToDrop = 0
-	local nCoreUnitsRemaining = self._nCoreUnitsTotal - self._nCoreUnitsKilled
-	if nCoreUnitsRemaining <= 0 then
-		nGoldToDrop = self._nGoldRemainingInRound
-	else
-		local flCurrentDropChance = self._nGoldBagsRemaining / (1 + nCoreUnitsRemaining)
-		if RandomFloat( 0, 1 ) <= flCurrentDropChance then
-			if self._nGoldBagsRemaining <= 1 then
-				nGoldToDrop = self._nGoldRemainingInRound
-			else
-				nGoldToDrop = math.floor( self._nGoldRemainingInRound / self._nGoldBagsRemaining )
-				nCurrentGoldDrop = math.max(1, RandomInt( nGoldToDrop - self._nBagVariance, nGoldToDrop + self._nBagVariance  ) )
-			end
-		end
-	end
-	
-	nGoldToDrop = math.min( nGoldToDrop, self._nGoldRemainingInRound )
-	if nGoldToDrop <= 0 then
-		return
-	end
-	self._nGoldRemainingInRound = math.max( 0, self._nGoldRemainingInRound - nGoldToDrop )
-	self._nGoldBagsRemaining = math.max( 0, self._nGoldBagsRemaining - 1 )
-
-	local newItem = CreateItem( "item_bag_of_gold", nil, nil )
-	newItem:SetPurchaseTime( 0 )
-	newItem:SetCurrentCharges( nGoldToDrop )
-	local drop = CreateItemOnPositionSync( killedUnit:GetAbsOrigin(), newItem )
-	local dropTarget = killedUnit:GetAbsOrigin() + RandomVector( RandomFloat( 50, 350 ) )
-	newItem:LaunchLoot( true, 300, 0.75, dropTarget )
 end
 
 

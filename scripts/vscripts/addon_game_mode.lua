@@ -9,7 +9,8 @@ Wintermaul
 		"v"		Table
 		"b"		Boolean
 ]]
-
+require( "wintermaul_game_round" )
+require( "wintermaul_game_spawner" )
 MAPSIZE = 16384
 NUMBERTOSPAWN = 8 --How many to spawn
 
@@ -48,8 +49,8 @@ CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_6] = 1
 CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_7] = 1
 --CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_8] = 1
 
-if CMyMod == nil then
-	CMyMod = class({})
+if CWintermaulGameMode == nil then
+	CWintermaulGameMode = class({})
 end
 
 --essential. loads the unit and model needed into memory
@@ -60,14 +61,16 @@ end
 
 function Activate()
 	--activates the mod. 
-	GameRules.CMyMod = CMyMod()
+	GameRules.CWintermaulGameMode = CWintermaulGameMode()
 	--calls InitGameMode
-	GameRules.CMyMod:InitGameMode()
+	GameRules.CWintermaulGameMode:InitGameMode()
 end
 
 
-function CMyMod:InitGameMode()
-	self._nWaveNumber = 1
+function CWintermaulGameMode:InitGameMode()
+	self._nRoundNumber = 1
+	self._currentRound = nil
+	self._flLastThinkGameTime = nil
 	
 	self:_ReadGameConfiguration()
 	GameRules:SetTimeOfDay( 0.75 )
@@ -91,34 +94,35 @@ function CMyMod:InitGameMode()
 	GameRules:GetGameModeEntity():SetUseCustomHeroLevels ( true )
 	--BuildingHelper:BlockGridNavSquares(MAPSIZE)
 	--BuildingHelper:BlockBadSquares(MAPSIZE)
-	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CMyMod, 'OnEntityKilled' ), self )
-	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CMyMod, "OnPlayerPicked" ), self )
-	
+	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CWintermaulGameMode, 'OnEntityKilled' ), self )
+	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
+	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
 	
 	
 	--sets the first think...Does it do this every 71 seconds??? Eks
-	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 71 )
+	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 0.25 )
 	print( "Wintermaul is loaded." )
 end
 
 -- Read and assign configurable keyvalues if applicable
-function CMyMod:_ReadGameConfiguration()
+function CWintermaulGameMode:_ReadGameConfiguration()
 	local kv = LoadKeyValues( "scripts/maps/wintermaul_map_config.txt" )
 	kv = kv or {} -- Handle the case where there is not keyvalues file
-
+	
+	self._flPrepTimeBetweenRounds = tonumber( kv.PrepTimeBetweenRounds or 0 )
+	
 	self:_ReadSpawnsConfiguration( kv["Spawns"] )
-	self:_ReadWaveConfigurations( kv["Waves"])
+	self:_ReadRoundConfigurations( kv["Waves"])
 end
 
 
 -- Verify valid spawns are defined and build a table with them from the keyvalues file
-function CMyMod:_ReadSpawnsConfiguration( kvSpawns )
+function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
 	self._vSpawnsList = {}
 	if type( kvSpawns ) ~= "table" then
 		return
 	end
 	for _,sp in pairs( kvSpawns ) do			-- Note "_" used as a shortcut to create a temporary throwaway variable
-		print(sp)
 		table.insert( self._vSpawnsList, {
 			szSpawnerName = sp.SpawnerName or "",
 			szFirstWaypoint = sp.Waypoint or ""
@@ -127,22 +131,30 @@ function CMyMod:_ReadSpawnsConfiguration( kvSpawns )
 end
 
 -- Set number of rounds without requiring index in text file
-function CMyMod:_ReadWaveConfigurations( kv )
-	self._vWaveList = {}
+function CWintermaulGameMode:_ReadRoundConfigurations( kv )
+	self._vRounds = {}
 	while true do
-		local szWaveName = string.format("Wave%d", #self._vWaveList + 1 )
-		local kvWaveData = kv[ szWaveName ]
-		if kvWaveData == nil then
+		local szRoundName = string.format("Wave%d", #self._vRounds + 1 )
+		local kvRoundData = kv[ szRoundName ]
+		if kvRoundData == nil then
 			return
 		end
-		local roundObj = CHoldoutGameWave()
-		roundObj:ReadConfiguration( kvWaveData, self, #self._vWaveList + 1 )
-		table.insert( self._vWaveList, roundObj )
+		local roundObj = CWintermaulGameRound()
+		roundObj:ReadConfiguration( kvRoundData, self, #self._vRounds + 1 )
+		table.insert( self._vRounds, roundObj )
+	end
+end
+
+-- When game state changes set state in script
+function CWintermaulGameMode:OnGameRulesStateChange()
+	local nNewState = GameRules:State_Get()
+	if nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+		self._flPrepTimeEnd = GameRules:GetGameTime() + self._flPrepTimeBetweenRounds
 	end
 end
 
 -- sets ability points to 0 and sets skills to lvl1 at start.
-function CMyMod:OnPlayerPicked()
+function CWintermaulGameMode:OnPlayerPicked()
 	
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
@@ -158,74 +170,60 @@ function CMyMod:OnPlayerPicked()
 	end
 end
 
--- spawns units
-function CMyMod:spawnunits()
-	print("trying to spawn.")
-	
-	for i=1,#self._vSpawnsList do -- For each spawn location
 
-		-- What does the first argument do on FindByName? Remember to check... Eks.
-		local spawnLocation = Entities:FindByName( nil, self._vSpawnsList[i].SpawnerName )
-		local waypointLocation = Entities:FindByName( nil, self._vSpawnsList[i].Waypoint )
-		
-		local currentWaveData = self._vWaveList[self._nWaveNumber]
-		
-		-- Room to program the SpawnInterval here (future work)
-		for j=1,currentWaveData.UnitsPerSpawn do
-			--hscript CreateUnitByName( string name, vector origin, bool findOpenSpot, hscript, hscript, int team)
-			--spawns the creature in an area around the spawner 
-			local creature = CreateUnitByName( currentWaveData.NPCName , spawnLocation:GetAbsOrigin() + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS )
-			--print ("create unit has run")
-			creature:SetInitialGoalEntity( waypointlocation )
+function CWintermaulGameMode:_ThinkPrepTime()
+	if GameRules:GetGameTime() >= self._flPrepTimeEnd then
+		self._flPrepTimeEnd = nil
+		if self._entPrepTimeQuest then
+			UTIL_RemoveImmediate( self._entPrepTimeQuest )
+			self._entPrepTimeQuest = nil
 		end
-		print ("nextspawn")
-	end
-	self._EnemiesRemaining = currentWaveData.TotalUnitstoSpawn
-end 
 
-function CMyMod:OnEntityKilled()
-	local mobsLeft = self._EnemiesRemaining - 1
-	self._EnemiesRemaining = mobsLeft
-	print( string.format( "Enemies remaining: %d", mobsLeft ) )
-	if mobsLeft == 0 then
-		self._nWaveNumber = self._nWaveNumber + 1
-		print( string.format( "wave: %d", self._nWaveNumber ) )
-		
-		-- This function should spawn the next wave in...Global 
-		GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 35 )
-
+		if self._nRoundNumber > #self._vRounds then
+			GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
+			return false
+		end
+		self._currentRound = self._vRounds[ self._nRoundNumber ]
+		self._currentRound:Begin()
+		return
 	end
+
+	if not self._entPrepTimeQuest then
+		self._entPrepTimeQuest = SpawnEntityFromTableSynchronous( "quest", { name = "PrepTime", title = "#DOTA_Quest_Wintermaul_PrepTime" } )
+		self._entPrepTimeQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_ROUND, self._nRoundNumber )
+
+		self._vRounds[ self._nRoundNumber ]:Precache()
+	end
+	self._entPrepTimeQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, self._flPrepTimeEnd - GameRules:GetGameTime() )
 end
 
 
--- Checks for defeat for ancient death because we dont have a life system yet.
---[[function CMyMod:_CheckForDefeat()
-	if GameRules:State_Get() ~= DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		return
-	end
-	
-	if self._entAncient:GetHealth() <= 0 then
-		GameRules:MakeTeamLose( DOTA_TEAM_GOODGUYS )
-		return
-	end
-end]]
-
-
 -- this is the thinker. it thinks
-function CMyMod:OnThink()
-	--idk what this stuff does was in the template
+-- Evaluate the state of the game
+function CWintermaulGameMode:OnThink()
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		print( "Wintermaul spawning script is running." )
-		--if WAVE == 0 then
-		--	WAVE = WAVE+1
-		--
-		--end
-	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
+		--self:_CheckForDefeat()
+		--self:_ThinkLootExpiry()
+
+		if self._flPrepTimeEnd ~= nil then
+			self:_ThinkPrepTime()
+		elseif self._currentRound ~= nil then
+			self._currentRound:Think()
+			if self._currentRound:IsFinished() then
+				self._currentRound:End()
+				self._currentRound = nil
+
+				self._nRoundNumber = self._nRoundNumber + 1
+				if self._nRoundNumber > #self._vRounds then
+					self._nRoundNumber = 1
+					GameRules:MakeTeamLose( DOTA_TEAM_BADGUYS )
+				else
+					self._flPrepTimeEnd = GameRules:GetGameTime() + self._flPrepTimeBetweenRounds
+				end
+			end
+		end
+	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then		-- Safe guard catching any state that may exist beyond DOTA_GAMERULES_STATE_POST_GAME
 		return nil
 	end
-	
-	self:spawnunits()
-	return nil
-	--every 30 seconds call this function again	
-	--return 30000
+	return 1
 end

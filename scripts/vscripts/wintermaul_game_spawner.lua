@@ -14,6 +14,8 @@ function CHoldoutGameSpawner:ReadConfiguration( name, kv, gameRound )
 	self._szGroupWithUnit = kv.GroupWithUnit or ""
 	self._szName = name
 	self._szNPCClassName = kv.NPCName or ""
+	print("printing self._szNPCClassName")
+	print(self._szNPCClassName)
 	self._szSpawnerName = kv.SpawnerName or ""
 	self._szWaitForUnit = kv.WaitForUnit or ""
 	self._szWaypointName = kv.Waypoint or ""
@@ -67,6 +69,7 @@ function CHoldoutGameSpawner:Begin()
 	
 	self._vecSpawnLocation = nil
 	if self._szSpawnerName ~= "" then
+		print("Spawning started")
 		local entSpawner = Entities:FindByName( nil, self._szSpawnerName )
 		if not entSpawner then
 			print( string.format( "Failed to find spawner named %s for %s\n", self._szSpawnerName, self._szName ) )
@@ -160,7 +163,8 @@ function CHoldoutGameSpawner:_GetSpawnWaypoint()
 	end
 end
 
-
+-- Don't need the function below
+--[[
 function CHoldoutGameSpawner:_UpdateRandomSpawn()
 	self._vecSpawnLocation = Vector( 0, 0, 0 )
 	self._entWaypoint = nil
@@ -186,7 +190,7 @@ function CHoldoutGameSpawner:_UpdateRandomSpawn()
 		end
 	end
 end
-
+]]
 
 function CHoldoutGameSpawner:_DoSpawn()
 	local nUnitsToSpawn = math.min( self._nUnitsPerSpawn, self._nTotalUnitsToSpawn - self._nUnitsSpawnedThisRound )
@@ -195,10 +199,6 @@ function CHoldoutGameSpawner:_DoSpawn()
 		return
 	elseif self._nUnitsSpawnedThisRound == 0 then
 		print( string.format( "Started spawning %s at %.2f", self._szName, GameRules:GetGameTime() ) )
-	end
-
-	if self._szSpawnerName == "" then
-		self:_UpdateRandomSpawn()
 	end
 
 	local vBaseSpawnLocation = self:_GetSpawnLocation()

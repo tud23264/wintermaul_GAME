@@ -1,6 +1,6 @@
 "dota_wintermaul"
 {
-	"PrepTimeBetweenRounds"			"35"
+	"PrepTimeBetweenRounds"			"5"
 	"ItemExpireTime"				"10"
 	"RestoreHPAfterRound"			"0"
 	"RestoreMPAfterRound"			"0"
@@ -8,168 +8,130 @@
 	"TowerRewardAmount"				"18"
 	"TowerScalingRewardPerRound"	"2"
 	
-	"ItemDrops"
-	{
-		"HealingSalve"
-		{
-			"Item"					"item_flask2"
-			"Chance"				"2"
-		}
-		"Clarity"
-		{
-			"Item"					"item_greater_clarity"
-			"Chance"				"2"
-		}
-	}
-	
 	"Spawns"
 	{
-		1
+		"Spawn1"
 		{
-			"SpawnerName"			"red_spawn_1"
-			"Waypoint"				"pc_red"
+			"SpawnerName"				"red_spawn_1"
+			"Waypoint"					"pc_red"
 		}
 		
-		2
+		"Spawn2"
 		{
-			"SpawnerName"			"red_spawn_2"
-			"Waypoint"				"pc_red"
+			"SpawnerName"				"red_spawn_2"
+			"Waypoint"					"pc_red"
 		}
 		
-		3
+		"Spawn3"
 		{
-			"SpawnerName"			"blue_spawn_1"
-			"Waypoint"				"pc_blue_1"
+			"SpawnerName"				"blue_spawn_1"
+			"Waypoint"					"pc_blue_1"
 		}
 		
-		4
+		"Spawn4"
 		{
-			"SpawnerName"			"blue_spawn_2"
-			"Waypoint"				"pc_blue_2"
+			"SpawnerName"				"blue_spawn_2"
+			"Waypoint"					"pc_blue_2"
 		}
 		
-		5
+		"Spawn5"
 		{
-			"SpawnerName"			"teal_spawn_1"
-			"Waypoint"				"pc_teal"
+			"SpawnerName"				"teal_spawn_1"
+			"Waypoint"					"pc_teal"
 		}
 		
-		6
+		"Spawn6"
 		{
-			"SpawnerName"			"teal_spawn_2"
-			"Waypoint"				"pc_teal"
+			"SpawnerName"				"teal_spawn_2"
+			"Waypoint"					"pc_teal"
 		}
 		
-		7
+		"Spawn7"
 		{
-			"SpawnerName"			"orange_spawn_1"
-			"Waypoint"				"pc_orange"
+			"SpawnerName"				"orange_spawn_1"
+			"Waypoint"					"pc_orange"
 		}
 		
-		8
+		"Spawn8"
 		{
-			"SpawnerName"			"orange_spawn_2"
-			"Waypoint"				"pc_orange"
+			"SpawnerName"				"orange_spawn_2"
+			"Waypoint"					"pc_orange"
 		}
 		
-		9
+		"Spawn9"
 		{
-			"SpawnerName"			"yellow_spawn_1"
-			"Waypoint"				"pc_yellow_1"
+			"SpawnerName"				"yellow_spawn_1"
+			"Waypoint"					"pc_yellow_1"
 		}
 		
-		10
+		"Spawn10"
 		{
-			"SpawnerName"			"yellow_spawn_2"
-			"Waypoint"				"pc_yellow_2"
+			"SpawnerName"				"yellow_spawn_2"
+			"Waypoint"					"pc_yellow_2"
 		}
 		
-		11
+		"Spawn11"
 		{
-			"SpawnerName"			"purple_spawn_1"
-			"Waypoint"				"pc_purple"
+			"SpawnerName"				"purple_spawn_1"
+			"Waypoint"					"pc_purple"
 		}
 		
-		12
+		"Spawn12"
 		{
-			"SpawnerName"			"purple_spawn_2"
-			"Waypoint"				"pc_purple"
+			"SpawnerName"				"purple_spawn_2"
+			"Waypoint"					"pc_purple"
 		}
 		
-		13
+		"Spawn13"
 		{
-			"SpawnerName"			"green_spawn_1"
-			"Waypoint"				"pc_green_top"
+			"SpawnerName"				"green_spawn_1"
+			"Waypoint"					"pc_green_top"
 		}
 		
-		14
+		"Spawn14"
 		{
-			"SpawnerName"			"green_spawn_2"
-			"Waypoint"				"pc_green_top"
+			"SpawnerName"				"green_spawn_2"
+			"Waypoint"					"pc_green_top"
 		}
 		
-		15
+		"Spawn15"
 		{
-			"SpawnerName"			"grey_spawn_1"
-			"Waypoint"				"pc_grey"
+			"SpawnerName"				"grey_spawn_1"
+			"Waypoint"					"pc_grey"
 		}
 		
-		16
+		"Spawn16"
 		{
-			"SpawnerName"			"grey_spawn_2"
-			"Waypoint"				"pc_grey"
+			"SpawnerName"				"grey_spawn_2"
+			"Waypoint"					"pc_grey"
 		}
 		
-		17
+		"Spawn17"
 		{
-			"SpawnerName"			"pink_spawn_1"
-			"Waypoint"				"pc_pink_top"
+			"SpawnerName"				"pink_spawn_1"
+			"Waypoint"					"pc_pink_top"
 		}
 		
-		18
+		"Spawn18"
 		{
-			"SpawnerName"			"pink_spawn_2"
-			"Waypoint"				"pc_pink_top"
+			"SpawnerName"				"pink_spawn_2"
+			"Waypoint"					"pc_pink_top"
 		}
 		
 	}
-
-	"LinkedXPEnemies"
+	
+	"Waves"
 	{
-		-- Key enemy spawns sub-value count of subkey enemies
-		-- e.g. splitter_a spawns 3 splitter_b
-		"npc_dota_splitter_a"
-		{
-			"npc_dota_splitter_b"	"3"
-		}
-
-		"npc_dota_splitter_b"
-		{
-			"npc_dota_splitter_c"	"4"
-		}
-
-		"npc_dota_creature_boss_skeleton_king_1"
-		{
-			"npc_dota_creature_boss_skeleton_king_2"	"1"
-		}
-
-		"npc_dota_creature_boss_skeleton_king_2"
-		{
-			"npc_dota_creature_boss_skeleton_king_3"	"1"
-		}
-	}
-
-	"Wave"
-	{
-		1 -- Scouts
+		"Wave1" // Scouts
 		{
 			"NPCName"					"npc_dota_wintermaul_scouts"
 			"TotalUnitsToSpawn"			"18"
 			"UnitsPerSpawn"				"6"
 			"SpawnInterval"				"8"
+			"RoundDescription"			"nonsense"
 		}
 		
-		2 -- Engineers
+		"Wave2" // Engineers
 		{
 			"NPCName"					"npc_dota_wintermaul_engineers"
 			"TotalUnitsToSpawn"			"18"
@@ -177,7 +139,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		3 -- Night Ranger
+		"Wave3" // Night Ranger
 		{
 			"NPCName"					"npc_dota_wintermaul_night_ranger"
 			"TotalUnitsToSpawn"			"18"
@@ -185,7 +147,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		4 -- Barbarians
+		"Wave4" // Barbarians
 		{
 			"NPCName"					"npc_dota_wintermaul_barbarians"
 			"TotalUnitsToSpawn"			"18"
@@ -193,7 +155,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		5 -- Drake
+		"Wave5" // Drake
 		{
 			"NPCName"					"npc_dota_wintermaul_drake"
 			"TotalUnitsToSpawn"			"18"
@@ -201,7 +163,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		6 -- Stalker
+		"Wave6" // Stalker
 		{
 			"NPCName"					"npc_dota_wintermaul_stalker"
 			"TotalUnitsToSpawn"			"18"
@@ -209,7 +171,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		7 -- Water Runner
+		"Wave7" // Water Runner
 		{
 			"NPCName"					"npc_dota_wintermaul_water_runner"
 			"TotalUnitsToSpawn"			"18"
@@ -217,7 +179,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		8 -- Ice troll
+		"Wave8" // Ice troll
 		{
 			"NPCName"					"npc_dota_wintermaul_ice_troll"
 			"TotalUnitsToSpawn"			"18"
@@ -225,7 +187,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		9 -- Wolf Rider
+		"Wave9" // Wolf Rider
 		{
 			"NPCName"					"npc_dota_wintermaul_wolf_rider"
 			"TotalUnitsToSpawn"			"18"
@@ -233,7 +195,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		10 -- Hovercraft
+		"Wave10" // Hovercraft
 		{
 			"NPCName"					"npc_dota_wintermaul_hovercraft"
 			"TotalUnitsToSpawn"			"18"
@@ -241,7 +203,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		11 -- Goblin Machine
+		"Wave11" // Goblin Machine
 		{
 			"NPCName"					"npc_dota_wintermaul_goblin_machine"
 			"TotalUnitsToSpawn"			"18"
@@ -249,7 +211,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		12 -- Frosty Reptile
+		"Wave12" // Frosty Reptile
 		{
 			"NPCName"					"npc_dota_wintermaul_frost_reptile"
 			"TotalUnitsToSpawn"			"18"
@@ -257,7 +219,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		13 -- Demonic Pets
+		"Wave13" // Demonic Pets
 		{
 			"NPCName"					"npc_dota_wintermaul_"
 			"TotalUnitsToSpawn"			"18"
@@ -265,7 +227,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		14 -- Matured Dragon
+		"Wave14" // Matured Dragon
 		{
 			"NPCName"					"npc_dota_wintermaul_"
 			"TotalUnitsToSpawn"			"18"
@@ -273,7 +235,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		15 -- Ice Shard Golem
+		"Wave15" // Ice Shard Golem
 		{
 			"NPCName"					"npc_dota_wintermaul_ice_shard_golem"
 			"TotalUnitsToSpawn"			"18"
@@ -281,7 +243,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		16 -- Eternal Spirit
+		"Wave16" // Eternal Spirit
 		{
 			"NPCName"					"npc_dota_wintermaul_eternal_spirit"
 			"TotalUnitsToSpawn"			"18"
@@ -289,7 +251,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		17 -- Supply Tank
+		"Wave17" // Supply Tank
 		{
 			"NPCName"					"npc_dota_wintermaul_supply_tank"
 			"TotalUnitsToSpawn"			"18"
@@ -297,7 +259,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		18 -- Walking Corpse
+		"Wave18" // Walking Corpse
 		{
 			"NPCName"					"npc_dota_wintermaul_walking_corpse"
 			"TotalUnitsToSpawn"			"18"
@@ -305,7 +267,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		19 -- Totem Carriers
+		"Wave19" // Totem Carriers
 		{
 			"NPCName"					"npc_dota_wintermaul_totem_carriers"
 			"TotalUnitsToSpawn"			"18"
@@ -313,14 +275,14 @@
 			"SpawnInterval"				"8"
 		}
 		
-		20 -- Unholy Knight
+		"Wave20" // Unholy Knight
 		{
 			"NPCName"					"npc_dota_wintermaul_unholy_knight"
 			"TotalUnitsToSpawn"			"18"
 			"UnitsPerSpawn"				"6"
 			"SpawnInterval"				"8"
 		}
-		21 -- Crystal Mage
+		"Wave21" // Crystal Mage
 		{
 			"NPCName"					"npc_dota_wintermaul_crystal_mage"
 			"TotalUnitsToSpawn"			"18"
@@ -328,7 +290,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		22 -- Frozen Infernal
+		"Wave22" // Frozen Infernal
 		{
 			"NPCName"					"npc_dota_wintermaul_frozen_infernal"
 			"TotalUnitsToSpawn"			"18"
@@ -336,7 +298,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		23 -- Dragon
+		"Wave23" // Dragon
 		{
 			"NPCName"					"npc_dota_wintermaul_dragon"
 			"TotalUnitsToSpawn"			"18"
@@ -344,7 +306,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		24 -- Polar Bear
+		"Wave24" // Polar Bear
 		{
 			"NPCName"					"npc_dota_wintermaul_polar_bear"
 			"TotalUnitsToSpawn"			"18"
@@ -352,7 +314,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		25 -- Possessed Hunter
+		"Wave25" // Possessed Hunter
 		{
 			"NPCName"					"npc_dota_wintermaul_possessed_hunter"
 			"TotalUnitsToSpawn"			"18"
@@ -360,7 +322,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		26 -- Corrupt Chieftain
+		"Wave26" // Corrupt Chieftain
 		{
 			"NPCName"					"npc_dota_wintermaul_currupt_chieftain"
 			"TotalUnitsToSpawn"			"18"
@@ -368,7 +330,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		27 -- Ancient Dragon
+		"Wave27" // Ancient Dragon
 		{
 			"NPCName"					"npc_dota_wintermaul_ancient_dragon"
 			"TotalUnitsToSpawn"			"18"
@@ -376,7 +338,7 @@
 			"SpawnInterval"				"8"
 		}
 		
-		28 -- Spider Fiend
+		"Wave28" // Spider Fiend
 		{
 			"NPCName"					"npc_dota_wintermaul_spider_fiend"
 			"TotalUnitsToSpawn"			"18"
@@ -384,14 +346,14 @@
 			"SpawnInterval"				"8"
 		}
 		
-		29 -- Armored Wisp
+		"Wave29" // Armored Wisp
 		{
 			"NPCName"					"npc_dota_wintermaul_armored_wisp"
 			"TotalUnitsToSpawn"			"18"
 			"UnitsPerSpawn"				"6"
 			"SpawnInterval"				"8"
 		}
-		30 -- Duke Wintermaul
+		"Wave30" // Duke Wintermaul
 		{
 			"NPCName"					"npc_dota_wintermaul_duke_wintermaul"
 			"TotalUnitsToSpawn"			"18"
