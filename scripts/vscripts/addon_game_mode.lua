@@ -98,8 +98,6 @@ function CWintermaulGameMode:InitGameMode()
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
 	
-	
-	--sets the first think...Does it do this every 71 seconds??? Eks
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 0.25 )
 	print( "Wintermaul is loaded." )
 end
@@ -113,6 +111,16 @@ function CWintermaulGameMode:_ReadGameConfiguration()
 	
 	self:_ReadSpawnsConfiguration( kv["Spawns"] )
 	self:_ReadRoundConfigurations( kv["Waves"])
+end
+
+
+-- Verify spawners if random is set
+function CWintermaulGameMode:ChooseSpawnInfo()
+	if #self._vSpawnsList == 0 then
+		error( "Attempt to choose a random spawn, but no random spawns are specified in the data." )
+		return nil
+	end
+	return self._vSpawnsList[ 1 ]  --#RandomInt( 1, #self._vpawnsList )
 end
 
 

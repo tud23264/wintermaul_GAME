@@ -1,12 +1,12 @@
 --[[
-	CHoldoutGameSpawner - A single unit spawner for Holdout.
+	CWintermaulGameSpawner - A single unit spawner for Holdout.
 ]]
-if CHoldoutGameSpawner == nil then
-	CHoldoutGameSpawner = class({})
+if CWintermaulGameSpawner == nil then
+	CWintermaulGameSpawner = class({})
 end
 
 
-function CHoldoutGameSpawner:ReadConfiguration( name, kv, gameRound )
+function CWintermaulGameSpawner:ReadConfiguration( name, kv, gameRound )
 	self._gameRound = gameRound
 	self._dependentSpawners = {}
 
@@ -14,8 +14,6 @@ function CHoldoutGameSpawner:ReadConfiguration( name, kv, gameRound )
 	self._szGroupWithUnit = kv.GroupWithUnit or ""
 	self._szName = name
 	self._szNPCClassName = kv.NPCName or ""
-	print("printing self._szNPCClassName")
-	print(self._szNPCClassName)
 	self._szSpawnerName = kv.SpawnerName or ""
 	self._szWaitForUnit = kv.WaitForUnit or ""
 	self._szWaypointName = kv.Waypoint or ""
@@ -37,7 +35,7 @@ function CHoldoutGameSpawner:ReadConfiguration( name, kv, gameRound )
 end
 
 
-function CHoldoutGameSpawner:PostLoad( spawnerList )
+function CWintermaulGameSpawner:PostLoad( spawnerList )
 	self._waitForUnit = spawnerList[ self._szWaitForUnit ]
 	if self._szWaitForUnit ~= "" and not self._waitForUnit then
 		print( "%s has a wait for unit %s that is missing from the round data.", self._szName, self._szWaitForUnit )
@@ -54,7 +52,7 @@ function CHoldoutGameSpawner:PostLoad( spawnerList )
 end
 
 
-function CHoldoutGameSpawner:Precache()
+function CWintermaulGameSpawner:Precache()
 	PrecacheUnitByNameAsync( self._szNPCClassName, function( sg ) self._sg = sg end )
 	if self._szChampionNPCClassName ~= "" then
 		PrecacheUnitByNameAsync( self._szChampionNPCClassName, function( sg ) self._sgChampion = sg end )
@@ -62,11 +60,11 @@ function CHoldoutGameSpawner:Precache()
 end
 
 
-function CHoldoutGameSpawner:Begin()
+function CWintermaulGameSpawner:Begin()
 	self._nUnitsSpawnedThisRound = 0
 	self._nChampionsSpawnedThisRound = 0
 	self._nUnitsCurrentlyAlive = 0
-	
+
 	self._vecSpawnLocation = nil
 	if self._szSpawnerName ~= "" then
 		print("Spawning started")
@@ -92,7 +90,7 @@ function CHoldoutGameSpawner:Begin()
 end
 
 
-function CHoldoutGameSpawner:End()
+function CWintermaulGameSpawner:End()
 	if self._sg ~= nil then
 		UnloadSpawnGroupByHandle( self._sg )
 		self._sg = nil
@@ -104,7 +102,7 @@ function CHoldoutGameSpawner:End()
 end
 
 
-function CHoldoutGameSpawner:ParentSpawned( parentSpawner )
+function CWintermaulGameSpawner:ParentSpawned( parentSpawner )
 	if parentSpawner == self._groupWithUnit then
 		-- Make sure we use the same spawn location as parentSpawner.
 		self:_DoSpawn()
@@ -116,7 +114,7 @@ function CHoldoutGameSpawner:ParentSpawned( parentSpawner )
 end
 
 
-function CHoldoutGameSpawner:Think()
+function CWintermaulGameSpawner:Think()
 	if not self._flNextSpawnTime then
 		return
 	end
@@ -136,17 +134,17 @@ function CHoldoutGameSpawner:Think()
 end
 
 
-function CHoldoutGameSpawner:GetTotalUnitsToSpawn()
+function CWintermaulGameSpawner:GetTotalUnitsToSpawn()
 	return self._nTotalUnitsToSpawn
 end
 
 
-function CHoldoutGameSpawner:IsFinishedSpawning()
+function CWintermaulGameSpawner:IsFinishedSpawning()
 	return ( self._nTotalUnitsToSpawn <= self._nUnitsSpawnedThisRound ) or ( self._groupWithUnit ~= nil )
 end
 
 
-function CHoldoutGameSpawner:_GetSpawnLocation()
+function CWintermaulGameSpawner:_GetSpawnLocation()
 	if self._groupWithUnit then
 		return self._groupWithUnit:_GetSpawnLocation()
 	else
@@ -155,7 +153,7 @@ function CHoldoutGameSpawner:_GetSpawnLocation()
 end
 
 
-function CHoldoutGameSpawner:_GetSpawnWaypoint()
+function CWintermaulGameSpawner:_GetSpawnWaypoint()
 	if self._groupWithUnit then
 		return self._groupWithUnit:_GetSpawnWaypoint()
 	else
@@ -163,13 +161,12 @@ function CHoldoutGameSpawner:_GetSpawnWaypoint()
 	end
 end
 
--- Don't need the function below
---[[
-function CHoldoutGameSpawner:_UpdateRandomSpawn()
+
+function CWintermaulGameSpawner:_UpdateSpawn()
 	self._vecSpawnLocation = Vector( 0, 0, 0 )
 	self._entWaypoint = nil
 
-	local spawnInfo = self._gameRound:ChooseRandomSpawnInfo()
+	local spawnInfo = self._gameRound:ChooseSpawnInfo()
 	if spawnInfo == nil then
 		print( string.format( "Failed to get random spawn info for spawner %s.", self._szName ) )
 		return
@@ -190,9 +187,9 @@ function CHoldoutGameSpawner:_UpdateRandomSpawn()
 		end
 	end
 end
-]]
 
-function CHoldoutGameSpawner:_DoSpawn()
+
+function CWintermaulGameSpawner:_DoSpawn()
 	local nUnitsToSpawn = math.min( self._nUnitsPerSpawn, self._nTotalUnitsToSpawn - self._nUnitsSpawnedThisRound )
 
 	if nUnitsToSpawn <= 0 then
@@ -200,9 +197,14 @@ function CHoldoutGameSpawner:_DoSpawn()
 	elseif self._nUnitsSpawnedThisRound == 0 then
 		print( string.format( "Started spawning %s at %.2f", self._szName, GameRules:GetGameTime() ) )
 	end
-
+	
+	if self._szSpawnerName == "" then
+		self:_UpdateSpawn()
+	end
+	
 	local vBaseSpawnLocation = self:_GetSpawnLocation()
 	if not vBaseSpawnLocation then return end
+	print(vBaseSpawnLocation)
 	for iUnit = 1,nUnitsToSpawn do
 		local bIsChampion = RollPercentage( self._flChampionChance )
 		if self._nChampionsSpawnedThisRound >= self._nChampionMax then
@@ -218,7 +220,10 @@ function CHoldoutGameSpawner:_DoSpawn()
 		if not self._bDontOffsetSpawn then
 			vSpawnLocation = vSpawnLocation + RandomVector( RandomFloat( 0, 200 ) )
 		end
-
+		print("NPCClassToSpawn")
+		print(szNPCClassToSpawn)
+		print("SpawnLocation")
+		print(vSpawnLocation)
 		local entUnit = CreateUnitByName( szNPCClassToSpawn, vSpawnLocation, true, nil, nil, DOTA_TEAM_BADGUYS )
 		if entUnit then
 			if entUnit:IsCreature() then
@@ -247,7 +252,7 @@ function CHoldoutGameSpawner:_DoSpawn()
 end
 
 
-function CHoldoutGameSpawner:StatusReport()
+function CWintermaulGameSpawner:StatusReport()
 	print( string.format( "** Spawner %s", self._szNPCClassName ) )
 	print( string.format( "%d of %d spawned", self._nUnitsSpawnedThisRound, self._nTotalUnitsToSpawn ) )
 end

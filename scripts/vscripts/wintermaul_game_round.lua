@@ -15,9 +15,7 @@ function CWintermaulGameRound:ReadConfiguration( kv, gameMode, roundNumber )
 
 	self._vSpawners = {}
 	for k, v in pairs( kv ) do
-		print(type(v))
 		if type( v ) == "table" and v.NPCName then
-			print("Spongebob")
 			local spawner = CWintermaulGameSpawner()
 			spawner:ReadConfiguration( k, v, self )
 			self._vSpawners[ k ] = spawner
@@ -35,6 +33,7 @@ function CWintermaulGameRound:Precache()
 		spawner:Precache()
 	end
 end
+
 
 function CWintermaulGameRound:Begin()
 	self._vEnemiesRemaining = {}
@@ -125,6 +124,11 @@ function CWintermaulGameRound:Think()
 end
 
 
+function CWintermaulGameRound:ChooseSpawnInfo()
+	return self._gameMode:ChooseSpawnInfo()
+end
+
+
 function CWintermaulGameRound:IsFinished()
 	for _, spawner in pairs( self._vSpawners ) do
 		if not spawner:IsFinishedSpawning() then
@@ -153,7 +157,7 @@ function CWintermaulGameRound:GetXPPerCoreUnit()
 	if self._nCoreUnitsTotal == 0 then
 		return 0
 	else
-		return math.floor( self._nFixedXP / self._nCoreUnitsTotal )
+		return math.floor( 0 / self._nCoreUnitsTotal )
 	end
 end
 
