@@ -2,7 +2,7 @@
 Wintermaul
 
 	Underscore prefix such as "_function()" denotes a local function and is used to improve readability
-	
+
 	Variable Prefix Examples
 		"fl"	Float
 		"n"		Int
@@ -55,12 +55,12 @@ end
 
 --essential. loads the unit and model needed into memory
 function Precache( context )
-	
+
 	print( "Precaching is complete." )
 end
 
 function Activate()
-	--activates the mod. 
+	--activates the mod.
 	GameRules.CWintermaulGameMode = CWintermaulGameMode()
 	--calls InitGameMode
 	GameRules.CWintermaulGameMode:InitGameMode()
@@ -71,7 +71,8 @@ function CWintermaulGameMode:InitGameMode()
 	self._nRoundNumber = 1
 	self._currentRound = nil
 	self._flLastThinkGameTime = nil
-	
+	self._nCurrentSpawnerID = 0
+
 	self:_ReadGameConfiguration()
 	GameRules:SetTimeOfDay( 0.75 )
 	GameRules:SetHeroRespawnEnabled( false )
@@ -97,7 +98,7 @@ function CWintermaulGameMode:InitGameMode()
 	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CWintermaulGameMode, 'OnEntityKilled' ), self )
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
-	
+
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 0.25 )
 	print( "Wintermaul is loaded." )
 end
@@ -106,9 +107,9 @@ end
 function CWintermaulGameMode:_ReadGameConfiguration()
 	local kv = LoadKeyValues( "scripts/maps/wintermaul_map_config.txt" )
 	kv = kv or {} -- Handle the case where there is not keyvalues file
-	
+
 	self._flPrepTimeBetweenRounds = tonumber( kv.PrepTimeBetweenRounds or 0 )
-	
+
 	self:_ReadSpawnsConfiguration( kv["Spawns"] )
 	self:_ReadRoundConfigurations( kv["Waves"])
 end
@@ -120,9 +121,25 @@ function CWintermaulGameMode:ChooseSpawnInfo()
 		error( "Attempt to choose a random spawn, but no random spawns are specified in the data." )
 		return nil
 	end
-	return self._vSpawnsList[ 1 ]  --#RandomInt( 1, #self._vpawnsList )
+	return self._vSpawnsList[ self._NextSpawnerID() ]  --#RandomInt( 1, #self._vpawnsList )
 end
 
+function CWintermaulGameMode:_NextSpawnerID()
+	--calculate the next ID
+	--increment the spawn ID
+	local nNextSpawnerID = ((self._nCurrentSpawnerID + 1)
+	-- wrap the value
+	nNextSpawnerID = nNextSpawnerID % #self._vSpawnsList) + 1
+
+	--store the current ID
+	local nSpawnerID = self._nCurrentSpawnerID
+
+	--set the current ID to be the next one
+	self._nCurrentSpawnerID = nNextSpawnerID
+
+	--return the current ID
+	return nSpawnerID
+end
 
 -- Verify valid spawns are defined and build a table with them from the keyvalues file
 function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
@@ -163,10 +180,10 @@ end
 
 -- sets ability points to 0 and sets skills to lvl1 at start.
 function CWintermaulGameMode:OnPlayerPicked()
-	
+
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
-			for e=0,15 do -- 
+			for e=0,15 do --
 				if (PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e) ==nil) then
 					break
 				else
