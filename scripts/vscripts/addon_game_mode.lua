@@ -71,8 +71,8 @@ function CWintermaulGameMode:InitGameMode()
 	self._nRoundNumber = 1
 	self._currentRound = nil
 	self._flLastThinkGameTime = nil
-	self._nCurrentSpawnerID = 0
-
+	self._nCurrentSpawnerID = 1
+	print("id: %d", self._nCurrentSpawnerID)
 	self:_ReadGameConfiguration()
 	GameRules:SetTimeOfDay( 0.75 )
 	GameRules:SetHeroRespawnEnabled( false )
@@ -121,15 +121,20 @@ function CWintermaulGameMode:ChooseSpawnInfo()
 		error( "Attempt to choose a random spawn, but no random spawns are specified in the data." )
 		return nil
 	end
-	return self._vSpawnsList[ self._NextSpawnerID() ]  --#RandomInt( 1, #self._vpawnsList )
+	return self._vSpawnsList[ self:_NextSpawnerID() ]  --#RandomInt( 1, #self._vpawnsList )
 end
 
 function CWintermaulGameMode:_NextSpawnerID()
+	print("id: %d", self._nCurrentSpawnerID)
+	if self._nCurrentSpawnerID == nil then
+		self._nCurrentSpawnerID = 0
+	end
+	print("id: %d", self._nCurrentSpawnerID)
 	--calculate the next ID
 	--increment the spawn ID
-	local nNextSpawnerID = ((self._nCurrentSpawnerID + 1)
+	local nNextSpawnerID = (self._nCurrentSpawnerID + 1)
 	-- wrap the value
-	nNextSpawnerID = nNextSpawnerID % #self._vSpawnsList) + 1
+	nNextSpawnerID = (nNextSpawnerID % #self._vSpawnsList) + 1
 
 	--store the current ID
 	local nSpawnerID = self._nCurrentSpawnerID
