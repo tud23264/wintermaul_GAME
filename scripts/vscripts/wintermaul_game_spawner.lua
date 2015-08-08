@@ -204,7 +204,7 @@ function CWintermaulGameSpawner:_DoSpawn()
 	
 	local vBaseSpawnLocation = self:_GetSpawnLocation()
 	if not vBaseSpawnLocation then return end
-	print(vBaseSpawnLocation)
+
 	for iUnit = 1,nUnitsToSpawn do
 		local bIsChampion = RollPercentage( self._flChampionChance )
 		if self._nChampionsSpawnedThisRound >= self._nChampionMax then
@@ -220,10 +220,7 @@ function CWintermaulGameSpawner:_DoSpawn()
 		if not self._bDontOffsetSpawn then
 			vSpawnLocation = vSpawnLocation + RandomVector( RandomFloat( 0, 200 ) )
 		end
-		print("NPCClassToSpawn")
-		print(szNPCClassToSpawn)
-		print("SpawnLocation")
-		print(vSpawnLocation)
+		
 		local entUnit = CreateUnitByName( szNPCClassToSpawn, vSpawnLocation, true, nil, nil, DOTA_TEAM_BADGUYS )
 		if entUnit then
 			if entUnit:IsCreature() then
