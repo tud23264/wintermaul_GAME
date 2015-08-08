@@ -1,19 +1,23 @@
--- Generated from template
+--[[
+Wintermaul
 
+	Underscore prefix such as "_function()" denotes a local function and is used to improve readability
+	
+	Variable Prefix Examples
+		"fl"	Float
+		"n"		Int
+		"v"		Table
+		"b"		Boolean
+]]
+require( "wintermaul_game_round" )
+require( "wintermaul_game_spawner" )
 MAPSIZE = 16384
 NUMBERTOSPAWN = 8 --How many to spawn
-SPAWNLOCATION = {"red_spawn_1","red_spawn_2","blue_spawn_1","blue_spawn_2","teal_spawn_1","teal_spawn_2","orange_spawn_1","orange_spawn_2","yellow_spawn_1","yellow_spawn_2","purple_spawn_1","purple_spawn_2","green_spawn_1","green_spawn_2","grey_spawn_1","grey_spawn_2","pink_spawn_1","pink_spawn_2"}--table of spawn locations in order
 
-WAYPOINTNAME = {"pc_red","pc_red","pc_blue_1","pc_blue_2","pc_teal","pc_teal","pc_orange","pc_orange","pc_yellow_1","pc_yellow_2","pc_purple","pc_purple","pc_green_top","pc_green_top","pc_grey","pc_grey","pc_pink_top","pc_pink_top",}--table to waypoints after spawn location(after this units will know where to go)
-CREATURETOSPAWN = {"npc_dota_wintermaul_scouts","npc_dota_wintermaul_engineers","npc_dota_wintermaul_night_ranger","npc_dota_wintermaul_barbarians","npc_dota_wintermaul_drake","npc_dota_wintermaul_stalker","npc_dota_wintermaul_water_runner","npc_dota_wintermaul_ice_troll","npc_dota_wintermaul_wolf_rider","npc_dota_wintermaul_hovercraft","npc_dota_wintermaul_goblin_machine","npc_dota_wintermaul_frosty_reptile","npc_dota_wintermaul_demonic_pets","npc_dota_wintermaul_matured_dragon","npc_dota_wintermaul_ice_shard_golem","npc_dota_wintermaul_eternal_spirit","npc_dota_wintermaul_supply_tank","npc_dota_wintermaul_walking_corpse","npc_dota_wintermaul_totem_carriers","npc_dota_wintermaul_unholy_knight","npc_dota_wintermaul_crystal_mage","npc_dota_wintermaul_frozen_infernal","npc_dota_wintermaul_dragon","npc_dota_wintermaul_polar_bear","npc_dota_wintermaul_posessed_hunter","npc_dota_wintermaul_corrupt_chieftain","npc_dota_wintermaul_ancient_dragon","npc_dota_wintermaul_spider_fiend","npc_dota_wintermaul_armored wisp","npc_dota_wintermaul_duke_wintermaul"}--eventually will be the table of all unit names we need to spawn.
-
-GAIAPRECACHE = {"build_nature_pool","terran_protector","gaias_box","earths_soul","ground_pounder","gaia"}
+GAIAPRECACHE = {"nature_pool","terran_protector","gaias_box","earths_soul","ground_pounder","gaia"}
 CRYSTALPRECACHE = {"crystal_shooter","crystal_blaster","crystal_fury","crystal_slower","crystal_buster","crystal_dissolver"}
 POWERPRECACHE = {"shock_tower","storm_caller","chain_lightning_caster","thunder_rod","sparkler","battery"}
 FORGEPRECACHE = {"flare_tower","flame_dancer","meteor_watcher","blast_furnace","incinerator","flame_staff"}
-
-WAVE = 1
-ENEMIESLEFT = 144
 
 MAX_NUMBER_OF_TEAMS = 9                -- How many potential teams can be in this game mode?
 USE_CUSTOM_TEAM_COLORS = true          -- Should we use custom team colors?
@@ -45,75 +49,35 @@ CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_6] = 1
 CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_7] = 1
 --CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_8] = 1
 
-if CMyMod == nil then
-	CMyMod = class({})
+if CWintermaulGameMode == nil then
+	CWintermaulGameMode = class({})
 end
 
 --essential. loads the unit and model needed into memory
 function Precache( context )
-		
-        
-		PrecacheModel( "npc_dota_wintermaul_scouts", context )
-		for i =1,30 do
-			PrecacheUnitByNameAsync( CREATURETOSPAWN[i], context )
-			PrecacheModel( CREATURETOSPAWN[i], context )
-		end
-		PrecacheModel( "nature_pool", context )
-		for i =1,6 do
-			PrecacheUnitByNameAsync( GAIAPRECACHE[i], context)
-			PrecacheModel( GAIAPRECACHE[i], context )
-		end
-		PrecacheModel( "shock_tower", context )
-		for i =1,6 do
-			PrecacheUnitByNameAsync( POWERPRECACHE[i], context)
-			PrecacheModel( POWERPRECACHE[i], context )
-		end
-		PrecacheModel( "flare_tower", context )
-		for i =1,6 do
-			PrecacheUnitByNameAsync( FORGEPRECACHE[i], context)
-			PrecacheModel( FORGEPRECACHE[i], context )
-		end
-		PrecacheModel( "crystal_shooter", context )
-		for i =1,6 do
-			PrecacheUnitByNameAsync( CRYSTALPRECACHE[i], context)
-			PrecacheModel( CRYSTALPRECACHE[i], context )
-		end
-		
-		--PrecacheUnitByNameAsync( CREATURETOSPAWN[WAVE], context )
-        --PrecacheModel( CREATURETOSPAWN[WAVE], context )
-	--[[
-		Precache things we know we'll use.  Possible file types include (but not limited to):
-			PrecacheResource( "model", "*.vmdl", context )
-			PrecacheResource( "soundfile", "*.vsndevts", context )
-			PrecacheResource( "particle", "*.vpcf", context )
-			PrecacheResource( "particle_folder", "particles/folder", context )
-	]]
+	
+	print( "Precaching is complete." )
 end
 
 function Activate()
 	--activates the mod. 
-	GameRules.CMyMod = CMyMod()
+	GameRules.CWintermaulGameMode = CWintermaulGameMode()
 	--calls InitGameMode
-	GameRules.CMyMod:InitGameMode()
+	GameRules.CWintermaulGameMode:InitGameMode()
 end
 
 
-function CMyMod:InitGameMode()
-
-
-	--[[self._entAncient = Entities:FindByName( nil, "dota_goodguys_fort" )
-	if not self._entAncient then
-		print( "Ancient entity not found!" )
-	else 
-		print( "Antient entity found!" )
+function CWintermaulGameMode:InitGameMode()
+	self._nRoundNumber = 1
+	self._currentRound = nil
+	self._flLastThinkGameTime = nil
 	
-	end]]
-	
+	self:_ReadGameConfiguration()
 	GameRules:SetTimeOfDay( 0.75 )
 	GameRules:SetHeroRespawnEnabled( false )
 	GameRules:SetUseUniversalShopMode( true )
 	GameRules:SetHeroSelectionTime( 30.0 )
-	GameRules:SetPreGameTime( 60.0 )
+	GameRules:SetPreGameTime( 10.0 )
 	GameRules:SetPostGameTime( 60.0 )
 	GameRules:SetTreeRegrowTime( 60.0 )
 	--GameRules:SetHeroMinimapIconSize( 600 )
@@ -130,25 +94,71 @@ function CMyMod:InitGameMode()
 	GameRules:GetGameModeEntity():SetUseCustomHeroLevels ( true )
 	--BuildingHelper:BlockGridNavSquares(MAPSIZE)
 	--BuildingHelper:BlockBadSquares(MAPSIZE)
-	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CMyMod, 'OnEntityKilled' ), self )
-	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CMyMod, "OnPlayerPicked" ), self )
+	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CWintermaulGameMode, 'OnEntityKilled' ), self )
+	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
+	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
 	
 	
-	--sets the first think
-	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 71 )
+	--sets the first think...Does it do this every 71 seconds??? Eks
+	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 0.25 )
 	print( "Wintermaul is loaded." )
-	print( "First spawning location loaded: " )
-	print(SPAWNLOCATION[1] )
+end
+
+-- Read and assign configurable keyvalues if applicable
+function CWintermaulGameMode:_ReadGameConfiguration()
+	local kv = LoadKeyValues( "scripts/maps/wintermaul_map_config.txt" )
+	kv = kv or {} -- Handle the case where there is not keyvalues file
+	
+	self._flPrepTimeBetweenRounds = tonumber( kv.PrepTimeBetweenRounds or 0 )
+	
+	self:_ReadSpawnsConfiguration( kv["Spawns"] )
+	self:_ReadRoundConfigurations( kv["Waves"])
+end
+
+
+-- Verify valid spawns are defined and build a table with them from the keyvalues file
+function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
+	self._vSpawnsList = {}
+	if type( kvSpawns ) ~= "table" then
+		return
+	end
+	for _,sp in pairs( kvSpawns ) do			-- Note "_" used as a shortcut to create a temporary throwaway variable
+		table.insert( self._vSpawnsList, {
+			szSpawnerName = sp.SpawnerName or "",
+			szFirstWaypoint = sp.Waypoint or ""
+		} )
+	end
+end
+
+-- Set number of rounds without requiring index in text file
+function CWintermaulGameMode:_ReadRoundConfigurations( kv )
+	self._vRounds = {}
+	while true do
+		local szRoundName = string.format("Wave%d", #self._vRounds + 1 )
+		local kvRoundData = kv[ szRoundName ]
+		if kvRoundData == nil then
+			return
+		end
+		local roundObj = CWintermaulGameRound()
+		roundObj:ReadConfiguration( kvRoundData, self, #self._vRounds + 1 )
+		table.insert( self._vRounds, roundObj )
+	end
+end
+
+-- When game state changes set state in script
+function CWintermaulGameMode:OnGameRulesStateChange()
+	local nNewState = GameRules:State_Get()
+	if nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+		self._flPrepTimeEnd = GameRules:GetGameTime() + self._flPrepTimeBetweenRounds
+	end
 end
 
 -- sets ability points to 0 and sets skills to lvl1 at start.
-function CMyMod:OnPlayerPicked( event )
-	local spawnedUnit = event.hero
-
+function CWintermaulGameMode:OnPlayerPicked()
 	
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
-			for e=0,15 do -- "0" is Ability 1 and "15" is ability 6. so it checks abilities 1 through 6 (if a builder has less than 6 abilities this breaks)
+			for e=0,15 do -- 
 				if (PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e) ==nil) then
 					break
 				else
@@ -161,86 +171,59 @@ function CMyMod:OnPlayerPicked( event )
 end
 
 
-
--- spawns units
-function CMyMod:spawnunits()
-		print("trying to spawn.")
-		local waypointlocation
-		local spawnlocation
-		local i = 1
-		local j = 1
-		while 18>=i do
-			print(SPAWNLOCATION[i])
-			--finds one of the twelve places to spawn
-			spawnLocation = Entities:FindByName( nil, SPAWNLOCATION[i] )
-			--finds where the unit should go after spawn
-			waypointlocation = Entities:FindByName ( nil, WAYPOINTNAME[i])
-			while NUMBERTOSPAWN>=j do
-					--hscript CreateUnitByName( string name, vector origin, bool findOpenSpot, hscript, hscript, int team)
-					--spawns the creature in an area around the spawner 
-					local creature = CreateUnitByName( CREATURETOSPAWN[WAVE] , spawnLocation:GetAbsOrigin() + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS )
-					--print ("create unit has run")
-					creature:SetInitialGoalEntity( waypointlocation )
-					j = j + 1
-			end
-			print ("nextspawn")
-			i=i+1
-			j=1
+function CWintermaulGameMode:_ThinkPrepTime()
+	if GameRules:GetGameTime() >= self._flPrepTimeEnd then
+		self._flPrepTimeEnd = nil
+		if self._entPrepTimeQuest then
+			UTIL_RemoveImmediate( self._entPrepTimeQuest )
+			self._entPrepTimeQuest = nil
 		end
-		
-end 
 
-function CMyMod:OnEntityKilled( event )
-	ENEMIESLEFT = ENEMIESLEFT - 1
-	print( string.format( "Enemies remaining: %d", ENEMIESLEFT ) )
-	if ENEMIESLEFT == 0 then
-		WAVE = WAVE + 1
-		print( string.format( "wave: %d", WAVE ) )
-		GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 35 )
-		if WAVE == 5 or WAVE == 14 or WAVE == 23 or WAVE == 27 then
-			print("FLYINGWAVE")
-			ENEMIESLEFT = 144 --amount for air waves
-		elseif WAVE == 30 then
-			print("BOSSWAVE")
-			ENEMIESLEFT = 12 --amount for boss waves
-		else
-			print("GROUNDWAVE")
-			ENEMIESLEFT = 144 --amount for ground waves
+		if self._nRoundNumber > #self._vRounds then
+			GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
+			return false
 		end
-		--self.spawnunits()
-		
+		self._currentRound = self._vRounds[ self._nRoundNumber ]
+		self._currentRound:Begin()
+		return
 	end
+
+	if not self._entPrepTimeQuest then
+		self._entPrepTimeQuest = SpawnEntityFromTableSynchronous( "quest", { name = "PrepTime", title = "#DOTA_Quest_Wintermaul_PrepTime" } )
+		self._entPrepTimeQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_ROUND, self._nRoundNumber )
+
+		self._vRounds[ self._nRoundNumber ]:Precache()
+	end
+	self._entPrepTimeQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, self._flPrepTimeEnd - GameRules:GetGameTime() )
 end
 
 
--- Checks for defeat for ancient death because we dont have a life system yet.
---[[function CMyMod:_CheckForDefeat()
-	if GameRules:State_Get() ~= DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		return
-	end
-	
-	if self._entAncient:GetHealth() <= 0 then
-		GameRules:MakeTeamLose( DOTA_TEAM_GOODGUYS )
-		return
-	end
-end]]
-
-
 -- this is the thinker. it thinks
-function CMyMod:OnThink()
-	--idk what this stuff does was in the template
+-- Evaluate the state of the game
+function CWintermaulGameMode:OnThink()
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		print( "Wintermaul spawningscript is running." )
-		--if WAVE == 0 then
-		--	WAVE = WAVE+1
-		--
-		--end
-	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
+		--self:_CheckForDefeat()
+		--self:_ThinkLootExpiry()
+
+		if self._flPrepTimeEnd ~= nil then
+			self:_ThinkPrepTime()
+		elseif self._currentRound ~= nil then
+			self._currentRound:Think()
+			if self._currentRound:IsFinished() then
+				self._currentRound:End()
+				self._currentRound = nil
+
+				self._nRoundNumber = self._nRoundNumber + 1
+				if self._nRoundNumber > #self._vRounds then
+					self._nRoundNumber = 1
+					GameRules:MakeTeamLose( DOTA_TEAM_BADGUYS )
+				else
+					self._flPrepTimeEnd = GameRules:GetGameTime() + self._flPrepTimeBetweenRounds
+				end
+			end
+		end
+	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then		-- Safe guard catching any state that may exist beyond DOTA_GAMERULES_STATE_POST_GAME
 		return nil
 	end
-	
-	self.spawnunits()
-	return nil
-	--every 30 seconds call this function again	
-	--return 30000
+	return 1
 end
