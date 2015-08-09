@@ -131,9 +131,9 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_scouts"
-				"TotalUnitsToSpawn"			"18"
-				"UnitsPerSpawn"				"6"
-				"SpawnInterval"				"8"
+				"TotalUnitsToSpawn"			"60"
+				"UnitsPerSpawn"				"1"
+				"SpawnInterval"				"0.5"
 			}
 		}
 		

@@ -163,28 +163,38 @@ end
 
 
 function CWintermaulGameSpawner:_UpdateSpawn()
-	self._vecSpawnLocation = Vector( 0, 0, 0 )
-	self._entWaypoint = nil
+	self._vecSpawnLocations = {}
+	self._entWaypoints = {}
 
 	local spawnInfo = self._gameRound:ChooseSpawnInfo()
 	if spawnInfo == nil then
-		print( string.format( "Failed to get random spawn info for spawner %s.", self._szName ) )
+		print( string.format( "Failed to get any spawn info for a spawner %s.", self._szName ) )
 		return
 	end
 	
-	local entSpawner = Entities:FindByName( nil, spawnInfo.szSpawnerName )
-	if not entSpawner then
-		print( string.format( "Failed to find spawner named %s for %s.", spawnInfo.szSpawnerName, self._szName ) )
-		return
-	end
-	self._vecSpawnLocation = entSpawner:GetAbsOrigin()
+	for i = 1, #spawn_Info do
+	
+		local SpawnLocation = Vector( 0, 0, 0 )
+		local Waypoint = nil
 
-	if not self._bDontGiveGoal then
-		self._entWaypoint = Entities:FindByName( nil, spawnInfo.szFirstWaypoint )
-		if not self._entWaypoint then
-			print( string.format( "Failed to find a waypoint named %s for %s.", spawnInfo.szFirstWaypoint, self._szName ) )
+	
+		local entSpawner = Entities:FindByName( nil, spawnInfo[ i ].szSpawnerName )
+		if not entSpawner then
+			print( string.format( "Failed to find spawner named %s for %s.", spawnInfo.szSpawnerName, self._szName ) )
 			return
 		end
+		SpawnLocation = entSpawner:GetAbsOrigin()
+
+		if not self._bDontGiveGoal then
+			Waypoint = Entities:FindByName( nil, spawnInfo.szFirstWaypoint )
+			if not Waypoint then
+				print( string.format( "Failed to find a waypoint named %s for %s.", spawnInfo.szFirstWaypoint, self._szName ) )
+				return
+			end
+		end
+		
+		table.insert( self._vRounds, roundObj )
+		
 	end
 end
 
@@ -204,7 +214,7 @@ function CWintermaulGameSpawner:_DoSpawn()
 	
 	local vBaseSpawnLocation = self:_GetSpawnLocation()
 	if not vBaseSpawnLocation then return end
-
+	
 	for iUnit = 1,nUnitsToSpawn do
 		local bIsChampion = RollPercentage( self._flChampionChance )
 		if self._nChampionsSpawnedThisRound >= self._nChampionMax then

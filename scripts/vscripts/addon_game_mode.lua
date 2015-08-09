@@ -238,7 +238,9 @@ function CWintermaulGameMode:OnThink()
 		if self._flPrepTimeEnd ~= nil then
 			self:_ThinkPrepTime()
 		elseif self._currentRound ~= nil then
-			self._currentRound:Think()
+			for i = 1, #self._vSpawnsList do
+				self._currentRound:Think()
+			end
 			if self._currentRound:IsFinished() then
 				self._currentRound:End()
 				self._currentRound = nil
