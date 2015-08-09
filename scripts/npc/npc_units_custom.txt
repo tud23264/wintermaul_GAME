@@ -176,7 +176,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -272,7 +272,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -367,7 +367,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -460,7 +460,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -553,7 +553,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -646,7 +646,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -742,7 +742,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -836,7 +836,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -929,7 +929,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1038,7 +1038,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1134,7 +1134,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1230,7 +1230,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1328,7 +1328,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1426,7 +1426,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1520,7 +1520,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1616,7 +1616,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1711,7 +1711,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1902,7 +1902,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1996,7 +1996,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -2089,7 +2089,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -2182,7 +2182,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -2275,7 +2275,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -2368,7 +2368,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -2420,7 +2420,6 @@
 		"Level"						"1"
 		"ModelScale" 					".9"
 		"IsNeutralUnitType"			"1"
-		//"vscripts"					"holdout_ai_attack_ancient.lua"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -2452,14 +2451,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"1"		// Gold earned min.
-		"BountyGoldMax"				"1"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"280"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2523,9 +2522,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"1"		// Gold earned min.
-		"BountyGoldMax"				"1"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -2618,14 +2617,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"1"		// Gold earned min.
-		"BountyGoldMax"				"1"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2690,14 +2689,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"1"		// Gold earned min.
-		"BountyGoldMax"				"1"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2717,7 +2716,7 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-	}
+	} 
 	//wave 5 drake
 	"npc_dota_wintermaul_drake"
 	{										
@@ -2762,14 +2761,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
-		"MovementSpeed"				"200"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2835,14 +2834,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2907,14 +2906,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2979,14 +2978,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3051,14 +3050,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3123,14 +3122,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3195,14 +3194,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3267,14 +3266,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3339,14 +3338,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3411,7 +3410,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
@@ -3483,14 +3482,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3555,14 +3554,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3627,14 +3626,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3699,14 +3698,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3771,14 +3770,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3843,14 +3842,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3915,14 +3914,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3987,14 +3986,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4059,7 +4058,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
@@ -4131,14 +4130,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4203,14 +4202,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4275,14 +4274,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4347,7 +4346,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
@@ -4419,14 +4418,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4491,14 +4490,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4563,14 +4562,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
