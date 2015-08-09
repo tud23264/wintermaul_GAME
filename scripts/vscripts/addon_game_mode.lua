@@ -95,7 +95,7 @@ function CWintermaulGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetUseCustomHeroLevels ( true )
 	--BuildingHelper:BlockGridNavSquares(MAPSIZE)
 	--BuildingHelper:BlockBadSquares(MAPSIZE)
-	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CWintermaulGameMode, 'OnEntityKilled' ), self )
+	
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
 
