@@ -2,11 +2,6 @@
 {
 	"PrepTimeBetweenRounds"			"5"
 	"ItemExpireTime"				"10"
-	"RestoreHPAfterRound"			"0"
-	"RestoreMPAfterRound"			"0"
-	"RewardForTowersStanding"		"1"
-	"TowerRewardAmount"				"18"
-	"TowerScalingRewardPerRound"	"2"
 	
 	"Spawns"
 	{
@@ -131,9 +126,9 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_scouts"
-				"TotalUnitsToSpawn"			"84"
+				"TotalUnitsToSpawn"			"10"
 				"UnitsPerSpawn"				"1"
-				"SpawnInterval"				"5"
+				"SpawnInterval"				"1"
 			}
 		}
 		
