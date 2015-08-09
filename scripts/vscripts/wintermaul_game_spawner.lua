@@ -237,6 +237,7 @@ function CWintermaulGameSpawner:_DoSpawn()
 				end
 
 				local entWp = self:_GetSpawnWaypoint()
+
 				if entWp ~= nil then
 					entUnit:SetInitialGoalEntity( entWp )
 				end
