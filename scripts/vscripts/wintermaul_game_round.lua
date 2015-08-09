@@ -143,20 +143,6 @@ function CWintermaulGameRound:IsFinished()
 end
 
 
--- Rather than use the xp granting from the units keyvalues file,
--- we let the round determine the xp per unit to grant as a flat value.
--- This is done to make tuning of rounds easier.
-
--- Think about changing this to GOLD
-function CWintermaulGameRound:GetXPPerCoreUnit()
-	if self._nCoreUnitsTotal == 0 then
-		return 0
-	else
-		return math.floor( 0 / self._nCoreUnitsTotal )
-	end
-end
-
-
 function CWintermaulGameRound:OnNPCSpawned( event )
 	local spawnedUnit = EntIndexToHScript( event.entindex )
 	if not spawnedUnit or spawnedUnit:IsPhantom() or spawnedUnit:GetClassname() == "npc_dota_thinker" or spawnedUnit:GetUnitName() == "" then
