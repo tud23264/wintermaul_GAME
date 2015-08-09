@@ -118,7 +118,7 @@ function CWintermaulGameSpawner:Think()
 	if not self._flNextSpawnTime then
 		return
 	end
-	
+
 	if GameRules:GetGameTime() >= self._flNextSpawnTime then
 		self:_DoSpawn()
 		for _,s in pairs( self._dependentSpawners ) do
@@ -171,7 +171,7 @@ function CWintermaulGameSpawner:_UpdateSpawn()
 		print( string.format( "Failed to get random spawn info for spawner %s.", self._szName ) )
 		return
 	end
-	
+
 	local entSpawner = Entities:FindByName( nil, spawnInfo.szSpawnerName )
 	if not entSpawner then
 		print( string.format( "Failed to find spawner named %s for %s.", spawnInfo.szSpawnerName, self._szName ) )
@@ -197,53 +197,54 @@ function CWintermaulGameSpawner:_DoSpawn()
 	elseif self._nUnitsSpawnedThisRound == 0 then
 		print( string.format( "Started spawning %s at %.2f", self._szName, GameRules:GetGameTime() ) )
 	end
-	
-	if self._szSpawnerName == "" then
-		self:_UpdateSpawn()
-	end
-	
-	local vBaseSpawnLocation = self:_GetSpawnLocation()
-	if not vBaseSpawnLocation then return end
-
-	for iUnit = 1,nUnitsToSpawn do
-		local bIsChampion = RollPercentage( self._flChampionChance )
-		if self._nChampionsSpawnedThisRound >= self._nChampionMax then
-			bIsChampion = false
+	for i =1,#self._gameRound._gameMode._vSpawnsList do
+		if self._szSpawnerName == "" then
+			self:_UpdateSpawn()
 		end
 
-		local szNPCClassToSpawn = self._szNPCClassName
-		if bIsChampion and self._szChampionNPCClassName ~= "" then
-			szNPCClassToSpawn = self._szChampionNPCClassName
-		end
+		local vBaseSpawnLocation = self:_GetSpawnLocation()
+		if not vBaseSpawnLocation then return end
 
-		local vSpawnLocation = vBaseSpawnLocation
-		if not self._bDontOffsetSpawn then
-			vSpawnLocation = vSpawnLocation + RandomVector( RandomFloat( 0, 200 ) )
-		end
-		
-		local entUnit = CreateUnitByName( szNPCClassToSpawn, vSpawnLocation, true, nil, nil, DOTA_TEAM_BADGUYS )
-		if entUnit then
-			if entUnit:IsCreature() then
-				if bIsChampion then
-					self._nChampionsSpawnedThisRound = self._nChampionsSpawnedThisRound + 1
-					entUnit:CreatureLevelUp( ( self._nChampionLevel - 1 ) )
-					entUnit:SetChampion( true )
-					local nParticle = ParticleManager:CreateParticle( "heavens_halberd", PATTACH_ABSORIGIN_FOLLOW, entUnit )
-					ParticleManager:ReleaseParticleIndex( nParticle )
-					entUnit:SetModelScale( 1.1, 0 )
-				else
-					entUnit:CreatureLevelUp( self._nCreatureLevel - 1 )
+		for iUnit = 1,nUnitsToSpawn do
+			local bIsChampion = RollPercentage( self._flChampionChance )
+			if self._nChampionsSpawnedThisRound >= self._nChampionMax then
+				bIsChampion = false
+			end
+
+			local szNPCClassToSpawn = self._szNPCClassName
+			if bIsChampion and self._szChampionNPCClassName ~= "" then
+				szNPCClassToSpawn = self._szChampionNPCClassName
+			end
+
+			local vSpawnLocation = vBaseSpawnLocation
+			if not self._bDontOffsetSpawn then
+				vSpawnLocation = vSpawnLocation + RandomVector( RandomFloat( 0, 200 ) )
+			end
+
+			local entUnit = CreateUnitByName( szNPCClassToSpawn, vSpawnLocation, true, nil, nil, DOTA_TEAM_BADGUYS )
+			if entUnit then
+				if entUnit:IsCreature() then
+					if bIsChampion then
+						self._nChampionsSpawnedThisRound = self._nChampionsSpawnedThisRound + 1
+						entUnit:CreatureLevelUp( ( self._nChampionLevel - 1 ) )
+						entUnit:SetChampion( true )
+						local nParticle = ParticleManager:CreateParticle( "heavens_halberd", PATTACH_ABSORIGIN_FOLLOW, entUnit )
+						ParticleManager:ReleaseParticleIndex( nParticle )
+						entUnit:SetModelScale( 1.1, 0 )
+					else
+						entUnit:CreatureLevelUp( self._nCreatureLevel - 1 )
+					end
 				end
-			end
 
-			local entWp = self:_GetSpawnWaypoint()
-			if entWp ~= nil then
-				entUnit:SetInitialGoalEntity( entWp )
+				local entWp = self:_GetSpawnWaypoint()
+				if entWp ~= nil then
+					entUnit:SetInitialGoalEntity( entWp )
+				end
+				self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
+				self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
+				entUnit.Holdout_IsCore = true
+				entUnit:SetDeathXP( self._gameRound:GetXPPerCoreUnit() )
 			end
-			self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
-			self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
-			entUnit.Holdout_IsCore = true
-			entUnit:SetDeathXP( self._gameRound:GetXPPerCoreUnit() )
 		end
 	end
 end
