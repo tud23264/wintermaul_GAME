@@ -1,17 +1,7 @@
 "dota_wintermaul"
 {
 	"PrepTimeBetweenRounds"			"5"
-	"ItemExpireTime"				"10"
-<<<<<<< HEAD
 
-=======
-	"RestoreHPAfterRound"			"0"
-	"RestoreMPAfterRound"			"0"
-	"RewardForTowersStanding"		"1"
-	"TowerRewardAmount"				"18"
-	"TowerScalingRewardPerRound"	"2"
-
->>>>>>> spawn only from selected spawns
 	"Spawns"
 	{
 		"Spawn1"
