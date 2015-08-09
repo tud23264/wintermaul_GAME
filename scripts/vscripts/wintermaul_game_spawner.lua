@@ -243,8 +243,6 @@ function CWintermaulGameSpawner:_DoSpawn()
 				end
 				self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
 				self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
-				entUnit.Holdout_IsCore = true
-				entUnit:SetDeathXP( self._gameRound:GetXPPerCoreUnit() )
 			end
 		end
 	end
