@@ -124,11 +124,6 @@ function CWintermaulGameRound:Think()
 end
 
 
-function CWintermaulGameRound:ChooseSpawnInfo()
-	return self._gameMode:ChooseSpawnInfo()
-end
-
-
 function CWintermaulGameRound:IsFinished()
 	for _, spawner in pairs( self._vSpawners ) do
 		if not spawner:IsFinishedSpawning() then

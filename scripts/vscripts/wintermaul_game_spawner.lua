@@ -162,11 +162,11 @@ function CWintermaulGameSpawner:_GetSpawnWaypoint()
 end
 
 
-function CWintermaulGameSpawner:_UpdateSpawn()
+function CWintermaulGameSpawner:_UpdateSpawn( index )
 	self._vecSpawnLocation = Vector( 0, 0, 0 )
 	self._entWaypoint = nil
 
-	local spawnInfo = self._gameRound:ChooseSpawnInfo()
+	local spawnInfo = self._gameRound._gameMode._vSpawnsList[ index ]
 	if spawnInfo == nil then
 		print( string.format( "Failed to get random spawn info for spawner %s.", self._szName ) )
 		return
@@ -197,9 +197,9 @@ function CWintermaulGameSpawner:_DoSpawn()
 	elseif self._nUnitsSpawnedThisRound == 0 then
 		print( string.format( "Started spawning %s at %.2f", self._szName, GameRules:GetGameTime() ) )
 	end
-	for i =1,#self._gameRound._gameMode._vSpawnsList do
+	for i = 1, #self._gameRound._gameMode._vSpawnsList do
 		if self._szSpawnerName == "" then
-			self:_UpdateSpawn()
+			self:_UpdateSpawn( i )
 		end
 
 		local vBaseSpawnLocation = self:_GetSpawnLocation()

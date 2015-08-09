@@ -115,37 +115,6 @@ function CWintermaulGameMode:_ReadGameConfiguration()
 end
 
 
--- Verify spawners if random is set
-function CWintermaulGameMode:ChooseSpawnInfo()
-	if #self._vSpawnsList == 0 then
-		error( "Attempt to choose a random spawn, but no random spawns are specified in the data." )
-		return nil
-	end
-	return self._vSpawnsList[ self:_NextSpawnerID() ]  --#RandomInt( 1, #self._vpawnsList )
-end
-
-function CWintermaulGameMode:_NextSpawnerID()
-	print("id: %d", self._nCurrentSpawnerID)
-	if self._nCurrentSpawnerID == nil then
-		self._nCurrentSpawnerID = 0
-	end
-	print("id: %d", self._nCurrentSpawnerID)
-	--calculate the next ID
-	--increment the spawn ID
-	local nNextSpawnerID = (self._nCurrentSpawnerID + 1)
-	-- wrap the value
-	nNextSpawnerID = (nNextSpawnerID % #self._vSpawnsList) + 1
-
-	--store the current ID
-	local nSpawnerID = self._nCurrentSpawnerID
-
-	--set the current ID to be the next one
-	self._nCurrentSpawnerID = nNextSpawnerID
-
-	--return the current ID
-	return nSpawnerID
-end
-
 -- Verify valid spawns are defined and build a table with them from the keyvalues file
 function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
 	self._vSpawnsList = {}
