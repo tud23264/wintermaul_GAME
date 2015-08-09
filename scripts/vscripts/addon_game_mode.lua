@@ -127,6 +127,9 @@ function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
 			szFirstWaypoint = sp.Waypoint or ""
 		} )
 	end
+	for k,v in pairs( self._vSpawnsList ) do
+		print("key: ", k, "val: ", v)
+	end
 end
 
 -- Set number of rounds without requiring index in text file
@@ -225,4 +228,8 @@ function CWintermaulGameMode:OnThink()
 		return nil
 	end
 	return 1
+end
+
+function CWintermaulGameMode:OnEntityKilled()
+	--@todo do something when an entity dies
 end
