@@ -239,7 +239,7 @@ function CWintermaulGameMode:OnThink()
 			self:_ThinkPrepTime()
 		elseif self._currentRound ~= nil then
 			for i = 1,#self._vSpawnsList do
-				self:_CurrentRoundThink()
+				seld:_CurrentRoundThink
 			end
 		end
 	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then		-- Safe guard catching any state that may exist beyond DOTA_GAMERULES_STATE_POST_GAME
