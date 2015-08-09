@@ -32,6 +32,21 @@ function CWintermaulGameSpawner:ReadConfiguration( name, kv, gameRound )
 
 	self._bDontGiveGoal = ( tonumber( kv.DontGiveGoal or 0 ) ~= 0 )
 	self._bDontOffsetSpawn = ( tonumber( kv.DontOffsetSpawn or 0 ) ~= 0 )
+
+	if kv.PossibleSpawns ~= nil then
+		self:_LoadPossibleSpawns( kv.PossibleSpawns )
+	end
+end
+
+function CWintermaulGameSpawner:_LoadPossibleSpawns( kvSpawns )
+	self._vPossibleSpawns = {}
+	if type( kvSpawns ) == "table" then
+		for k,v in pairs( kvSpawns ) do
+			self._vPossibleSpawns[(tonumber(k))] = v
+		end
+	else
+		print("its not a table")
+	end
 end
 
 
@@ -165,7 +180,16 @@ end
 function CWintermaulGameSpawner:_UpdateSpawn( index )
 	self._vecSpawnLocation = Vector( 0, 0, 0 )
 	self._entWaypoint = nil
+	if self._vPossibleSpawns == nil then
+		self:_GetSpawnerInfo(index)
+	else
+		local spawnerIndex = self._vPossibleSpawns[(index % (#self._vPossibleSpawns + 1))]
+		self:_GetSpawnerInfo(spawnerIndex)
+	end
 
+end
+
+function CWintermaulGameSpawner:_GetSpawnerInfo( index )
 	local spawnInfo = self._gameRound._gameMode._vSpawnsList[ index ]
 	if spawnInfo == nil then
 		print( string.format( "Failed to get random spawn info for spawner %s.", self._szName ) )
