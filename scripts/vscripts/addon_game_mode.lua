@@ -238,28 +238,22 @@ function CWintermaulGameMode:OnThink()
 		if self._flPrepTimeEnd ~= nil then
 			self:_ThinkPrepTime()
 		elseif self._currentRound ~= nil then
-			for i = 1,#self._vSpawnsList do
-				seld:_CurrentRoundThink
+			self._currentRound:Think()
+			if self._currentRound:IsFinished() then
+				self._currentRound:End()
+				self._currentRound = nil
+
+				self._nRoundNumber = self._nRoundNumber + 1
+				if self._nRoundNumber > #self._vRounds then
+					self._nRoundNumber = 1
+					GameRules:MakeTeamLose( DOTA_TEAM_BADGUYS )
+				else
+					self._flPrepTimeEnd = GameRules:GetGameTime() + self._flPrepTimeBetweenRounds
+				end
 			end
 		end
 	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then		-- Safe guard catching any state that may exist beyond DOTA_GAMERULES_STATE_POST_GAME
 		return nil
 	end
 	return 1
-end
-
-function CWintermaulGameMode:_CurrentRoundThink()
-	self._currentRound:Think()
-	if self._currentRound:IsFinished() then
-		self._currentRound:End()
-		self._currentRound = nil
-
-		self._nRoundNumber = self._nRoundNumber + 1
-		if self._nRoundNumber > #self._vRounds then
-			self._nRoundNumber = 1
-			GameRules:MakeTeamLose( DOTA_TEAM_BADGUYS )
-		else
-			self._flPrepTimeEnd = GameRules:GetGameTime() + self._flPrepTimeBetweenRounds
-		end
-	end
 end
