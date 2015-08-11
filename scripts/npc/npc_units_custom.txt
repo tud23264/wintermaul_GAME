@@ -176,7 +176,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -272,7 +272,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -367,7 +367,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -460,7 +460,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -553,7 +553,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -646,7 +646,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -742,7 +742,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -836,7 +836,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -929,7 +929,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1038,7 +1038,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1134,7 +1134,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1230,7 +1230,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1328,7 +1328,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1426,7 +1426,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1520,7 +1520,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1616,7 +1616,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1711,7 +1711,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1902,7 +1902,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1996,7 +1996,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -2089,7 +2089,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -2182,7 +2182,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -2275,7 +2275,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -2368,7 +2368,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"	// Experience earn.
+		"BountyXP"					"0"	// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -2420,7 +2420,6 @@
 		"Level"						"1"
 		"ModelScale" 					".9"
 		"IsNeutralUnitType"			"1"
-		//"vscripts"					"holdout_ai_attack_ancient.lua"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -2452,14 +2451,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"1"		// Gold earned min.
-		"BountyGoldMax"				"1"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2486,7 +2485,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/kunkka/kunkka.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					".6"
@@ -2523,14 +2522,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"1"		// Gold earned min.
-		"BountyGoldMax"				"1"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2581,7 +2580,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/drow/drow.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					".7"
@@ -2618,14 +2617,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"1"		// Gold earned min.
-		"BountyGoldMax"				"1"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2652,7 +2651,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_troll_dark_a/n_creep_troll_dark_a.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1.5"
@@ -2690,14 +2689,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"1"		// Gold earned min.
-		"BountyGoldMax"				"1"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2717,14 +2716,14 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-	}
+	} 
 	//wave 5 drake
 	"npc_dota_wintermaul_drake"
 	{										
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_black_drake/n_creep_black_drake.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					".8"
@@ -2762,14 +2761,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
-		"MovementSpeed"				"200"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2782,7 +2781,8 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"800"		// Range of vision during day light.
 		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
+		
+		
 		// Team
 		//----------------------------------------------------------------
 		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
@@ -2796,7 +2796,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/life_stealer/life_stealer.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					".9"
@@ -2834,14 +2834,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2868,7 +2868,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/slark/slark.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					".9"
@@ -2906,14 +2906,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -2940,7 +2940,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_ogre_lrg/n_creep_ogre_lrg.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -2978,14 +2978,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3012,7 +3012,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/disruptor/disruptor.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -3050,14 +3050,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3084,7 +3084,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/gyro/gyro.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -3122,14 +3122,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3156,7 +3156,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/shredder/shredder.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -3194,14 +3194,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3228,7 +3228,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -3266,14 +3266,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3300,7 +3300,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/items/courier/starladder_grillhound/starladder_grillhound.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -3338,14 +3338,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
-		"BountyGoldMin"				"2"		// Gold earned min.
-		"BountyGoldMax"				"2"		// Gold earned max.
+		"BountyXP"					"0"		// Experience earn.
+		"BountyGoldMin"				"5"		// Gold earned min.
+		"BountyGoldMax"				"5"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3372,7 +3372,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1.2"
@@ -3410,7 +3410,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
@@ -3444,7 +3444,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1.4"
@@ -3482,14 +3482,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3516,7 +3516,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/death_prophet/death_prophet.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -3554,14 +3554,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3588,7 +3588,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/props_cave/mine_cart.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"2"
@@ -3626,14 +3626,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3660,7 +3660,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/pudge/pudge.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"0.7"
@@ -3698,14 +3698,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3732,7 +3732,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/earthshaker/earthshaker.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -3770,14 +3770,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"3"		// Gold earned min.
 		"BountyGoldMax"				"3"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3804,7 +3804,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/chaos_knight/chaos_knight.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -3842,14 +3842,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3876,7 +3876,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/keeper_of_the_light/keeper_of_the_light.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -3914,14 +3914,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -3948,7 +3948,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/items/warlock/golem/the_torchbearer/the_torchbearer.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1.5"
@@ -3986,14 +3986,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4020,7 +4020,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/courier/otter_dragon/otter_dragon_flying.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"4"
@@ -4058,7 +4058,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
@@ -4092,7 +4092,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/items/lone_druid/bear/spirit_of_the_atniw/spirit_of_the_atniw.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1.2"
@@ -4130,14 +4130,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4164,7 +4164,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/antimage/antimage.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1"
@@ -4202,14 +4202,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4236,7 +4236,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/elder_titan/elder_titan.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"2.5"
@@ -4274,14 +4274,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4308,7 +4308,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/items/dragon_knight/dragon_immortal_1/dragon_immortal_1.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1.3"
@@ -4346,7 +4346,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
@@ -4380,7 +4380,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/broodmother/spiderling.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"3"
@@ -4418,14 +4418,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4452,7 +4452,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/props_wildlife/wildlife_butterfly001.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"5"
@@ -4490,14 +4490,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -4524,7 +4524,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/heroes/abaddon/abaddon.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					"1.5"
@@ -4562,14 +4562,14 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"25"		// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"4"		// Gold earned min.
 		"BountyGoldMax"				"4"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"140"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------

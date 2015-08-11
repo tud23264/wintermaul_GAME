@@ -118,14 +118,9 @@ end
 
 
 function CWintermaulGameRound:Think()
-	for _, spawner in pairs( self._vSpawners ) do
+	for _, spawner in pairs( self._vSpawners ) do -- For each unit in a spawner
 		spawner:Think()
 	end
-end
-
-
-function CWintermaulGameRound:ChooseSpawnInfo()
-	return self._gameMode:ChooseSpawnInfo()
 end
 
 
@@ -145,20 +140,6 @@ function CWintermaulGameRound:IsFinished()
 		print ( string.format( "%d enemies remaining in the round...", #self._vEnemiesRemaining ) )
 	end
 	return false
-end
-
-
--- Rather than use the xp granting from the units keyvalues file,
--- we let the round determine the xp per unit to grant as a flat value.
--- This is done to make tuning of rounds easier.
-
--- Think about changing this to GOLD
-function CWintermaulGameRound:GetXPPerCoreUnit()
-	if self._nCoreUnitsTotal == 0 then
-		return 0
-	else
-		return math.floor( 0 / self._nCoreUnitsTotal )
-	end
 end
 
 

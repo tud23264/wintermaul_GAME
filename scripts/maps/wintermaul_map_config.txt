@@ -1,13 +1,7 @@
 "dota_wintermaul"
 {
 	"PrepTimeBetweenRounds"			"5"
-	"ItemExpireTime"				"10"
-	"RestoreHPAfterRound"			"0"
-	"RestoreMPAfterRound"			"0"
-	"RewardForTowersStanding"		"1"
-	"TowerRewardAmount"				"18"
-	"TowerScalingRewardPerRound"	"2"
-	
+
 	"Spawns"
 	{
 		"Spawn1"
@@ -15,115 +9,115 @@
 			"SpawnerName"				"red_spawn_1"
 			"Waypoint"					"pc_red"
 		}
-		
+
 		"Spawn2"
 		{
 			"SpawnerName"				"red_spawn_2"
 			"Waypoint"					"pc_red"
 		}
-		
+
 		"Spawn3"
 		{
 			"SpawnerName"				"blue_spawn_1"
 			"Waypoint"					"pc_blue_1"
 		}
-		
+
 		"Spawn4"
 		{
 			"SpawnerName"				"blue_spawn_2"
 			"Waypoint"					"pc_blue_2"
 		}
-		
+
 		"Spawn5"
 		{
 			"SpawnerName"				"teal_spawn_1"
 			"Waypoint"					"pc_teal"
 		}
-		
+
 		"Spawn6"
 		{
 			"SpawnerName"				"teal_spawn_2"
 			"Waypoint"					"pc_teal"
 		}
-		
+
 		"Spawn7"
 		{
 			"SpawnerName"				"orange_spawn_1"
 			"Waypoint"					"pc_orange"
 		}
-		
+
 		"Spawn8"
 		{
 			"SpawnerName"				"orange_spawn_2"
 			"Waypoint"					"pc_orange"
 		}
-		
+
 		"Spawn9"
 		{
 			"SpawnerName"				"yellow_spawn_1"
 			"Waypoint"					"pc_yellow_1"
 		}
-		
+
 		"Spawn10"
 		{
 			"SpawnerName"				"yellow_spawn_2"
 			"Waypoint"					"pc_yellow_2"
 		}
-		
+
 		"Spawn11"
 		{
 			"SpawnerName"				"purple_spawn_1"
 			"Waypoint"					"pc_purple"
 		}
-		
+
 		"Spawn12"
 		{
 			"SpawnerName"				"purple_spawn_2"
 			"Waypoint"					"pc_purple"
 		}
-		
+
 		"Spawn13"
 		{
 			"SpawnerName"				"green_spawn_1"
 			"Waypoint"					"pc_green_top"
 		}
-		
+
 		"Spawn14"
 		{
 			"SpawnerName"				"green_spawn_2"
 			"Waypoint"					"pc_green_top"
 		}
-		
+
 		"Spawn15"
 		{
 			"SpawnerName"				"grey_spawn_1"
 			"Waypoint"					"pc_grey"
 		}
-		
+
 		"Spawn16"
 		{
 			"SpawnerName"				"grey_spawn_2"
 			"Waypoint"					"pc_grey"
 		}
-		
+
 		"Spawn17"
 		{
 			"SpawnerName"				"pink_spawn_1"
 			"Waypoint"					"pc_pink_top"
 		}
-		
+
 		"Spawn18"
 		{
 			"SpawnerName"				"pink_spawn_2"
 			"Waypoint"					"pc_pink_top"
 		}
-		
+
 	}
-	
+
 	"Waves"
 	{
-		
-		"Wave1" 
+
+		"Wave1"
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
 			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
@@ -131,12 +125,21 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_scouts"
-				"TotalUnitsToSpawn"			"18"
-				"UnitsPerSpawn"				"6"
-				"SpawnInterval"				"8"
+				"TotalUnitsToSpawn"			"10"
+				"UnitsPerSpawn"				"1"
+				"SpawnInterval"				"1"
+				"PossibleSpawns"
+				{
+					0						1
+					1						2
+					2						3
+					3						4
+					4						5
+					5						6
+				}
 			}
 		}
-		
+
 		"Wave2" // Engineers
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -150,7 +153,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave3" // Night Ranger
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -164,7 +167,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-			
+
 		"Wave4" // Barbarians
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -178,7 +181,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave5" // Drake
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -192,7 +195,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave6" // Stalker
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -206,7 +209,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave7" // Water Runner
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -220,7 +223,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave8" // Ice troll
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -234,7 +237,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave9" // Wolf Rider
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -248,7 +251,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave10" // Hovercraft
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -262,7 +265,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave11" // Goblin Machine
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -276,7 +279,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave12" // Frosty Reptile
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -290,7 +293,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave13" // Demonic Pets
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -304,7 +307,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave14" // Matured Dragon
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -318,7 +321,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave15" // Ice Shard Golem
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -332,7 +335,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave16" // Eternal Spirit
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -346,7 +349,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave17" // Supply Tank
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -360,7 +363,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave18" // Walking Corpse
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -374,7 +377,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave19" // Totem Carriers
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -388,7 +391,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave20" // Unholy Knight
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -402,7 +405,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-			
+
 		"Wave21" // Crystal Mage
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -416,7 +419,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave22" // Frozen Infernal
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -430,7 +433,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave23" // Dragon
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -444,7 +447,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave24" // Polar Bear
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -458,7 +461,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave25" // Possessed Hunter
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -472,7 +475,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave26" // Corrupt Chieftain
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -486,7 +489,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave27" // Ancient Dragon
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -500,7 +503,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave28" // Spider Fiend
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -514,7 +517,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-		
+
 		"Wave29" // Armored Wisp
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -528,7 +531,7 @@
 				"SpawnInterval"				"8"
 			}
 		}
-			
+
 		"Wave30" // Duke Wintermaul
 		{
 			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
@@ -542,5 +545,5 @@
 				"SpawnInterval"				"8"
 			}
 		}
-	}	
+	}
 }

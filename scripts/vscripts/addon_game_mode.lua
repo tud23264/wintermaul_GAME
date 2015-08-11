@@ -95,7 +95,7 @@ function CWintermaulGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetUseCustomHeroLevels ( true )
 	--BuildingHelper:BlockGridNavSquares(MAPSIZE)
 	--BuildingHelper:BlockBadSquares(MAPSIZE)
-	ListenToGameEvent( "entity_killed", Dynamic_Wrap( CWintermaulGameMode, 'OnEntityKilled' ), self )
+	
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
 
@@ -115,37 +115,6 @@ function CWintermaulGameMode:_ReadGameConfiguration()
 end
 
 
--- Verify spawners if random is set
-function CWintermaulGameMode:ChooseSpawnInfo()
-	if #self._vSpawnsList == 0 then
-		error( "Attempt to choose a random spawn, but no random spawns are specified in the data." )
-		return nil
-	end
-	return self._vSpawnsList[ self:_NextSpawnerID() ]  --#RandomInt( 1, #self._vpawnsList )
-end
-
-function CWintermaulGameMode:_NextSpawnerID()
-	print("id: %d", self._nCurrentSpawnerID)
-	if self._nCurrentSpawnerID == nil then
-		self._nCurrentSpawnerID = 0
-	end
-	print("id: %d", self._nCurrentSpawnerID)
-	--calculate the next ID
-	--increment the spawn ID
-	local nNextSpawnerID = (self._nCurrentSpawnerID + 1)
-	-- wrap the value
-	nNextSpawnerID = (nNextSpawnerID % #self._vSpawnsList) + 1
-
-	--store the current ID
-	local nSpawnerID = self._nCurrentSpawnerID
-
-	--set the current ID to be the next one
-	self._nCurrentSpawnerID = nNextSpawnerID
-
-	--return the current ID
-	return nSpawnerID
-end
-
 -- Verify valid spawns are defined and build a table with them from the keyvalues file
 function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
 	self._vSpawnsList = {}
@@ -157,6 +126,9 @@ function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
 			szSpawnerName = sp.SpawnerName or "",
 			szFirstWaypoint = sp.Waypoint or ""
 		} )
+	end
+	for k,v in pairs( self._vSpawnsList ) do
+		print("key: ", k, "val: ", v)
 	end
 end
 
@@ -188,7 +160,7 @@ function CWintermaulGameMode:OnPlayerPicked()
 
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
-			for e=0,15 do --
+			for e=0,15 do
 				if (PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e) ==nil) then
 					break
 				else
@@ -256,4 +228,8 @@ function CWintermaulGameMode:OnThink()
 		return nil
 	end
 	return 1
+end
+
+function CWintermaulGameMode:OnEntityKilled()
+	--@todo do something when an entity dies
 end
