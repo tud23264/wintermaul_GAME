@@ -160,7 +160,7 @@ function CWintermaulGameMode:OnPlayerPicked()
 
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
-			for e=0,15 do --
+			for e=0,15 do
 				if (PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e) ==nil) then
 					break
 				else
