@@ -118,7 +118,7 @@ end
 
 
 function CWintermaulGameRound:Think()
-	for _, spawner in pairs( self._vSpawners ) do
+	for _, spawner in pairs( self._vSpawners ) do -- For each unit in a spawner
 		spawner:Think()
 	end
 end
