@@ -1,6 +1,12 @@
 "dota_wintermaul"
 {
 	"PrepTimeBetweenRounds"			"5"
+	"ItemExpireTime"				"10"
+	"RestoreHPAfterRound"			"0"
+	"RestoreMPAfterRound"			"0"
+	"RewardForTowersStanding"		"1"
+	"TowerRewardAmount"				"18"
+	"TowerScalingRewardPerRound"	"2"
 
 	"Spawns"
 	{
@@ -125,9 +131,18 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_scouts"
-				"TotalUnitsToSpawn"			"36"
+				"TotalUnitsToSpawn"			"10"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
+				"PossibleSpawns"
+				{
+					1						"red_spawn_1"
+					2						"red_spawn_2"
+					3						"blue_spawn_1"
+					4						"blue_spawn_2"
+					5						"teal_spawn_1"
+					6						"teal_spawn_2"
+				}
 			}
 		}
 
@@ -139,9 +154,9 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_engineers"
-				"TotalUnitsToSpawn"			"1"
-				"UnitsPerSpawn"				"1"
-				"SpawnInterval"				"1"
+				"TotalUnitsToSpawn"			"18"
+				"UnitsPerSpawn"				"6"
+				"SpawnInterval"				"8"
 			}
 		}
 

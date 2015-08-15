@@ -128,7 +128,7 @@ function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
 		} )
 	end
 	for k,v in pairs( self._vSpawnsList ) do
-		print("key: ", k, "val: ", v)
+		print("key: ", k, "val: ", v.szSpawnerName, v.szFirstWaypoint)
 	end
 end
 
