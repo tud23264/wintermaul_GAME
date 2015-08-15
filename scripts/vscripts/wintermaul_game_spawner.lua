@@ -268,9 +268,6 @@ function CWintermaulGameSpawner:_DoSpawn()
 			end
 
 			local vSpawnLocation = vBaseSpawnLocation
-			if not self._bDontOffsetSpawn then
-				vSpawnLocation = vSpawnLocation + RandomVector( RandomFloat( 0, 200 ) )
-			end
 
 			local entUnit = CreateUnitByName( szNPCClassToSpawn, vSpawnLocation, true, nil, nil, DOTA_TEAM_BADGUYS )
 			if entUnit then
