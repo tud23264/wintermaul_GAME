@@ -1,6 +1,12 @@
 "dota_wintermaul"
 {
 	"PrepTimeBetweenRounds"			"5"
+	"ItemExpireTime"				"10"
+	"RestoreHPAfterRound"			"0"
+	"RestoreMPAfterRound"			"0"
+	"RewardForTowersStanding"		"1"
+	"TowerRewardAmount"				"18"
+	"TowerScalingRewardPerRound"	"2"
 
 	"Spawns"
 	{
@@ -130,12 +136,12 @@
 				"SpawnInterval"				"1"
 				"PossibleSpawns"
 				{
-					0						1
-					1						2
-					2						3
-					3						4
-					4						5
-					5						6
+					1						"red_spawn_1"
+					2						"red_spawn_2"
+					3						"blue_spawn_1"
+					4						"blue_spawn_2"
+					5						"teal_spawn_1"
+					6						"teal_spawn_2"
 				}
 			}
 		}

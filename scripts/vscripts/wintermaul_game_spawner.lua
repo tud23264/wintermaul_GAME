@@ -39,16 +39,37 @@ function CWintermaulGameSpawner:ReadConfiguration( name, kv, gameRound )
 end
 
 function CWintermaulGameSpawner:_LoadPossibleSpawns( kvSpawns )
+	vPossibleSpawnsNames = {}
 	self._vPossibleSpawns = {}
 	if type( kvSpawns ) == "table" then
-		for k,v in pairs( kvSpawns ) do
-			self._vPossibleSpawns[(tonumber(k))] = v
+		local i
+		while true do
+			i = #vPossibleSpawnsNames + 1
+			if kvSpawns[string.format(i)] == nil then
+				break
+			end
+			table.insert(vPossibleSpawnsNames, kvSpawns[string.format(i)])
 		end
 	else
 		print("its not a table")
 	end
+	for k,v in pairs( vPossibleSpawnsNames ) do
+		table.insert(self._vPossibleSpawns, self:_SearchSpawnTable(v))
+	end
 end
 
+function CWintermaulGameSpawner:_SearchSpawnTable( sSpawnName )
+	local spawn
+	for k,v in pairs(self._gameRound._gameMode._vSpawnsList) do
+		if v.szSpawnerName == sSpawnName then
+			spawn = v
+		end
+	end
+	if spawn == nil then
+		print("could not find ", sSpawnName)
+	end
+	return spawn
+end
 
 function CWintermaulGameSpawner:PostLoad( spawnerList )
 	self._waitForUnit = spawnerList[ self._szWaitForUnit ]
@@ -148,7 +169,6 @@ function CWintermaulGameSpawner:Think()
 	end
 end
 
-
 function CWintermaulGameSpawner:GetTotalUnitsToSpawn()
 	return self._nTotalUnitsToSpawn
 end
@@ -180,17 +200,17 @@ end
 function CWintermaulGameSpawner:_UpdateSpawn( index )
 	self._vecSpawnLocation = Vector( 0, 0, 0 )
 	self._entWaypoint = nil
-	if self._vPossibleSpawns == nil then
-		self:_GetSpawnerInfo(index)
-	else
-		local spawnerIndex = self._vPossibleSpawns[(index % (#self._vPossibleSpawns + 1))]
-		self:_GetSpawnerInfo(spawnerIndex)
-	end
 
+	self:_GetSpawnerInfo(index)
 end
 
 function CWintermaulGameSpawner:_GetSpawnerInfo( index )
-	local spawnInfo = self._gameRound._gameMode._vSpawnsList[ index ]
+	local spawnInfo
+	if self._vPossibleSpawns == nil then
+		spawnInfo = self._gameRound._gameMode._vSpawnsList[ index ]
+	else
+		spawnInfo = self._vPossibleSpawns[ index ]
+	end
 	if spawnInfo == nil then
 		print( string.format( "Failed to get random spawn info for spawner %s.", self._szName ) )
 		return
@@ -212,6 +232,13 @@ function CWintermaulGameSpawner:_GetSpawnerInfo( index )
 	end
 end
 
+function CWintermaulGameSpawner:_GetCurrentTotalSpawnPoints()
+	local numSpawns = #self._gameRound._gameMode._vSpawnsList
+	if self._vPossibleSpawns ~= nil then
+		numSpawns = #self._vPossibleSpawns
+	end
+	return numSpawns
+end
 
 function CWintermaulGameSpawner:_DoSpawn()
 	local nUnitsToSpawn = math.min( self._nUnitsPerSpawn, self._nTotalUnitsToSpawn - self._nUnitsSpawnedThisRound )
@@ -221,7 +248,7 @@ function CWintermaulGameSpawner:_DoSpawn()
 	elseif self._nUnitsSpawnedThisRound == 0 then
 		print( string.format( "Started spawning %s at %.2f", self._szName, GameRules:GetGameTime() ) )
 	end
-	for i = 1, #self._gameRound._gameMode._vSpawnsList do
+	for i = 1, self:_GetCurrentTotalSpawnPoints() do
 		if self._szSpawnerName == "" then
 			self:_UpdateSpawn( i )
 		end
