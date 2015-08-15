@@ -246,7 +246,8 @@
 		{
 			"RunScript"
 			{
-				"Target"				"CASTER"
+				"Caster"				"CASTER"
+				"Target"				"POINT"
 				"ScriptFile"			"scripts/vscripts/nature_pool.lua"
 				"Function"				"getBuildingPoint"
 			}
