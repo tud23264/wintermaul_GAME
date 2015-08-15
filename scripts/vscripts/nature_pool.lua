@@ -3,10 +3,13 @@ require('buildinghelper')
 BUILD_TIME=1.0
 
 function getBuildingPoint(keys)
-	local point = BuildingHelper:AddBuildingToGrid(keys.target_points[1], 2, keys.caster)
+	--local point = BuildingHelper:AddBuildingToGrid(keys.target_points[1], 2, keys.caster)
+	local ability = keys.ability
+	point = ability:GetCursorPosition()
 	if point ~= -1 then
-		local tower = CreateUnitByName("nature_pool", point, false, nil, nil, DOTA_TEAM_GOODGUYS)
+		local tower = CreateUnitByName("nature_pool", point, false, keys.caster, keys.caster, DOTA_TEAM_GOODGUYS)
 		BuildingHelper:AddBuilding(tower)
+		tower:SetOwner(keys.caster)
 		tower:UpdateHealth(BUILD_TIME,true,.85)
 		tower:SetHullRadius(64)
 		tower:SetControllableByPlayer( keys.caster:GetPlayerID(), true )

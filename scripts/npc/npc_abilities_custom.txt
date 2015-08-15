@@ -246,17 +246,12 @@
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
+				"Target"				"CASTER"
 				"ScriptFile"			"scripts/vscripts/nature_pool.lua"
 				"Function"				"getBuildingPoint"
 			}
 		}
 
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-		}
 	}
 	"build_terran_protector"
 	{
