@@ -10,9 +10,17 @@ function getBuildingPoint(keys)
         local tower = CreateUnitByName(towerToSpawnName, point, false, playerOwnerHandle, playerOwnerHandle, DOTA_TEAM_GOODGUYS)
         BuildingHelper:AddBuilding(tower)
         tower:UpdateHealth(BUILD_TIME,true,.85)
-        tower:SetHullRadius(64)
+        tower:SetHullRadius( _getTowerHullRadius( towerToSpawnName ) )
         tower:SetControllableByPlayer( keys.caster:GetPlayerID(), true )
     else
         --Fire a game event here and use Actionscript to let the player know he can't place a building at this spot.
     end
+end
+
+function _getTowerHullRadius( towerName )
+    local radius = 64
+    if towerName == "gaia" then
+        radius = 192
+    end
+    return radius
 end
