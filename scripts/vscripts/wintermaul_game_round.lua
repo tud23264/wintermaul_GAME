@@ -10,7 +10,7 @@ end
 function CWintermaulGameRound:ReadConfiguration( kv, gameMode, roundNumber )
 	self._gameMode = gameMode
 	self._nRoundNumber = roundNumber
-	self._szRoundQuestTitle = kv.round_quest_title or "#DOTA_Quest_Wintermaul_Round"
+	self._szRoundQuestTitle = "#DOTA_Quest_Wintermaul_Round_Subtext"
 	self._szRoundTitle = kv.round_title or string.format( "Round%d", roundNumber )
 
 	self._vSpawners = {}
@@ -62,6 +62,7 @@ function CWintermaulGameRound:Begin()
 		title =  self._szRoundQuestTitle
 	})
 	self._entQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_ROUND, self._nRoundNumber )
+	self._entQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, self._nCoreUnitsTotal )
 
 	self._entKillCountSubquest = SpawnEntityFromTableSynchronous( "subquest_base", {
 		show_progress_bar = true,
@@ -172,8 +173,11 @@ function CWintermaulGameRound:OnEntityKilled( event )
 	end	
 	if killedUnit.Wintermaul_IsCore then
 		self._nCoreUnitsKilled = self._nCoreUnitsKilled + 1
+		if self._entQuest then
+			self._entQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, self._nCoreUnitsKilled )
+		end
 		if self._entKillCountSubquest then
-			self._entKillCountSubquest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, self._nCoreUnitsKilled )
+			self._entKillCountSubquest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, self._nCoreUnitsKilled )
 		end
 	end
 
