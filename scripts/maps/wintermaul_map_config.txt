@@ -126,7 +126,7 @@
 		"Wave1"
 		{
 			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_description"			"#DOTA_Wintermaul_Round_Scouts_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_scouts"
@@ -147,8 +147,8 @@
 
 		"Wave2" // Engineers
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Engineers_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Engineers_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_engineers"
@@ -160,8 +160,8 @@
 
 		"Wave3" // Night Ranger
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Night_Ranger_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Night_Ranger_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_night_ranger"
@@ -173,8 +173,8 @@
 
 		"Wave4" // Barbarians
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Barbarians_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Barbarians_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_barbarians"
@@ -186,8 +186,8 @@
 
 		"Wave5" // Drake
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Drake_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Drake_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_drake"
@@ -199,8 +199,8 @@
 
 		"Wave6" // Stalker
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Stalker_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Stalker_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_stalker"
@@ -212,8 +212,8 @@
 
 		"Wave7" // Water Runner
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Water_Runner_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Water_Runner_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_water_runner"
@@ -225,8 +225,8 @@
 
 		"Wave8" // Ice troll
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Ice_Troll_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Ice_Troll_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_ice_troll"
@@ -238,8 +238,8 @@
 
 		"Wave9" // Wolf Rider
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Wolf_Rider_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Wolf_Rider_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_wolf_rider"
@@ -251,8 +251,8 @@
 
 		"Wave10" // Hovercraft
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Hovercraft_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Hovercraft_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_hovercraft"
@@ -264,8 +264,8 @@
 
 		"Wave11" // Goblin Machine
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Goblin_Machine_Scouts_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Goblin_Machine_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_goblin_machine"
@@ -277,8 +277,8 @@
 
 		"Wave12" // Frosty Reptile
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Frosty_Reptile_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Frosty_Reptile_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_frost_reptile"
@@ -290,8 +290,8 @@
 
 		"Wave13" // Demonic Pets
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Demonic_Pets_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Demonic_Pets_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_"
@@ -303,8 +303,8 @@
 
 		"Wave14" // Matured Dragon
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Matured_Dragon_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Matured_Dragon_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_"
@@ -316,8 +316,8 @@
 
 		"Wave15" // Ice Shard Golem
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Ice_Shard_Golem_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Ice_Shard_Golem_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_ice_shard_golem"
@@ -329,8 +329,8 @@
 
 		"Wave16" // Eternal Spirit
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Eternal_Spirit_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Eternal_Spirit_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_eternal_spirit"
@@ -342,8 +342,8 @@
 
 		"Wave17" // Supply Tank
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Supply_Tank_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Supply_Tank_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_supply_tank"
@@ -355,8 +355,8 @@
 
 		"Wave18" // Walking Corpse
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Walking_Corpse_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Walking_Corpse_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_walking_corpse"
@@ -368,8 +368,8 @@
 
 		"Wave19" // Totem Carriers
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Totem_Carriers_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Totem_Carriers_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_totem_carriers"
@@ -381,8 +381,8 @@
 
 		"Wave20" // Unholy Knight
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Unholy_Knight_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Unholy_Knight_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_unholy_knight"
@@ -394,8 +394,8 @@
 
 		"Wave21" // Crystal Mage
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Crystal_Mage_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Crystal_Mage_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_crystal_mage"
@@ -407,8 +407,8 @@
 
 		"Wave22" // Frozen Infernal
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Frozen_Infernal_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Frozen_Infernal_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_frozen_infernal"
@@ -420,8 +420,8 @@
 
 		"Wave23" // Dragon
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Dragon_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Dragon_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_dragon"
@@ -433,8 +433,8 @@
 
 		"Wave24" // Polar Bear
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Polar_Bear_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Polar_Bear_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_polar_bear"
@@ -446,8 +446,8 @@
 
 		"Wave25" // Possessed Hunter
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Possessed_Hunter_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Possessed_Hunter_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_possessed_hunter"
@@ -459,8 +459,8 @@
 
 		"Wave26" // Corrupt Chieftain
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Corrupt_Chieftain_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Corrupt_Chieftain_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_currupt_chieftain"
@@ -472,8 +472,8 @@
 
 		"Wave27" // Ancient Dragon
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Ancient_Dragon_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Ancient_Dragon_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_ancient_dragon"
@@ -485,8 +485,8 @@
 
 		"Wave28" // Spider Fiend
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Spider_Fiend_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Spider_Fiend_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_spider_fiend"
@@ -498,8 +498,8 @@
 
 		"Wave29" // Armored Wisp
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Armored_Wisp_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Armored_Wisp_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_armored_wisp"
@@ -511,8 +511,8 @@
 
 		"Wave30" // Duke Wintermaul
 		{
-			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
-			"round_description"			"#DOTA_Wintermaul_Round_Description"
+			"round_title"				"#DOTA_Wintermaul_Round_Duke_Wintermaul_Title"
+			"round_description"			"#DOTA_Wintermaul_Round_Duke_Wintermaul_Description"
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_duke_wintermaul"
