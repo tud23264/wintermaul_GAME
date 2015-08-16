@@ -22,7 +22,7 @@ function CWintermaulGameSpawner:ReadConfiguration( name, kv, gameRound )
 	self._nChampionLevel = tonumber( kv.ChampionLevel or 1 )
 	self._nChampionMax = tonumber( kv.ChampionMax or 1 )
 	self._nCreatureLevel = tonumber( kv.CreatureLevel or 1 )
-	self._nTotalUnitsToSpawn = tonumber( kv.TotalUnitsToSpawn or 0 )
+	self._nTotalUnitsToSpawnPerSpawner = tonumber( kv.TotalUnitsToSpawn or 0 )
 	self._nUnitsPerSpawn = tonumber( kv.UnitsPerSpawn or 0 )
 	self._nUnitsPerSpawn = tonumber( kv.UnitsPerSpawn or 1 )
 
@@ -36,6 +36,7 @@ function CWintermaulGameSpawner:ReadConfiguration( name, kv, gameRound )
 	if kv.PossibleSpawns ~= nil then
 		self:_LoadPossibleSpawns( kv.PossibleSpawns )
 	end
+	self._nTotalUnitsToSpawn = self._nTotalUnitsToSpawnPerSpawner * self:_GetCurrentTotalSpawnPoints()
 end
 
 function CWintermaulGameSpawner:_LoadPossibleSpawns( kvSpawns )
@@ -98,8 +99,13 @@ end
 
 function CWintermaulGameSpawner:Begin()
 	self._nUnitsSpawnedThisRound = 0
+	self._vnUnitsSpawndedFromSpawnerThisRound = {}
 	self._nChampionsSpawnedThisRound = 0
 	self._nUnitsCurrentlyAlive = 0
+
+	for i = 1,self:_GetCurrentTotalSpawnPoints() do
+		table.insert(self._vnUnitsSpawndedFromSpawnerThisRound, tonumber(0))
+	end
 
 	self._vecSpawnLocation = nil
 	if self._szSpawnerName ~= "" then
@@ -241,21 +247,27 @@ function CWintermaulGameSpawner:_GetCurrentTotalSpawnPoints()
 end
 
 function CWintermaulGameSpawner:_DoSpawn()
-	local nUnitsToSpawn = math.min( self._nUnitsPerSpawn, self._nTotalUnitsToSpawn - self._nUnitsSpawnedThisRound )
-
-	if nUnitsToSpawn <= 0 then
+	--decide there are any units left to spawn
+	if (self._nTotalUnitsToSpawn - self._nUnitsSpawnedThisRound) <= 0 then
 		return
 	elseif self._nUnitsSpawnedThisRound == 0 then
 		print( string.format( "Started spawning %s at %.2f", self._szName, GameRules:GetGameTime() ) )
 	end
+
 	for i = 1, self:_GetCurrentTotalSpawnPoints() do
+		--decide how many units this spawner has left to spawn
+		local nUnitsToSpawn = math.min( self._nUnitsPerSpawn, self._nTotalUnitsToSpawnPerSpawner - self._vnUnitsSpawndedFromSpawnerThisRound[ i ])
+
+		--get the info on spawn point to spawn from
 		if self._szSpawnerName == "" then
 			self:_UpdateSpawn( i )
 		end
 
+		--get the spawn location
 		local vBaseSpawnLocation = self:_GetSpawnLocation()
 		if not vBaseSpawnLocation then return end
 
+		--spawn the units
 		for iUnit = 1,nUnitsToSpawn do
 			local bIsChampion = RollPercentage( self._flChampionChance )
 			if self._nChampionsSpawnedThisRound >= self._nChampionMax then
@@ -290,15 +302,17 @@ function CWintermaulGameSpawner:_DoSpawn()
 					entUnit:SetInitialGoalEntity( entWp )
 				end
 				self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
+				self._vnUnitsSpawndedFromSpawnerThisRound[ i ] = self._vnUnitsSpawndedFromSpawnerThisRound[ i ] + 1
 				self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
 				entUnit.Wintermaul_IsCore = true
 			end
 		end
 	end
+	print("end spawn")
 end
 
 
 function CWintermaulGameSpawner:StatusReport()
 	print( string.format( "** Spawner %s", self._szNPCClassName ) )
-	print( string.format( "%d of %d spawned", self._nUnitsSpawnedThisRound, self._nTotalUnitsToSpawn ) )
+	print( string.format( "%d of %d spawned", self._nUnitsSpawnedThisRound, ( self._nTotalUnitsToSpawn * self:_GetCurrentTotalSpawnPoints() ) ) )
 end
