@@ -125,8 +125,8 @@
 
 		"Wave1"
 		{
-			"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
-			"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+			"round_quest_title"			"#DOTA_Wintermaul_Round_Scouts_Quest_Title"
+			"round_title"				"#DOTA_Wintermaul_Round_Scouts_Title"
 			"round_description"			"#DOTA_Wintermaul_Round_Description"
 			"Scouts_1a"
 			{

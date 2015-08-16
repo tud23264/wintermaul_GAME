@@ -291,6 +291,7 @@ function CWintermaulGameSpawner:_DoSpawn()
 				end
 				self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
 				self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
+				entUnit.Wintermaul_IsCore = true
 			end
 		end
 	end
