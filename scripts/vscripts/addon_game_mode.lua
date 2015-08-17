@@ -86,6 +86,8 @@ function CWintermaulGameMode:InitGameMode()
 	GameRules:SetRuneMinimapIconScale( 0.7 )
 	GameRules:SetGoldTickTime( 60.0 )
 	GameRules:SetGoldPerTick( 0 )
+	GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS,10)
+	GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS,0)
 	GameRules:GetGameModeEntity():SetRemoveIllusionsOnDeath( true )
 	GameRules:GetGameModeEntity():SetTopBarTeamValuesOverride( true )
 	GameRules:GetGameModeEntity():SetTopBarTeamValuesVisible( false )
@@ -128,7 +130,7 @@ function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
 		} )
 	end
 	for k,v in pairs( self._vSpawnsList ) do
-		print("key: ", k, "val: ", v)
+		print("key: ", k, "val: ", v.szSpawnerName, v.szFirstWaypoint)
 	end
 end
 
