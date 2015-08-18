@@ -22,7 +22,7 @@ function CWintermaulGameSpawner:ReadConfiguration( name, kv, gameRound )
 	self._nChampionLevel = tonumber( kv.ChampionLevel or 1 )
 	self._nChampionMax = tonumber( kv.ChampionMax or 1 )
 	self._nCreatureLevel = tonumber( kv.CreatureLevel or 1 )
-	self._nTotalUnitsToSpawn = tonumber( kv.TotalUnitsToSpawn or 0 )
+	self._nTotalUnitsToSpawnPerSpawner = tonumber( kv.TotalUnitsToSpawn or 0 )
 	self._nUnitsPerSpawn = tonumber( kv.UnitsPerSpawn or 0 )
 	self._nUnitsPerSpawn = tonumber( kv.UnitsPerSpawn or 1 )
 
@@ -32,8 +32,45 @@ function CWintermaulGameSpawner:ReadConfiguration( name, kv, gameRound )
 
 	self._bDontGiveGoal = ( tonumber( kv.DontGiveGoal or 0 ) ~= 0 )
 	self._bDontOffsetSpawn = ( tonumber( kv.DontOffsetSpawn or 0 ) ~= 0 )
+
+	if kv.PossibleSpawns ~= nil then
+		self:_LoadPossibleSpawns( kv.PossibleSpawns )
+	end
+	self._nTotalUnitsToSpawn = self._nTotalUnitsToSpawnPerSpawner * self:_GetCurrentTotalSpawnPoints()
 end
 
+function CWintermaulGameSpawner:_LoadPossibleSpawns( kvSpawns )
+	vPossibleSpawnsNames = {}
+	self._vPossibleSpawns = {}
+	if type( kvSpawns ) == "table" then
+		local i
+		while true do
+			i = #vPossibleSpawnsNames + 1
+			if kvSpawns[string.format(i)] == nil then
+				break
+			end
+			table.insert(vPossibleSpawnsNames, kvSpawns[string.format(i)])
+		end
+	else
+		print("its not a table")
+	end
+	for k,v in pairs( vPossibleSpawnsNames ) do
+		table.insert(self._vPossibleSpawns, self:_SearchSpawnTable(v))
+	end
+end
+
+function CWintermaulGameSpawner:_SearchSpawnTable( sSpawnName )
+	local spawn
+	for k,v in pairs(self._gameRound._gameMode._vSpawnsList) do
+		if v.szSpawnerName == sSpawnName then
+			spawn = v
+		end
+	end
+	if spawn == nil then
+		print("could not find ", sSpawnName)
+	end
+	return spawn
+end
 
 function CWintermaulGameSpawner:PostLoad( spawnerList )
 	self._waitForUnit = spawnerList[ self._szWaitForUnit ]
@@ -62,8 +99,13 @@ end
 
 function CWintermaulGameSpawner:Begin()
 	self._nUnitsSpawnedThisRound = 0
+	self._vnUnitsSpawndedFromSpawnerThisRound = {}
 	self._nChampionsSpawnedThisRound = 0
 	self._nUnitsCurrentlyAlive = 0
+
+	for i = 1,self:_GetCurrentTotalSpawnPoints() do
+		table.insert(self._vnUnitsSpawndedFromSpawnerThisRound, tonumber(0))
+	end
 
 	self._vecSpawnLocation = nil
 	if self._szSpawnerName ~= "" then
@@ -118,7 +160,7 @@ function CWintermaulGameSpawner:Think()
 	if not self._flNextSpawnTime then
 		return
 	end
-	
+
 	if GameRules:GetGameTime() >= self._flNextSpawnTime then
 		self:_DoSpawn()
 		for _,s in pairs( self._dependentSpawners ) do
@@ -132,7 +174,6 @@ function CWintermaulGameSpawner:Think()
 		end
 	end
 end
-
 
 function CWintermaulGameSpawner:GetTotalUnitsToSpawn()
 	return self._nTotalUnitsToSpawn
@@ -162,104 +203,116 @@ function CWintermaulGameSpawner:_GetSpawnWaypoint()
 end
 
 
-function CWintermaulGameSpawner:_UpdateSpawn()
-	self._vecSpawnLocations = {}
-	self._entWaypoints = {}
+function CWintermaulGameSpawner:_UpdateSpawn( index )
+	self._vecSpawnLocation = Vector( 0, 0, 0 )
+	self._entWaypoint = nil
 
-	local spawnInfo = self._gameRound:ChooseSpawnInfo()
+	self:_GetSpawnerInfo(index)
+end
+
+function CWintermaulGameSpawner:_GetSpawnerInfo( index )
+	local spawnInfo
+	if self._vPossibleSpawns == nil then
+		spawnInfo = self._gameRound._gameMode._vSpawnsList[ index ]
+	else
+		spawnInfo = self._vPossibleSpawns[ index ]
+	end
 	if spawnInfo == nil then
-		print( string.format( "Failed to get any spawn info for a spawner %s.", self._szName ) )
+		print( string.format( "Failed to get random spawn info for spawner %s.", self._szName ) )
 		return
 	end
-	
-	for i = 1, #spawn_Info do
-	
-		local SpawnLocation = Vector( 0, 0, 0 )
-		local Waypoint = nil
 
-	
-		local entSpawner = Entities:FindByName( nil, spawnInfo[ i ].szSpawnerName )
-		if not entSpawner then
-			print( string.format( "Failed to find spawner named %s for %s.", spawnInfo.szSpawnerName, self._szName ) )
+	local entSpawner = Entities:FindByName( nil, spawnInfo.szSpawnerName )
+	if not entSpawner then
+		print( string.format( "Failed to find spawner named %s for %s.", spawnInfo.szSpawnerName, self._szName ) )
+		return
+	end
+	self._vecSpawnLocation = entSpawner:GetAbsOrigin()
+
+	if not self._bDontGiveGoal then
+		self._entWaypoint = Entities:FindByName( nil, spawnInfo.szFirstWaypoint )
+		if not self._entWaypoint then
+			print( string.format( "Failed to find a waypoint named %s for %s.", spawnInfo.szFirstWaypoint, self._szName ) )
 			return
 		end
-		SpawnLocation = entSpawner:GetAbsOrigin()
-
-		if not self._bDontGiveGoal then
-			Waypoint = Entities:FindByName( nil, spawnInfo.szFirstWaypoint )
-			if not Waypoint then
-				print( string.format( "Failed to find a waypoint named %s for %s.", spawnInfo.szFirstWaypoint, self._szName ) )
-				return
-			end
-		end
-		
-		table.insert( self._vRounds, roundObj )
-		
 	end
 end
 
+function CWintermaulGameSpawner:_GetCurrentTotalSpawnPoints()
+	local numSpawns = #self._gameRound._gameMode._vSpawnsList
+	if self._vPossibleSpawns ~= nil then
+		numSpawns = #self._vPossibleSpawns
+	end
+	return numSpawns
+end
 
 function CWintermaulGameSpawner:_DoSpawn()
-	local nUnitsToSpawn = math.min( self._nUnitsPerSpawn, self._nTotalUnitsToSpawn - self._nUnitsSpawnedThisRound )
-
-	if nUnitsToSpawn <= 0 then
+	--decide there are any units left to spawn
+	if (self._nTotalUnitsToSpawn - self._nUnitsSpawnedThisRound) <= 0 then
 		return
 	elseif self._nUnitsSpawnedThisRound == 0 then
 		print( string.format( "Started spawning %s at %.2f", self._szName, GameRules:GetGameTime() ) )
 	end
-	
-	if self._szSpawnerName == "" then
-		self:_UpdateSpawn()
-	end
-	
-	local vBaseSpawnLocation = self:_GetSpawnLocation()
-	if not vBaseSpawnLocation then return end
-	
-	for iUnit = 1,nUnitsToSpawn do
-		local bIsChampion = RollPercentage( self._flChampionChance )
-		if self._nChampionsSpawnedThisRound >= self._nChampionMax then
-			bIsChampion = false
+
+	for i = 1, self:_GetCurrentTotalSpawnPoints() do
+		--decide how many units this spawner has left to spawn
+		local nUnitsToSpawn = math.min( self._nUnitsPerSpawn, self._nTotalUnitsToSpawnPerSpawner - self._vnUnitsSpawndedFromSpawnerThisRound[ i ])
+
+		--get the info on spawn point to spawn from
+		if self._szSpawnerName == "" then
+			self:_UpdateSpawn( i )
 		end
 
-		local szNPCClassToSpawn = self._szNPCClassName
-		if bIsChampion and self._szChampionNPCClassName ~= "" then
-			szNPCClassToSpawn = self._szChampionNPCClassName
-		end
+		--get the spawn location
+		local vBaseSpawnLocation = self:_GetSpawnLocation()
+		if not vBaseSpawnLocation then return end
 
-		local vSpawnLocation = vBaseSpawnLocation
-		if not self._bDontOffsetSpawn then
-			vSpawnLocation = vSpawnLocation + RandomVector( RandomFloat( 0, 200 ) )
-		end
-		
-		local entUnit = CreateUnitByName( szNPCClassToSpawn, vSpawnLocation, true, nil, nil, DOTA_TEAM_BADGUYS )
-		if entUnit then
-			if entUnit:IsCreature() then
-				if bIsChampion then
-					self._nChampionsSpawnedThisRound = self._nChampionsSpawnedThisRound + 1
-					entUnit:CreatureLevelUp( ( self._nChampionLevel - 1 ) )
-					entUnit:SetChampion( true )
-					local nParticle = ParticleManager:CreateParticle( "heavens_halberd", PATTACH_ABSORIGIN_FOLLOW, entUnit )
-					ParticleManager:ReleaseParticleIndex( nParticle )
-					entUnit:SetModelScale( 1.1, 0 )
-				else
-					entUnit:CreatureLevelUp( self._nCreatureLevel - 1 )
+		--spawn the units
+		for iUnit = 1,nUnitsToSpawn do
+			local bIsChampion = RollPercentage( self._flChampionChance )
+			if self._nChampionsSpawnedThisRound >= self._nChampionMax then
+				bIsChampion = false
+			end
+
+			local szNPCClassToSpawn = self._szNPCClassName
+			if bIsChampion and self._szChampionNPCClassName ~= "" then
+				szNPCClassToSpawn = self._szChampionNPCClassName
+			end
+
+			local vSpawnLocation = vBaseSpawnLocation
+
+			local entUnit = CreateUnitByName( szNPCClassToSpawn, vSpawnLocation, true, nil, nil, DOTA_TEAM_BADGUYS )
+			if entUnit then
+				if entUnit:IsCreature() then
+					if bIsChampion then
+						self._nChampionsSpawnedThisRound = self._nChampionsSpawnedThisRound + 1
+						entUnit:CreatureLevelUp( ( self._nChampionLevel - 1 ) )
+						entUnit:SetChampion( true )
+						local nParticle = ParticleManager:CreateParticle( "heavens_halberd", PATTACH_ABSORIGIN_FOLLOW, entUnit )
+						ParticleManager:ReleaseParticleIndex( nParticle )
+						entUnit:SetModelScale( 1.1, 0 )
+					else
+						entUnit:CreatureLevelUp( self._nCreatureLevel - 1 )
+					end
 				end
-			end
 
-			local entWp = self:_GetSpawnWaypoint()
-			if entWp ~= nil then
-				entUnit:SetInitialGoalEntity( entWp )
+				local entWp = self:_GetSpawnWaypoint()
+
+				if entWp ~= nil then
+					entUnit:SetInitialGoalEntity( entWp )
+				end
+				self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
+				self._vnUnitsSpawndedFromSpawnerThisRound[ i ] = self._vnUnitsSpawndedFromSpawnerThisRound[ i ] + 1
+				self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
+				entUnit.Wintermaul_IsCore = true
 			end
-			self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
-			self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
-			entUnit.Holdout_IsCore = true
-			entUnit:SetDeathXP( self._gameRound:GetXPPerCoreUnit() )
 		end
 	end
+	print("end spawn")
 end
 
 
 function CWintermaulGameSpawner:StatusReport()
 	print( string.format( "** Spawner %s", self._szNPCClassName ) )
-	print( string.format( "%d of %d spawned", self._nUnitsSpawnedThisRound, self._nTotalUnitsToSpawn ) )
+	print( string.format( "%d of %d spawned", self._nUnitsSpawnedThisRound, ( self._nTotalUnitsToSpawn * self:_GetCurrentTotalSpawnPoints() ) ) )
 end
