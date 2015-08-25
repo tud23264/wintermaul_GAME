@@ -103,30 +103,32 @@ function PlayerHasRequirementForAbility( player, ability_name )
 	local upgrades = player.upgrades
 	local requirement_failed = false
 
-	if requirements[ability_name] then
+	if requirements then
+		if requirements[ability_name] then
 
-		-- Go through each requirement line and check if the player has that building on its list
-		for k,v in pairs(requirements[ability_name]) do
+			-- Go through each requirement line and check if the player has that building on its list
+			for k,v in pairs(requirements[ability_name]) do
 
-			-- If it's an ability tied to a research, check the upgrades table
-			if requirements[ability_name].research then
-				if k ~= "research" and (not upgrades[k] or upgrades[k] == 0) then
-					--print("Failed the research requirements for "..ability_name..", no "..k.." found")
-					return false
-				end
-			else
-				--print("Building Name","Need","Have")
-				--print(k,v,buildings[k])
+				-- If it's an ability tied to a research, check the upgrades table
+				if requirements[ability_name].research then
+					if k ~= "research" and (not upgrades[k] or upgrades[k] == 0) then
+						--print("Failed the research requirements for "..ability_name..", no "..k.." found")
+						return false
+					end
+				else
+					--print("Building Name","Need","Have")
+					--print(k,v,buildings[k])
 
-				-- If its a building, check every building requirement
-				if not buildings[k] or buildings[k] == 0 then
-					--print("Failed one of the requirements for "..ability_name..", no "..k.." found")
-					return false
+					-- If its a building, check every building requirement
+					if not buildings[k] or buildings[k] == 0 then
+						--print("Failed one of the requirements for "..ability_name..", no "..k.." found")
+						return false
+					end
 				end
 			end
 		end
 	end
-
+	
 	return true
 end
 

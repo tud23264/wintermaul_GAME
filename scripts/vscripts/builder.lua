@@ -128,8 +128,8 @@ function Build( event )
     	-- Remove invulnerability on npc_dota_building baseclass
     	unit:RemoveModifierByName("modifier_invulnerable")
 
-    	-- Particle effect
-    	ApplyModifier(unit, "modifier_construction")
+    	-- Particle effect (COULDN'T GET THIS TO WORK UNFORTUNATELY)
+    	--ApplyModifier(unit, "modifier_construction")
 
     	-- Check the abilities of this building, disabling those that don't meet the requirements
     	CheckAbilityRequirements( unit, player )
