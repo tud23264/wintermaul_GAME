@@ -2478,6 +2478,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 2 Engineers
 	"npc_dota_wintermaul_engineers"
@@ -2570,8 +2575,10 @@
 			}
 		}
 		
-
-
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}		
 		
 	}
 	//wave 3 Night ranger
@@ -2644,6 +2651,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 4 barbarian
 	"npc_dota_wintermaul_barbarians"
@@ -2716,6 +2728,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	} 
 	//wave 5 drake
 	"npc_dota_wintermaul_drake"
@@ -2789,6 +2806,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 6 stalker
 	"npc_dota_wintermaul_stalker"
@@ -2861,6 +2883,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 7 Water runner
 	"npc_dota_wintermaul_water_runner"
@@ -2933,6 +2960,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 8 Ice troll
 	"npc_dota_wintermaul_ice_troll"
@@ -3005,6 +3037,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 9 Wolf rider
 	"npc_dota_wintermaul_wolf_rider"
@@ -3077,6 +3114,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 10 Hovercraft
 	"npc_dota_wintermaul_hovercraft"
@@ -3149,6 +3191,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 11 Goblin machines
 	"npc_dota_wintermaul_goblin_machine"
@@ -3221,6 +3268,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 12 Frosty reptile
 	"npc_dota_wintermaul_frosty_reptile"
@@ -3293,6 +3345,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 13 Demonic pets
 	"npc_dota_wintermaul_demonic_pets"
@@ -3365,6 +3422,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 14 Matured dragons
 	"npc_dota_wintermaul_matured_dragon"
@@ -3437,6 +3499,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 15 Matured Ice shard golem - recieve an extra 1000 gold here (the lumber)
 	"npc_dota_wintermaul_ice_shard_golem"
@@ -3509,6 +3576,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 16 Eternal spirit
 	"npc_dota_wintermaul_eternal_spirit"
@@ -3581,6 +3653,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 17 Supply tank
 	"npc_dota_wintermaul_supply_tank"
@@ -3653,6 +3730,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 18 Walking corpse
 	"npc_dota_wintermaul_walking_corpse"
@@ -3725,6 +3807,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 19 Totem carriers
 	"npc_dota_wintermaul_totem_carriers"
@@ -3797,6 +3884,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 20 Unholy knight
 	"npc_dota_wintermaul_unholy_knight"
@@ -3869,6 +3961,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 21 Crystal mages
 	"npc_dota_wintermaul_crystal_mage"
@@ -3941,6 +4038,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 22 Frozen infernals
 	"npc_dota_wintermaul_frozen_infernal"
@@ -4013,6 +4115,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 23 Dragons
 	"npc_dota_wintermaul_dragon"
@@ -4085,6 +4192,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 24 Polar bears
 	"npc_dota_wintermaul_polar_bear"
@@ -4157,6 +4269,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 25 Possessed hunters
 	"npc_dota_wintermaul_possessed_hunter"
@@ -4229,6 +4346,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 26 Corrupt Chieftain
 	"npc_dota_wintermaul_corrupt_chieftain"
@@ -4301,6 +4423,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 27 Ancient dragon
 	"npc_dota_wintermaul_ancient_dragon"
@@ -4373,6 +4500,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 28 Spider fiends
 	"npc_dota_wintermaul_spider_fiend"
@@ -4445,6 +4577,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 29 Armored wisps -- WISP DOESNT WORK --
 	"npc_dota_wintermaul_armored_wisp"
@@ -4517,6 +4654,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 30 Duke Wintermaul
 	"npc_dota_wintermaul_duke_wintermaul"
@@ -4589,6 +4731,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 
 	
