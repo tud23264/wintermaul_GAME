@@ -22,7 +22,7 @@
 		"MovementTurnRate"			"1.0"
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		
+		"UnitLabel"					"builder"
 	}
 	
 	
@@ -45,7 +45,7 @@
 		"MovementTurnRate"			"1.0"
 		"VisionNighttimeRange"		"1800"								// Range of vision at night time.
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		
+		"UnitLabel"					"builder"
 	}
 	
 	
@@ -68,7 +68,7 @@
 		"MovementTurnRate"			"1.0"
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		
+		"UnitLabel"					"builder"
 	}
 	
 	//=================================================================================================================
@@ -90,7 +90,7 @@
 		"MovementTurnRate"			"1.0"
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
-		
+		"UnitLabel"					"builder"
 	}
 
 	

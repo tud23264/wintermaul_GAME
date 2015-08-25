@@ -1,79 +1,302 @@
 "DOTAAbilities"
 {
-	//=================================================================================================================
-	// Recipe: Arcane Boots
-	//=================================================================================================================
-	"item_recipe_arcane_boots2"
+	"item_apply_modifiers"
 	{
-		"ID"							"1005"
-
-		"BaseClass"						"item_recipe_arcane_boots"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"	
-		"ItemShopTags"					""
-		
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_arcane_boots2"
-		"ItemRequirements"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"item_datadriven"
+	
+		"precache"
 		{
-			"01"						"item_energy_booster;item_arcane_boots"
+			"particle"  "particles/econ/events/ti5/radiant_fountain_regen_lvl2_ti5.vpcf"
+		}
+	
+		"Modifiers"
+		{
+			"modifier_construction"
+			{
+				"IsHidden"				"1"
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/econ/events/ti5/radiant_fountain_regen_lvl2_ti5.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+						"ControlPoints"
+						{
+							"01"			"0 250 0"
+						}
+					}
+				}
+			}
+			
+			"modifier_builder_hidden"
+			{
+				"IsHidden"				"1"  
+	
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ROOTED"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+					//"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED" //Builder can send build orders while inside the building
+					//"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED" //Builder is selectable while inside the building
+				}
+			}
+	
+			"modifier_onfire"
+			{
+				"IsHidden"			"1"
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/dire_fx/fire_barracks.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+						"ControlPointEntities"
+						{
+							"TARGET"	"attach_fx"
+						}
+					}
+				}
+			}
+		}		
+	}
+	"item_building_cancel"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_cancel"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"CancelBuilding"
+			}
 		}
 	}
-	
-	//=================================================================================================================
-	// Arcane Boots II
-	//=================================================================================================================
-	"item_arcane_boots2"
+	"item_build_wall"
 	{
-		"ID"							"1006"
-
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"BaseClass"						"item_arcane_boots"
-
-		// Stats		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"55.0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"25"
-		"ItemCost"						"2450"
-		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
-		"ItemQuality"					"rare"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemDisassembleRule"			"0"
-		"ItemAlertable"					"1"
-		"ItemAliases"					"mana;mb"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_build_wall"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+	
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2" 
+		"BuildTime"						"10.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"wall"
+		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"10"
+		// End of BuildingHelper info
+	
 		"AbilitySpecial"
 		{
 			"01"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_movement"		"75"
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"10.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_mana"			"500"
+				"gold_cost"				"10"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"replenish_radius"		"600"
+				"lumber_cost"			"10"
 			}
-			"04"
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"replenish_amount"		"250"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				"ItemUnitName"  "wall"
+			}
+		}
+	}
+	// All channeled abilities require an item with the same name to be queued
+	// Research abilities set the ability hidden to prevent further queueing. The item re-enables them
+	"item_research_dark_tower"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_research_dark_tower"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable research ability
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/research.lua"
+				"Function"		"ReEnableResearch"
+			}
+		}
+	}
+	
+	"item_research_ultimate_ability"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_research_ultimate_ability"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable research ability
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/research.lua"
+				"Function"		"ReEnableResearch"
+			}
+		}
+	}
+	
+	"item_train_city_center_tier2"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_train_city_center_tier2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable abilities
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"CancelUpgrade"
+			}
+	
+			"RemoveModifier"
+			{
+				"ModifierName"	"modifier_building_particle"
+				"Target" 		"CASTER"
+			}
+		}
+	}
+	
+	// Train abilities set all other abilities as hidden to prevent further queueing. The item re-enables them
+	"item_train_tower_tier2"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_train_tower_tier2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable abilities
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"CancelUpgrade"
+			}
+	
+			"RemoveModifier"
+			{
+				"ModifierName"	"modifier_building_particle"
+				"Target" 		"CASTER"
+			}
+		}
+	}
+	
+	"item_train_dark_tower"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_train_dark_tower"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0"
+	
+		"ItemDroppable" 				"0"
+		"ItemPurchasable" 				"0"
+		"ItemSellable"					"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"DequeueUnit"
+			}
+	
+			// Re-enable abilities
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"CancelUpgrade"
+			}
+	
+			"RemoveModifier"
+			{
+				"ModifierName"	"modifier_building_particle"
+				"Target" 		"CASTER"
 			}
 		}
 	}
