@@ -253,7 +253,6 @@
 	
 		"UnitName"						"nature_pool"
 		"AbilityCooldown"				"0"
-		"AbilityGoldCost"				"50"
 		
 		"AbilitySpecial"
 		{
@@ -265,7 +264,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
+				"gold_cost"				"10"
 			}
 			"03"
 			{
@@ -288,180 +287,275 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"terran_protector"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
+		
 		"AbilityGoldCost"				"40"
-
+		"AbilityChannelTime"			"5"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"terran_protector"
+		"AbilityCooldown"				"0"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"40"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"terran_protector"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_gaias_box"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"gaias_box"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
+		
 		"AbilityGoldCost"				"100"
-
+		"AbilityChannelTime"			"5"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"gaias_box"
+		"AbilityCooldown"				"0"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"gaias_box"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_earths_soul"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"earths_soul"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
+		
 		"AbilityGoldCost"				"200"
-
+		"AbilityChannelTime"			"5"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"earths_soul"
+		"AbilityCooldown"				"0"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"earths_soul"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_ground_pounder"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"ground_pounder"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
+		
 		"AbilityGoldCost"				"250"
-
+		"AbilityChannelTime"			"5"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"ground_pounder"
+		"AbilityCooldown"				"0"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"250"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"ground_pounder"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_gaia"
 	{
-		// General
+				// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"gaia"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
+		
 		"AbilityGoldCost"				"350"
-
+		"AbilityChannelTime"			"5"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"Scale"							"0" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"gaia"
+		"AbilityCooldown"				"0"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"350"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"gaia"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 
