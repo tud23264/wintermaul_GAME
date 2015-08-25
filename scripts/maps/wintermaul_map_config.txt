@@ -130,7 +130,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_scouts"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 				"PossibleSpawns"
@@ -152,7 +152,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_engineers"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -165,7 +165,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_night_ranger"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -178,7 +178,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_barbarians"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -191,7 +191,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_drake"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -204,7 +204,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_stalker"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -217,7 +217,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_water_runner"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -230,7 +230,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_ice_troll"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -243,7 +243,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_wolf_rider"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -256,7 +256,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_hovercraft"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -269,7 +269,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_goblin_machine"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -282,7 +282,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_frost_reptile"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -295,7 +295,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -308,7 +308,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -321,7 +321,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_ice_shard_golem"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -334,7 +334,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_eternal_spirit"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -347,7 +347,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_supply_tank"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -360,7 +360,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_walking_corpse"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -373,7 +373,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_totem_carriers"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -386,7 +386,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_unholy_knight"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -399,7 +399,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_crystal_mage"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -412,7 +412,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_frozen_infernal"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -425,7 +425,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_dragon"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -438,7 +438,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_polar_bear"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -451,7 +451,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_possessed_hunter"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -464,7 +464,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_currupt_chieftain"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -477,7 +477,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_ancient_dragon"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -490,7 +490,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_spider_fiend"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -503,7 +503,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_armored_wisp"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
@@ -516,7 +516,7 @@
 			"Scouts_1a"
 			{
 				"NPCName"					"npc_dota_wintermaul_duke_wintermaul"
-				"TotalUnitsToSpawn"			"100"
+				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
 			}
