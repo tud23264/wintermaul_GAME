@@ -9,53 +9,40 @@ Wintermaul
 		"v"		Table
 		"b"		Boolean
 ]]
-require( "wintermaul_game_round" )
-require( "wintermaul_game_spawner" )
-MAPSIZE = 16384
-NUMBERTOSPAWN = 8 --How many to spawn
 
-GAIAPRECACHE = {"nature_pool","terran_protector","gaias_box","earths_soul","ground_pounder","gaia"}
-CRYSTALPRECACHE = {"crystal_shooter","crystal_blaster","crystal_fury","crystal_slower","crystal_buster","crystal_dissolver"}
-POWERPRECACHE = {"shock_tower","storm_caller","chain_lightning_caster","thunder_rod","sparkler","battery"}
-FORGEPRECACHE = {"flare_tower","flame_dancer","meteor_watcher","blast_furnace","incinerator","flame_staff"}
-
-MAX_NUMBER_OF_TEAMS = 9                -- How many potential teams can be in this game mode?
-USE_CUSTOM_TEAM_COLORS = true          -- Should we use custom team colors?
-USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = true          -- Should we use custom team colors to color the players/minimap?
-
-TEAM_COLORS = {}                        -- If USE_CUSTOM_TEAM_COLORS is set, use these colors.
-TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 61, 210, 150 }  --    Teal
-TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 243, 201, 9 }   --    Yellow
-TEAM_COLORS[DOTA_TEAM_CUSTOM_1] = { 197, 77, 168 }  --    Pink
-TEAM_COLORS[DOTA_TEAM_CUSTOM_2] = { 255, 108, 0 }   --    Orange
-TEAM_COLORS[DOTA_TEAM_CUSTOM_3] = { 52, 85, 255 }   --    Blue
-TEAM_COLORS[DOTA_TEAM_CUSTOM_4] = { 101, 212, 19 }  --    Green
-TEAM_COLORS[DOTA_TEAM_CUSTOM_5] = { 129, 83, 54 }   --    Brown
-TEAM_COLORS[DOTA_TEAM_CUSTOM_6] = { 27, 192, 216 }  --    Cyan
-TEAM_COLORS[DOTA_TEAM_CUSTOM_7] = { 199, 228, 13 }  --    Olive
---TEAM_COLORS[DOTA_TEAM_CUSTOM_8] = { 140, 42, 244 }  --    Purple
-
-USE_AUTOMATIC_PLAYERS_PER_TEAM = false   -- Should we set the number of players to 10 / MAX_NUMBER_OF_TEAMS?
-
-CUSTOM_TEAM_PLAYER_COUNT = {}           -- If we're not automatically setting the number of players per team, use this table
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_GOODGUYS] = 1
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_BADGUYS]  = 1
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_1] = 1
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_2] = 1
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_3] = 1
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_4] = 1
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_5] = 1
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_6] = 1
-CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_7] = 1
---CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_8] = 1
+DEBUG_SPEW = 1
 
 if CWintermaulGameMode == nil then
 	CWintermaulGameMode = class({})
 end
 
+if CustomGameMode == nil then
+	_G.CustomGameMode = class({})
+end
+
+require('gamemode')
+require('utilities')
+require('upgrades')
+require('mechanics')
+require('orders')
+require('builder')
+require('buildinghelper')
+
+require('libraries/timers')
+require('libraries/popups')
+require('libraries/notifications')
+
+
+require("wintermaul_game_round")
+require("wintermaul_game_spawner")
+
 --essential. loads the unit and model needed into memory
 function Precache( context )
-
+	-- Model ghost and grid particles
+	PrecacheResource("particle_folder", "particles/buildinghelper", context)
+	
+	PrecacheUnitByNameSync("nature_pool", context)
+	PrecacheItemByNameSync("item_apply_modifiers", context)
 	print( "Precaching is complete." )
 end
 
@@ -68,6 +55,7 @@ end
 
 
 function CWintermaulGameMode:InitGameMode()
+
 	self._nRoundNumber = 1
 	self._currentRound = nil
 	self._flLastThinkGameTime = nil
@@ -95,13 +83,33 @@ function CWintermaulGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetFogOfWarDisabled ( true )
 	GameRules:GetGameModeEntity():SetCustomHeroMaxLevel( 1 )
 	GameRules:GetGameModeEntity():SetUseCustomHeroLevels ( true )
-	--BuildingHelper:BlockGridNavSquares(MAPSIZE)
-	--BuildingHelper:BlockBadSquares(MAPSIZE)
 	
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
 
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 0.25 )
+	
+	-- DebugPrint
+	Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 1)
+	
+	-- Filters
+    GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( CustomGameMode, "FilterExecuteOrder" ), self )
+	
+    CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(CustomGameMode, 'OnPlayerSelectedEntities'))
+   	CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(CustomGameMode, "RepairOrder"))  	
+    CustomGameEventManager:RegisterListener( "building_helper_build_command", Dynamic_Wrap(BuildingHelper, "BuildCommand"))
+	CustomGameEventManager:RegisterListener( "building_helper_cancel_command", Dynamic_Wrap(BuildingHelper, "CancelCommand"))
+	
+	-- Full units file to get the custom values
+	GameRules.AbilityKV = LoadKeyValues("scripts/npc/npc_abilities_custom.txt")
+  	GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
+  	GameRules.HeroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt")
+  	GameRules.ItemKV = LoadKeyValues("scripts/npc/npc_items_custom.txt")
+  	GameRules.Requirements = LoadKeyValues("scripts/kv/tech_tree.kv")
+	
+  	-- Store and update selected units of each pID
+	GameRules.SELECTED_UNITS = {}
+
 	print( "Wintermaul is loaded." )
 end
 
@@ -158,7 +166,17 @@ function CWintermaulGameMode:OnGameRulesStateChange()
 end
 
 -- sets ability points to 0 and sets skills to lvl1 at start.
-function CWintermaulGameMode:OnPlayerPicked()
+function CWintermaulGameMode:OnPlayerPicked( keys )
+	
+	local player = EntIndexToHScript(keys.player)
+	
+	-- Initialize Variables for Tracking
+	player.units = {} -- This keeps the handle of all the units of the player, to iterate for unlocking upgrades
+	player.structures = {} -- This keeps the handle of the constructed units, to iterate for unlocking upgrades
+	player.buildings = {} -- This keeps the name and quantity of each building
+	player.upgrades = {} -- This kees the name of all the upgrades researched
+	player.lumber = 0 -- Secondary resource of the player
+
 
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
@@ -234,4 +252,19 @@ end
 
 function CWintermaulGameMode:OnEntityKilled()
 	--@todo do something when an entity dies
+end
+
+
+-- Called whenever a player changes its current selection, it keeps a list of entity indexes
+function CWintermaulGameMode:OnPlayerSelectedEntities( event )
+	local pID = event.pID
+
+	GameRules.SELECTED_UNITS[pID] = event.selected_entities
+
+	-- This is for Building Helper to know which is the currently active builder
+	local mainSelected = GetMainSelectedEntity(pID)
+	if IsValidEntity(mainSelected) and IsBuilder(mainSelected) then
+		local player = PlayerResource:GetPlayer(pID)
+		player.activeBuilder = mainSelected
+	end
 end
