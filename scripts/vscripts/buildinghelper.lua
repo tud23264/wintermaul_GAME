@@ -5,7 +5,7 @@
 ]]--
 
 -- Building Particle Settings
-GRID_ALPHA = 30 -- Defines the transparency of the ghost squares (Panorama)
+GRID_ALPHA = 100 -- Defines the transparency of the ghost squares (Panorama)
 MODEL_ALPHA = 100 -- Defines the transparency of both the ghost model (Panorama) and Building Placed (Lua)
 RECOLOR_GHOST_MODEL = true -- Whether to recolor the ghost model green/red or not
 RECOLOR_BUILDING_PLACED = true -- Whether to recolor the queue of buildings placed (Lua)
@@ -381,6 +381,10 @@ function BuildingHelper:StartBuilding( keys )
         -- Remove the model particle and Advance Queue
         BuildingHelper:AdvanceQueue(builder)
         ParticleManager:DestroyParticle(work.particleIndex, true)
+
+        -- Building canceled, refund resources
+        work.refund = true
+        callbacks.onConstructionCancelled(work)
         return
     end
 
@@ -389,8 +393,23 @@ function BuildingHelper:StartBuilding( keys )
     -- Mark this work in progress, skip refund if cancelled as the building is already placed
     work.inProgress = true
 
+    -- Keep the origin of the buildings to put them back in position after spawning point_simple_obstruction entities
+    local buildings = FindUnitsInRadius(DOTA_TEAM_NEUTRALS, location, nil, 1000, DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_INVULNERABLE + DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
+    for k,v in pairs(buildings) do
+        if IsCustomBuilding(v) then
+            v.Origin = v:GetAbsOrigin()
+        end
+    end
+
     -- Spawn point obstructions before placing the building
     local gridNavBlockers = BuildingHelper:BlockGridNavSquare(size, location)
+
+    -- Stuck the buildings back in place
+    for k,v in pairs(buildings) do
+        if IsCustomBuilding(v) then
+            v:SetAbsOrigin(v.Origin)
+        end
+    end
 
     -- Spawn the building
     local building = CreateUnitByName(unitName, OutOfWorldVector, false, playersHero, player, builder:GetTeam())

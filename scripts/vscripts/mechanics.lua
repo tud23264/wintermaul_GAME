@@ -102,7 +102,6 @@ function PlayerHasRequirementForAbility( player, ability_name )
 	local buildings = player.buildings
 	local upgrades = player.upgrades
 	local requirement_failed = false
-
 	if requirements then
 		if requirements[ability_name] then
 
@@ -128,7 +127,6 @@ function PlayerHasRequirementForAbility( player, ability_name )
 			end
 		end
 	end
-	
 	return true
 end
 
@@ -138,6 +136,26 @@ function IsBuilder( unit )
 		return
 	end
 	return (unit:GetUnitLabel() == "builder")
+end
+
+-- A BuildingHelper ability is identified by the "Building" key.
+function IsBuildingAbility( ability )
+	if not IsValidEntity(ability) then
+		return
+	end
+
+	local ability_name = ability:GetAbilityName()
+	local ability_table = GameRules.AbilityKV[ability_name]
+	if ability_table and ability_table["Building"] then
+		return true
+	else
+		ability_table = GameRules.ItemKV[ability_name]
+		if ability_table and ability_table["Building"] then
+			return true
+		end
+	end
+
+	return false
 end
 
 function IsCustomBuilding( unit )

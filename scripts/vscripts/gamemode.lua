@@ -9,11 +9,11 @@ function CustomGameMode:InitGameMode()
 
 	-- DebugPrint
 	Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 0)
-	
+	--[[
 	-- Event Hooks
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(CustomGameMode, 'OnEntityKilled'), self)
 	ListenToGameEvent('dota_player_pick_hero', Dynamic_Wrap(CustomGameMode, 'OnPlayerPickHero'), self)
-
+	--]]
 	-- Filters
     GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( CustomGameMode, "FilterExecuteOrder" ), self )
 
@@ -50,7 +50,7 @@ function CustomGameMode:OnPlayerPickHero(keys)
 	player.buildings = {} -- This keeps the name and quantity of each building
 	player.upgrades = {} -- This kees the name of all the upgrades researched
 	player.lumber = 0 -- Secondary resource of the player
-	print("hello?")
+
     -- Create city center in front of the hero
     local position = hero:GetAbsOrigin() + hero:GetForwardVector() * 300
     local city_center_name = "city_center"

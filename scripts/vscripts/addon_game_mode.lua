@@ -10,8 +10,6 @@ Wintermaul
 		"b"		Boolean
 ]]
 
-DEBUG_SPEW = 1
-
 if CWintermaulGameMode == nil then
 	CWintermaulGameMode = class({})
 end
@@ -47,10 +45,12 @@ function Precache( context )
 end
 
 function Activate()
+	CustomGameMode:InitGameMode()
 	--activates the mod.
 	GameRules.CWintermaulGameMode = CWintermaulGameMode()
 	--calls InitGameMode
 	GameRules.CWintermaulGameMode:InitGameMode()
+	
 end
 
 
@@ -89,27 +89,6 @@ function CWintermaulGameMode:InitGameMode()
 
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 0.25 )
 	
-	-- DebugPrint
-	Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 1)
-	
-	-- Filters
-    GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( CustomGameMode, "FilterExecuteOrder" ), self )
-	
-    CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(CustomGameMode, 'OnPlayerSelectedEntities'))
-   	CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(CustomGameMode, "RepairOrder"))  	
-    CustomGameEventManager:RegisterListener( "building_helper_build_command", Dynamic_Wrap(BuildingHelper, "BuildCommand"))
-	CustomGameEventManager:RegisterListener( "building_helper_cancel_command", Dynamic_Wrap(BuildingHelper, "CancelCommand"))
-	
-	-- Full units file to get the custom values
-	GameRules.AbilityKV = LoadKeyValues("scripts/npc/npc_abilities_custom.txt")
-  	GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
-  	GameRules.HeroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt")
-  	GameRules.ItemKV = LoadKeyValues("scripts/npc/npc_items_custom.txt")
-  	GameRules.Requirements = LoadKeyValues("scripts/kv/tech_tree.kv")
-	
-  	-- Store and update selected units of each pID
-	GameRules.SELECTED_UNITS = {}
-
 	print( "Wintermaul is loaded." )
 end
 
@@ -254,7 +233,7 @@ function CWintermaulGameMode:OnEntityKilled()
 	--@todo do something when an entity dies
 end
 
-
+--[[
 -- Called whenever a player changes its current selection, it keeps a list of entity indexes
 function CWintermaulGameMode:OnPlayerSelectedEntities( event )
 	local pID = event.pID
@@ -268,3 +247,4 @@ function CWintermaulGameMode:OnPlayerSelectedEntities( event )
 		player.activeBuilder = mainSelected
 	end
 end
+]]--
