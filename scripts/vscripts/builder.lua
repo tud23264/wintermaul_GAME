@@ -125,8 +125,8 @@ function Build( event )
 		FindClearSpaceForUnit(caster, caster:GetAbsOrigin(), true)
 		caster:AddNewModifier(caster, nil, "modifier_phased", {duration=0.03})
 
-    	-- Remove invulnerability on npc_dota_building baseclass
-    	unit:RemoveModifierByName("modifier_invulnerable")
+    	-- Remove invulnerability on npc_dota_building baseclass (not required as the baseclass should be npc_dota_creature)
+    	-- unit:RemoveModifierByName("modifier_invulnerable")
 
     	-- Particle effect
     	ApplyModifier(unit, "modifier_construction")
@@ -146,7 +146,10 @@ function Build( event )
 
 		-- Let the building cast abilities
 		unit:RemoveModifierByName("modifier_construction")
-
+		
+		-- Add the invulnerability modifier
+		unit:AddNewModifier(unit, nil, "modifier_invulnerable", nil) 
+		
 		-- Remove item_building_cancel
         for i=0,5 do
             local item = unit:GetItemInSlot(i)

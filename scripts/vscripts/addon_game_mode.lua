@@ -38,8 +38,8 @@ require("wintermaul_game_spawner")
 function Precache( context )
 	-- Model ghost and grid particles
 	PrecacheResource("particle_folder", "particles/buildinghelper", context)
-	
 	PrecacheUnitByNameSync("nature_pool", context)
+	PrecacheUnitByNameSync("terran_protector", context)
 	PrecacheItemByNameSync("item_apply_modifiers", context)
 	print( "Precaching is complete." )
 end

@@ -8,7 +8,7 @@ function CustomGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetCameraDistanceOverride(1300)
 
 	-- DebugPrint
-	Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 0)
+	Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 1)
 	--[[
 	-- Event Hooks
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(CustomGameMode, 'OnEntityKilled'), self)
