@@ -30,14 +30,14 @@ function CWintermaulGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetFogOfWarDisabled ( true )
 	GameRules:GetGameModeEntity():SetCustomHeroMaxLevel( 1 )
 	GameRules:GetGameModeEntity():SetUseCustomHeroLevels ( true )
-	
+
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
 
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 0.25 )
-	
+
 	-- Gamemode stuff
-	
+
 	GameRules:GetGameModeEntity():SetHUDVisible(6, false)
 	GameRules:GetGameModeEntity():SetCameraDistanceOverride(1300)
 
@@ -49,10 +49,13 @@ function CWintermaulGameMode:InitGameMode()
 
     -- Register Listener
     CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(CWintermaulGameMode, 'OnPlayerSelectedEntities'))
-   	CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(CWintermaulGameMode, "RepairOrder"))  	
+   	CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(CWintermaulGameMode, "RepairOrder"))
     CustomGameEventManager:RegisterListener( "building_helper_build_command", Dynamic_Wrap(BuildingHelper, "BuildCommand"))
 	CustomGameEventManager:RegisterListener( "building_helper_cancel_command", Dynamic_Wrap(BuildingHelper, "CancelCommand"))
-	
+
+	-- Register Listeners
+	ListenToGameEvent( "npc_spawned", Dynamic_Wrap(CWintermaulGameMode, "onNPCSpawn"), self)
+
 	-- Full units file to get the custom values
 	GameRules.AbilityKV = LoadKeyValues("scripts/npc/npc_abilities_custom.txt")
   	GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
@@ -63,6 +66,21 @@ function CWintermaulGameMode:InitGameMode()
   	-- Store and update selected units of each pID
 	GameRules.SELECTED_UNITS = {}
 	print( "Wintermaul is loaded." )
+end
+
+-- assign invincibility to the heroes
+function CWintermaulGameMode:onNPCSpawn( keys )
+
+	local spawnedUnit = EntIndexToHScript( keys.entindex )
+
+	if (spawnedUnit:GetUnitName() == "npc_dota_hero_crystal_maiden")
+		or (spawnedUnit:GetUnitName() == "npc_dota_hero_enchantress")
+		or (spawnedUnit:GetUnitName() == "npc_dota_hero_razor")
+		or (spawnedUnit:GetUnitName() == "npc_dota_hero_lina")
+		then
+		-- add the invulnerable modifier to the hero
+		spawnedUnit:AddNewModifier(spawnedUnit, nil, "modifier_invulnerable", nil)
+	end
 end
 
 -- Read and assign configurable keyvalues if applicable
@@ -119,9 +137,9 @@ end
 
 -- sets ability points to 0 and sets skills to lvl1 at start.
 function CWintermaulGameMode:OnPlayerPicked( keys )
-	
+
 	local player = EntIndexToHScript(keys.player)
-	
+
 	-- Initialize Variables for Tracking
 	player.units = {} -- This keeps the handle of all the units of the player, to iterate for unlocking upgrades
 	player.structures = {} -- This keeps the handle of the constructed units, to iterate for unlocking upgrades
