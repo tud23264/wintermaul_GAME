@@ -281,7 +281,7 @@
 			"round_description"			"#DOTA_Wintermaul_Round_Frosty_Reptile_Description"
 			"Scouts_1a"
 			{
-				"NPCName"					"npc_dota_wintermaul_frost_reptile"
+				"NPCName"					"npc_dota_wintermaul_frosty_reptile"
 				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
@@ -294,7 +294,7 @@
 			"round_description"			"#DOTA_Wintermaul_Round_Demonic_Pets_Description"
 			"Scouts_1a"
 			{
-				"NPCName"					"npc_dota_wintermaul_"
+				"NPCName"					"npc_dota_wintermaul_demonic_pets"
 				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
@@ -307,7 +307,7 @@
 			"round_description"			"#DOTA_Wintermaul_Round_Matured_Dragon_Description"
 			"Scouts_1a"
 			{
-				"NPCName"					"npc_dota_wintermaul_"
+				"NPCName"					"npc_dota_wintermaul_matured_dragon"
 				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
