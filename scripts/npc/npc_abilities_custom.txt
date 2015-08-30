@@ -299,7 +299,7 @@
 		
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"2"
+		"BuildingSize"					"3"
 		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -354,7 +354,7 @@
 		
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"2"
+		"BuildingSize"					"4"
 		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
@@ -409,7 +409,7 @@
 		
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"2"
+		"BuildingSize"					"5"
 		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
