@@ -46,7 +46,7 @@ function UpgradeBuilding( event )
 
 	-- Add the new building to the structures list
 	table.insert(player.structures, building)
-
+	
 	-- Update the abilities of the units and structures
 	for k,unit in pairs(player.units) do
 		CheckAbilityRequirements( unit, player )
@@ -55,6 +55,7 @@ function UpgradeBuilding( event )
 	for k,structure in pairs(player.structures) do
 		CheckAbilityRequirements( structure, player )
 	end
+	
 end
 
 --[[

@@ -283,6 +283,97 @@
 			}
 		}
 	}
+	"upgrade_to_nature_pool_2"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"upgrade_to_nature_pool_2"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+	
+		"AbilityGoldCost"				"100"
+		"AbilityChannelTime"			"10"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"10.0" 
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
+		"precache"
+		{
+			"particle"  "particles/radiant_fx2/good_ancient001_ambient_fallback_med.vpcf"
+		}
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/queue.lua"
+				"Function"		"EnqueueUnit"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"StartUpgrade"
+				"ModifierName"	"modifier_building_particle"
+			}
+		}
+	
+		"OnChannelSucceeded"
+		{
+			// Consume the first item in the queue
+			"RunScript"
+			{
+				"ScriptFile"   	"buildings/queue.lua"
+				"Function"      "NextQueue"
+			}
+	
+			"RunScript"
+			{
+				"ScriptFile"	"buildings/upgrades.lua"
+				"Function"		"UpgradeBuilding"
+				"UnitName"		"terran_protector"
+			}		
+		}
+	
+		"Modifiers"
+		{
+			"modifier_building_particle"
+			{
+				"IsHidden"			"1"
+		
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/radiant_fx2/good_ancient001_ambient_fallback_med.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"			"CASTER"
+						"ControlPointEntities"
+						{
+							"CASTER"	"attach_fx"
+						}
+					}
+				}
+			}
+		}
+	}
+	
 	"build_terran_protector"
 	{
 		// General
@@ -1010,36 +1101,45 @@
 	//=================================
 	"splash_damage"
 	{
-		// General
-		//------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"sven_great_cleave"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"           	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"sven_great_cleave"
+		"MaxLevel"                      "1"
 
-		// Time
-		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityCooldown"				"0.0 0.0 0.0 0.0"
-
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		//"AbilityManaCost"				"8 12 16 20"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
-		{
-			"01"
+	    {
+	        "01"
+	        {
+	        	"var_type"					"FIELD_INTEGER"
+	        	"radius"					"650"
+	        }
+	    }
+		
+		"Modifiers"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"great_cleave_radius"	"300.0"
-			}
-
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"great_cleave_damage"	"100"
+				"Orb_modifier"
+				{
+					"Passive"     "1"
+					"IsHidden"    "1"
+					"Orb"
+					{
+						"Priority"          "DOTA_ORB_PRIORITY_ABILITY"
+						"ProjectileName"    "particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
+						"CastAttack"        "1"
+					}
+					"OnAttackLanded"
+					{
+						"RunScript"
+						{
+							"ScriptFile"		"towers/splashdamage.lua"
+							"Function"			"SplashDamage"
+							"radius"			"%radius"
+							"Target"			"TARGET"
+						}
+					}
+				}
 			}
 		}
-	}
 
 
 
