@@ -3,119 +3,6 @@
 {
 	"Version"	"1"
 	
-	
-    "npc_dota_creature_basic_zombie"
-     {
-                // General
-                //
-                "BaseClass"                                     "npc_dota_creature"     // Class of entity of link to.
-                "Model"                                         "models/heroes/undying/undying_minion.vmdl"     // Model.
-                "SoundSet"                                      "Undying_Zombie"                                        // Name of sound set.
-                "GameSoundsFile"                        "soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
-                "ModelScale"                            ".8"
-                "Level"                                         "1"
-                               
-                // Abilities
-                //----------------------------------------------------------------
-                "Ability1"                                      ""                      // Ability 1.
-                "Ability2"                                      ""                      // Ability 2.
-                "Ability3"                                      ""                      // Ability 3.
-                "Ability4"                                      ""                      // Ability 4.
-                "Ability5"                                      ""                      // Ability 5.
-                "Ability6"                                      ""                      // Ability 6 - Extra.
-                "Ability7"                                      ""                      // Ability 7 - Extra.
-                "Ability8"                                      ""                      // Ability 8 - Extra.
- 
-                // Armor
-                //----------------------------------------------------------------
-                "ArmorPhysical"                         "3"                     // Physical protection.
-                "MagicalResistance"                     "33"            // Magical protection.
- 
-                // Attack
-                //----------------------------------------------------------------
-                "AttackCapabilities"            "DOTA_UNIT_CAP_MELEE_ATTACK"
-                "AttackDamageMin"                       "18"            // Damage range min.
-                "AttackDamageMax"                       "22"            // Damage range max.
-                "AttackRate"                            "1.6"           // Speed of attack.
-                "AttackAnimationPoint"          "0.3"           // Normalized time in animation cycle to attack.
-                "AttackAcquisitionRange"        "800"           // Range within a target can be acquired.
-                "AttackRange"                           "128"           // Range within a target can be attacked.
-                "ProjectileModel"                       ""                      // Particle system model for projectile.
-                "ProjectileSpeed"                       ""                      // Speed of projectile.
- 
-                // Bounty
-                //----------------------------------------------------------------
-                "BountyXP"                                      "35"    // Experience earn.
-                "BountyGoldMin"                         "0"             // Gold earned min.
-                "BountyGoldMax"                         "0"             // Gold earned max.
- 
-                // Bounds
-                //----------------------------------------------------------------
-                "RingRadius"                            "70"
-                "HealthBarOffset"                       "160"
-                "BoundsHullName"                        "DOTA_HULL_SIZE_SMALL" 
- 
-                // Movement
-                //----------------------------------------------------------------
-                "MovementCapabilities"          "DOTA_UNIT_CAP_MOVE_GROUND"                     // Type of locomotion - ground, air
-                "MovementSpeed"                         "120"           // Speed
-                "MovementTurnRate"                      "0.5"           // Turning rate.
- 
-                // Status
-                //----------------------------------------------------------------
-                "StatusHealth"                          "120"           // Base health.
-                "StatusHealthRegen"                     "0.25"          // Health regeneration rate.
-                "StatusMana"                            "0"                     // Base mana.
-                "StatusManaRegen"                       "0"                     // Mana regeneration rate.
- 
-                // Team
-                //----------------------------------------------------------------
-                "TeamName"                                      "DOTA_TEAM_BADGUYS"                     // Team name.
-                "CombatClassAttack"                     "DOTA_COMBAT_CLASS_ATTACK_PIERCE"
-                "CombatClassDefend"                     "DOTA_COMBAT_CLASS_DEFEND_SOFT"
-                "UnitRelationshipClass"         "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-               
-                // Vision
-                //----------------------------------------------------------------
-                "VisionDaytimeRange"            "1400"          // Range of vision during day light.
-                "VisionNighttimeRange"          "1400"          // Range of vision at night time.
-               
-                // Creature Data
-                //----------------------------------------------------------------------------------------------------------------------
-                "Creature"
-                {
-                        "CanRespawn"                            "0"
-                       
-                        //Basic AI State
-                        //-----------------------------------------------------------------
-                        "DefaultState"                          "Invade"
-                       
-                        "States"
-                        {
-                                "Invade"
-                                {
-                                        "Name"                          "Invade"
-                                        "Aggression"            "0.0"
-                                        "Avoidance"                     "0.0"
-                                        "Support"                       "0.0"
-                                }
-                        }
- 
-                        //Level Up Parameters
-                        //-----------------------------------------------------------------
-                        "HPGain"                                        "40"
-                        "DamageGain"                            "10"
-                        "ArmorGain"                                     "1"
-                        "MagicResistGain"                       "1"
-                        "MoveSpeedGain"                         "1"
-                        "BountyGain"                            "5"
-                        "XPGain"                                        "20"
- 
-                        //Ability Usage Parameters
-                        //-----------------------------------------------------------------
-                }
-	}
-	
 	//==========================================================
 	// Forge of Fire
 	//==========================================================
@@ -1277,30 +1164,31 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_structures/good_statue008.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		
 		
 		// Abilities
 		//----------------------------------------------------------------
-		
+		"AbilityLayout"				"4"
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
-		"Ability4"					""			// Ability 4.
-		"Ability5"					""			// Ability 5.
-		"Ability6"					""			// Ability 6 - Extra.
-		"Ability7"					""			// Ability 7 - Extra.
-		"Ability8"					""			// Ability 8 - Extra.
+		"Ability2"					"ability_building"			// Ability 2.
+		"Ability3"					"upgrade_to_nature_pool_2"						// Ability 3.
+		"Ability4"					"ability_building_queue"						// Ability 4.
+		"Ability5"					""						// Ability 5.
+		"Ability6"					""						// Ability 6 - Extra.
+		"Ability7"					""						// Ability 7 - Extra.
+		"Ability8"					""						// Ability 8 - Extra.
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1315,16 +1203,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/neutral_fx/ghost_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1341,16 +1219,14 @@
 
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"500"		// Base health.
 		"StatusHealthRegen"			"0"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1364,11 +1240,7 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-		
-		
 	}
-	
-	
 	
 	
 	"terran_protector"
@@ -1766,7 +1638,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		//what the fuck?
+
 		"Ability1"					"splash_damage"			// Ability 1.
 		"Ability2"					""			// Ability 2.
 		"Ability3"					""			// Ability 3.
@@ -2478,6 +2350,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 2 Engineers
 	"npc_dota_wintermaul_engineers"
@@ -2554,24 +2431,18 @@
 
 		// Creature Data
 		//----------------------------------------------------------------------------------------------------------------------
-		"AttachWearables"
-		{
-			"Wearable1"
-			{
-				"ItemDef" "5588"
-			}
-			"Wearable2"
-			{
-				"ItemDef" "5590"
-			}
-			"Wearable3"
-			{
-				"ItemDef" "5589"
-			}
-		}
 		
-
-
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+			
+			"AttachWearables"
+			{
+				"Wearable1"	{ "ItemDef" "5588" }
+				"Wearable2" { "ItemDef" "5590" }
+				"Wearable3" { "ItemDef" "5589" }
+			}
+		}		
 		
 	}
 	//wave 3 Night ranger
@@ -2644,6 +2515,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 4 barbarian
 	"npc_dota_wintermaul_barbarians"
@@ -2716,6 +2592,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	} 
 	//wave 5 drake
 	"npc_dota_wintermaul_drake"
@@ -2789,6 +2670,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 6 stalker
 	"npc_dota_wintermaul_stalker"
@@ -2861,6 +2747,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 7 Water runner
 	"npc_dota_wintermaul_water_runner"
@@ -2933,6 +2824,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 8 Ice troll
 	"npc_dota_wintermaul_ice_troll"
@@ -3005,6 +2901,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 9 Wolf rider
 	"npc_dota_wintermaul_wolf_rider"
@@ -3077,6 +2978,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 10 Hovercraft
 	"npc_dota_wintermaul_hovercraft"
@@ -3149,6 +3055,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 11 Goblin machines
 	"npc_dota_wintermaul_goblin_machine"
@@ -3221,6 +3132,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 12 Frosty reptile
 	"npc_dota_wintermaul_frosty_reptile"
@@ -3293,6 +3209,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 13 Demonic pets
 	"npc_dota_wintermaul_demonic_pets"
@@ -3365,6 +3286,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 14 Matured dragons
 	"npc_dota_wintermaul_matured_dragon"
@@ -3437,6 +3363,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 15 Matured Ice shard golem - recieve an extra 1000 gold here (the lumber)
 	"npc_dota_wintermaul_ice_shard_golem"
@@ -3509,6 +3440,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 16 Eternal spirit
 	"npc_dota_wintermaul_eternal_spirit"
@@ -3581,6 +3517,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 17 Supply tank
 	"npc_dota_wintermaul_supply_tank"
@@ -3653,6 +3594,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 18 Walking corpse
 	"npc_dota_wintermaul_walking_corpse"
@@ -3725,6 +3671,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 19 Totem carriers
 	"npc_dota_wintermaul_totem_carriers"
@@ -3797,6 +3748,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 20 Unholy knight
 	"npc_dota_wintermaul_unholy_knight"
@@ -3869,6 +3825,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 21 Crystal mages
 	"npc_dota_wintermaul_crystal_mage"
@@ -3941,6 +3902,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 22 Frozen infernals
 	"npc_dota_wintermaul_frozen_infernal"
@@ -4013,6 +3979,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 23 Dragons
 	"npc_dota_wintermaul_dragon"
@@ -4085,6 +4056,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 24 Polar bears
 	"npc_dota_wintermaul_polar_bear"
@@ -4157,6 +4133,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 25 Possessed hunters
 	"npc_dota_wintermaul_possessed_hunter"
@@ -4229,6 +4210,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 26 Corrupt Chieftain
 	"npc_dota_wintermaul_corrupt_chieftain"
@@ -4301,6 +4287,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 27 Ancient dragon
 	"npc_dota_wintermaul_ancient_dragon"
@@ -4373,6 +4364,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 28 Spider fiends
 	"npc_dota_wintermaul_spider_fiend"
@@ -4445,6 +4441,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 29 Armored wisps -- WISP DOESNT WORK --
 	"npc_dota_wintermaul_armored_wisp"
@@ -4517,6 +4518,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 	//wave 30 Duke Wintermaul
 	"npc_dota_wintermaul_duke_wintermaul"
@@ -4589,6 +4595,11 @@
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"creature"
+		{
+			"DisableClumpingBehavior"   "1"
+		}
 	}
 
 	
