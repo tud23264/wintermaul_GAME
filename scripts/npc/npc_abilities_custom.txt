@@ -236,11 +236,8 @@
 		"AbilityTextureName"			"nature_pool"
 		"MaxLevel"						"1"
 		
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
-		
-		"AbilityGoldCost"				"10"
-		"AbilityChannelTime"			"5"
 		
 		// BuildingHelper info
 		"Building"						"1" //bool
@@ -253,6 +250,7 @@
 	
 		"UnitName"						"nature_pool"
 		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"10"
 		
 		"AbilitySpecial"
 		{
@@ -283,17 +281,18 @@
 			}
 		}
 	}
-	"upgrade_to_nature_pool_2"
+	"train_nature_pool_2"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"upgrade_to_nature_pool_2"
+		"AbilityTextureName"			"train_nature_pool_2"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 	
 		"AbilityGoldCost"				"100"
-		"AbilityChannelTime"			"10.0"
-		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"10"
+	
+		"AbilityMultiOrder"				"1"
 	
 		"AbilitySpecial"
 		{

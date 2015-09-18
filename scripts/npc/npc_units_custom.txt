@@ -1169,6 +1169,7 @@
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		"Level"						"1"
 		
@@ -1179,7 +1180,7 @@
 		"AbilityLayout"				"4"
 		"Ability1"					"splash_damage"			// Ability 1.
 		"Ability2"					"ability_building"			// Ability 2.
-		"Ability3"					"upgrade_to_nature_pool_2"						// Ability 3.
+		"Ability3"					"train_nature_pool_2"						// Ability 3.
 		"Ability4"					"ability_building_queue"						// Ability 4.
 		"Ability5"					""						// Ability 5.
 		"Ability6"					""						// Ability 6 - Extra.
@@ -1260,8 +1261,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"			// Ability 2.
+		"Ability3"					"ability_building_queue"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.

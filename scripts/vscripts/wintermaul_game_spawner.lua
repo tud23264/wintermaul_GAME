@@ -308,7 +308,6 @@ function CWintermaulGameSpawner:_DoSpawn()
 			end
 		end
 	end
-	print("end spawn")
 end
 
 
