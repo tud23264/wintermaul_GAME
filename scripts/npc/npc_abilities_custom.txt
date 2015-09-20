@@ -283,8 +283,8 @@
 	}
 	"train_nature_pool_2"
 	{
-		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"train_nature_pool_2"
+		"BaseClass"             			"ability_datadriven"
+		"AbilityTextureName"		"train_nature_pool_2"
 		"MaxLevel" 						"1"
 	
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
@@ -1362,7 +1362,26 @@
 			{
 				"Target"		"POINT"
 				"ScriptFile"	"builder.lua"
-				"Function"		"StartBuildingEntity"
+				"Function"	"StartBuildingEntity"
+			}
+		}
+	}
+	
+	"sell_building"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityTextureName"		"destr"
+		"BaseClass"						"ability_datadriven"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"			"0"
+		"MaxLevel"						"1"
+	
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"buildinghelper.lua"
+				"Function"	"SellBuilding"
 			}
 		}
 	}
