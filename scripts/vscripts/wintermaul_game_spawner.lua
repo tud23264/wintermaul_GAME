@@ -294,6 +294,10 @@ function CWintermaulGameSpawner:_DoSpawn()
 					else
 						entUnit:CreatureLevelUp( self._nCreatureLevel - 1 )
 					end
+
+					if self._gameRound._gameMode.CreepsAreAttacking then
+						entUnit:SetAttackCapability(1)
+					end
 				end
 
 				local entWp = self:_GetSpawnWaypoint()
