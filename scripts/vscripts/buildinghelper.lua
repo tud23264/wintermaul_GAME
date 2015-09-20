@@ -1100,6 +1100,71 @@ function SnapToGrid( size, location )
     end
 end
 
+function SellBuilding(keys)
+    local building = keys.unit
+    local hero = building:GetOwner()
+    DebugPrint("[BH] Sell "..building:GetUnitName().." "..building:GetEntityIndex())
+
+    -- Refund
+    local refund_factor = 0.5
+    local gold_cost = math.floor(GetGoldCost(building) * refund_factor)
+    local lumber_cost = math.floor(GetLumberCost(building) * refund_factor)
+
+    hero:ModifyGold(gold_cost, true, 0)
+    ModifyLumber( hero:GetPlayerOwner(), lumber_cost)
+    PopupGoldGain(building, gold_cost)
+    PopupLumber(building, lumber_cost)
+
+    -- Cancel builders repairing
+    local builders = building.units_repairing
+    if builders then
+        -- Remove the modifiers on the building and the builders
+        building:RemoveModifierByName("modifier_repairing_building")
+        for _,builder in pairs(builders) do
+            if builder and IsValidEntity(builder) then
+                builder:RemoveModifierByName("modifier_builder_repairing")
+
+                builder.state = "idle"
+                BuildingHelper:AdvanceQueue(builder)
+
+                local ability = builder:FindAbilityByName("human_gather")
+                if ability then 
+                    ToggleOff(ability)
+                end
+            end
+        end
+    end
+
+    -- Refund items (In the item-queue system, units can be queued before the building is finished)
+    for i=0,5 do
+        local item = building:GetItemInSlot(i)
+        if item then
+            if item:GetAbilityName() == "item_building_cancel" then
+                item:RemoveSelf()
+            else
+                Timers:CreateTimer(i*1/30, function() 
+                    building:CastAbilityImmediately(item, building:GetPlayerOwnerID())
+                end)
+            end
+        end
+    end
+
+    -- Special for RequiresRepair
+    local units_repairing = building.units_repairing
+    if units_repairing then
+        for k,builder in pairs(units_repairing) do
+            builder:RemoveModifierByName("modifier_on_order_cancel_repair")
+            local repair_ability = builder:FindAbilityByName("repair")
+            ToggleOff(repair_ability)
+        end
+    end
+
+    building.state = "canceled"
+    Timers:CreateTimer(1/5, function() 
+        BuildingHelper:RemoveBuilding(building, true)
+    end)
+end
+
 function SnapToGrid64(coord)
     return 64*math.floor(0.5+coord/64)
 end
