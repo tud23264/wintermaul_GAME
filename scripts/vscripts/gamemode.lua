@@ -7,6 +7,7 @@ function CWintermaulGameMode:InitGameMode()
 	self._currentRound = nil
 	self._flLastThinkGameTime = nil
 	self._nCurrentSpawnerID = 1
+	self.CreepsAreAttacking = false
 	print("id: %d", self._nCurrentSpawnerID)
 	self:_ReadGameConfiguration()
 	GameRules:SetTimeOfDay( 0.75 )
@@ -20,7 +21,6 @@ function CWintermaulGameMode:InitGameMode()
 	GameRules:SetCreepMinimapIconScale( 0.7 )
 	GameRules:SetRuneMinimapIconScale( 0.7 )
 	GameRules:SetGoldPerTick( 0 )
-	GameRules:SetGold( 50 )
 	GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS,10)
 	GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS,0)
 	GameRules:GetGameModeEntity():SetRemoveIllusionsOnDeath( true )
@@ -149,6 +149,7 @@ function CWintermaulGameMode:OnPlayerPicked( keys )
 
 
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
+		PlayerResource:SetGold(nPlayerID, 50, false)
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
 			for e=0,15 do
 				if (PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e) ==nil) then
@@ -217,7 +218,20 @@ function CWintermaulGameMode:OnThink()
 	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then		-- Safe guard catching any state that may exist beyond DOTA_GAMERULES_STATE_POST_GAME
 		return nil
 	end
-	return 1
+
+	-- Call a function that uses the CanFindPath function for each spawner and check it below
+	if self:CreepsCanReachEnd() then
+		if self.CreepsAreAttacking then
+
+			self:SwitchAttackMode()
+			self.CreepsAreAttacking = false
+		end
+	else
+		-- Then for every enemy entity there is on the map AND all new creeps that are spawned
+		-- Change their AttackCapability to melee/ranged - this should be in a seperate function
+		self:SwitchAttackMode()
+		self.CreepsAreAttacking = true
+	end
 end
 
 function CWintermaulGameMode:OnEntityKilled()
@@ -236,4 +250,25 @@ function CWintermaulGameMode:OnPlayerSelectedEntities( event )
 		local player = PlayerResource:GetPlayer(pID)
 		player.activeBuilder = mainSelected
 	end
+end
+
+function CWintermaulGameMode:CreepsCanReachEnd()
+	for k, v in pairs(self._vSpawnsList) do
+		if not CanFindPath( GetOrigin( v ), GetOrigin( "path_end") ) then
+			return false
+		end
+	end
+
+	return true
+end
+
+function CWintermaulGameMode:SwitchAttackMode( creature )
+	local attackMode
+	attackMode = creature:GetAttackCapability()
+	if attackMode == 0 then
+		attackMode = 1
+	elseif attackMode == 1 then
+		attackMode = 0
+	end
+	creature:SetAttackCapability(attackMode)
 end
