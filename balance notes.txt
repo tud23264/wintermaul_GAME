@@ -35,3 +35,12 @@ s = splitter
 g = ghost
 
 eqn forhealth is 19x^2 - 32x + 38
+
+Consider making units phase through each other to avoid bottle necks - or perhaps reduce the ring size of the unit
+Consider slowing down all units or making the tower projectiles faster
+Make the towers vulnerable, and change it such that the units cannot attack (unless the player has blocked the path)
+Give each tower a sell function
+Need panorama radius around towers, and ensure that the radius is showing when a player clicks on the towers
+Try and come up with an alternative to the thinking towers
+Fix Lina's icons
+Enable repair function
