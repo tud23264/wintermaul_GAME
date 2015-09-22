@@ -294,13 +294,17 @@ function CWintermaulGameSpawner:_DoSpawn()
 					else
 						entUnit:CreatureLevelUp( self._nCreatureLevel - 1 )
 					end
-				end
 
+					if self._gameRound._gameMode.CreepsAreAttacking == true then
+						entUnit:SetAttackCapability(1)
+					end
+				end
 				local entWp = self:_GetSpawnWaypoint()
 
 				if entWp ~= nil then
 					entUnit:SetInitialGoalEntity( entWp )
 				end
+
 				self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
 				self._vnUnitsSpawndedFromSpawnerThisRound[ i ] = self._vnUnitsSpawndedFromSpawnerThisRound[ i ] + 1
 				self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
@@ -308,7 +312,6 @@ function CWintermaulGameSpawner:_DoSpawn()
 			end
 		end
 	end
-	print("end spawn")
 end
 
 

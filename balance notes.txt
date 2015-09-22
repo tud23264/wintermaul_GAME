@@ -1,0 +1,46 @@
+0		25
+25		50
+63		113
+101		214
+139		353f
+177		530e
+215		745s
+253		998g
+291		1289
+329		1618f
+367		1985
+405		2390e
+443		2833
+481		3314s
+519		3833f
+557		4390g
+595		4985
+633		5618e
+671		6289
+709		6998f
+747		7745s
+785		8530
+823		9353
+861		10214eg
+899		11113f
+937		12050
+975		13025
+1013	14038s
+1051	15089
+1089	16178e
+
+f = flying
+e = evasion
+s = splitter
+g = ghost
+
+eqn forhealth is 19x^2 - 32x + 38
+
+Consider making units phase through each other to avoid bottle necks - or perhaps reduce the ring size of the unit
+Consider slowing down all units or making the tower projectiles faster
+Make the towers vulnerable, and change it such that the units cannot attack (unless the player has blocked the path)
+Give each tower a sell function
+Need panorama radius around towers, and ensure that the radius is showing when a player clicks on the towers
+Try and come up with an alternative to the thinking towers
+Fix Lina's icons
+Enable repair function

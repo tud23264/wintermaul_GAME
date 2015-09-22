@@ -1169,6 +1169,7 @@
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		"Level"						"1"
 		
@@ -1179,9 +1180,9 @@
 		"AbilityLayout"				"4"
 		"Ability1"					"splash_damage"			// Ability 1.
 		"Ability2"					"ability_building"			// Ability 2.
-		"Ability3"					"upgrade_to_nature_pool_2"						// Ability 3.
+		"Ability3"					"train_nature_pool_2"						// Ability 3.
 		"Ability4"					"ability_building_queue"						// Ability 4.
-		"Ability5"					""						// Ability 5.
+		"Ability5"					"sell_building"						// Ability 5.
 		"Ability6"					""						// Ability 6 - Extra.
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""						// Ability 8 - Extra.
@@ -1224,7 +1225,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"500"		// Base health.
+		"StatusHealth"				"10"		// Base health.
 		"StatusHealthRegen"			"0"			// Health regeneration rate.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
@@ -1260,8 +1261,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"			// Ability 2.
+		"Ability3"					"ability_building_queue"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -2290,8 +2291,10 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
-		"ModelScale" 					".9"
+		"ModelScale" 				"0.9"
 		"IsNeutralUnitType"			"1"
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -2306,7 +2309,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"14"		// Damage range min.
 		"AttackDamageMax"			"15"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -2335,7 +2338,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"25"		// Base health.
-		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2355,6 +2358,7 @@
 		{
 			"DisableClumpingBehavior"   "1"
 		}
+		
 	}
 	//wave 2 Engineers
 	"npc_dota_wintermaul_engineers"
@@ -2365,10 +2369,11 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
-		"ModelScale" 					".6"
+		"ModelScale" 				"0.6"
 		"IsNeutralUnitType"			"1"
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
-
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					""			// Ability 1
@@ -2382,7 +2387,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"14"		// Damage range min.
 		"AttackDamageMax"			"15"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -2438,9 +2443,12 @@
 			
 			"AttachWearables"
 			{
-				"Wearable1"	{ "ItemDef" "5588" }
-				"Wearable2" { "ItemDef" "5590" }
-				"Wearable3" { "ItemDef" "5589" }
+				"Wearable1"	{ "ItemDef" "5670" }	//Plume of the Crested Cannoneer
+				"Wearable2" { "ItemDef" "5661" }	//Boots
+				"Wearable3" { "ItemDef" "5669" }	//Hands
+				"Wearable4"	{ "ItemDef" "5374" }	//Cannonade
+				"Wearable5" { "ItemDef" "5671" }	//Shoulder
+				"Wearable6" { "ItemDef" "5373" }	//Tabard of the Crested Cannoneer
 			}
 		}		
 		
@@ -2454,9 +2462,10 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
-		"ModelScale" 					".7"
+		"ModelScale" 				"0.7"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -2471,7 +2480,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"14"		// Damage range min.
 		"AttackDamageMax"			"15"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -2532,7 +2541,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1.5"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -2548,7 +2558,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"14"		// Damage range min.
 		"AttackDamageMax"			"15"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -2576,7 +2586,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"113"		// Base health.
+		"StatusHealth"				"214"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -2609,7 +2619,8 @@
 		"Level"						"1"
 		"ModelScale" 					".8"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -2625,7 +2636,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"30"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -2649,11 +2660,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"113"		// Base health.
+		"StatusHealth"				"353"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -2687,7 +2698,8 @@
 		"Level"						"1"
 		"ModelScale" 					".9"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -2703,7 +2715,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"30"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -2731,7 +2743,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"130"		// Base health.
+		"StatusHealth"				"530"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -2764,7 +2776,8 @@
 		"Level"						"1"
 		"ModelScale" 					".9"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -2780,7 +2793,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"30"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -2808,7 +2821,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"215"		// Base health.
+		"StatusHealth"				"745"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -2841,7 +2854,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -2857,7 +2871,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"30"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -2885,7 +2899,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"375"		// Base health.
+		"StatusHealth"				"998"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -2918,7 +2932,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -2934,7 +2949,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"30"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -2962,7 +2977,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"400"		// Base health.
+		"StatusHealth"				"1289"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -2995,7 +3010,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3011,7 +3027,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"30"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3039,7 +3055,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"450"		// Base health.
+		"StatusHealth"				"1618"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3072,7 +3088,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3088,7 +3105,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"30"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3116,7 +3133,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"625"		// Base health.
+		"StatusHealth"				"1985"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3149,7 +3166,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3165,7 +3183,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"30"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3193,7 +3211,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"782"		// Base health.
+		"StatusHealth"				"2390"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3226,7 +3244,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3242,7 +3261,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"30"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3270,7 +3289,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"900"		// Base health.
+		"StatusHealth"				"2833"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3303,7 +3322,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1.2"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3319,7 +3339,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"30"		// Damage range min.
 		"AttackDamageMax"			"30"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3343,11 +3363,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
-		"MovementSpeed"				"200"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"825"		// Base health.
+		"StatusHealth"				"3314"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3380,7 +3400,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1.4"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3396,7 +3417,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3424,7 +3445,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1375"		// Base health.
+		"StatusHealth"				"3833"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3457,7 +3478,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3473,7 +3495,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3501,7 +3523,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1300"		// Base health.
+		"StatusHealth"				"4390"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3534,7 +3556,8 @@
 		"Level"						"1"
 		"ModelScale" 					"2"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3550,7 +3573,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3578,7 +3601,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1525"		// Base health.
+		"StatusHealth"				"4985"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3611,7 +3634,8 @@
 		"Level"						"1"
 		"ModelScale" 					"0.7"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3627,7 +3651,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3655,7 +3679,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2125"		// Base health.
+		"StatusHealth"				"5618"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3688,7 +3712,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3704,7 +3729,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3732,7 +3757,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2500"		// Base health.
+		"StatusHealth"				"6289"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3765,7 +3790,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3781,7 +3807,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3809,7 +3835,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2875"		// Base health.
+		"StatusHealth"				"6998"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3842,7 +3868,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3858,7 +3885,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3886,7 +3913,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3125"		// Base health.
+		"StatusHealth"				"7745"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3919,7 +3946,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1.5"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -3935,7 +3963,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -3963,7 +3991,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3625"		// Base health.
+		"StatusHealth"				"8350"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -3996,7 +4024,8 @@
 		"Level"						"1"
 		"ModelScale" 					"4"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -4012,7 +4041,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -4036,11 +4065,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
-		"MovementSpeed"				"200"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3000"		// Base health.
+		"StatusHealth"				"9353"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -4073,7 +4102,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1.2"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -4089,7 +4119,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -4117,7 +4147,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4250"		// Base health.
+		"StatusHealth"				"10214"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -4150,7 +4180,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -4166,7 +4197,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -4194,7 +4225,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5000"		// Base health.
+		"StatusHealth"				"11113"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -4227,7 +4258,8 @@
 		"Level"						"1"
 		"ModelScale" 					"2.5"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -4243,7 +4275,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -4271,7 +4303,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5625"		// Base health.
+		"StatusHealth"				"12050"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -4304,7 +4336,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1.3"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -4320,7 +4353,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -4344,11 +4377,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
-		"MovementSpeed"				"200"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5250"		// Base health.
+		"StatusHealth"				"13025"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -4381,7 +4414,8 @@
 		"Level"						"1"
 		"ModelScale" 					"3"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -4397,7 +4431,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -4425,7 +4459,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"7500"		// Base health.
+		"StatusHealth"				"14038"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -4458,7 +4492,8 @@
 		"Level"						"1"
 		"ModelScale" 					"5"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -4474,7 +4509,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -4502,7 +4537,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"8200"		// Base health.
+		"StatusHealth"				"15089"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
@@ -4535,7 +4570,8 @@
 		"Level"						"1"
 		"ModelScale" 					"1.5"
 		"IsNeutralUnitType"			"1"
-		
+		"PathfindingSearchDepthScale" "0.5"
+		"UnitLabel"					"waveCreep"
 		
 
 		// Abilities
@@ -4551,7 +4587,7 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
 		"AttackDamageMin"			"1000"		// Damage range min.
 		"AttackDamageMax"			"1000"		// Damage range max.	
 		"AttackRate"				"1.35"		// Speed of attack.
@@ -4579,7 +4615,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"7000"		// Base health.
+		"StatusHealth"				"16178"		// Base health.
 		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 

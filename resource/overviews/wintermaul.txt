@@ -1,0 +1,8 @@
+wintermaul
+{
+	material materials/overviews/wintermaul.vmat
+	pos_x -8231
+	pos_y 8218
+	scale 10.822
+}
+

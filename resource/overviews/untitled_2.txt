@@ -1,8 +1,0 @@
-untitled_2
-{
-	material materials/overviews/untitled_2.vmat
-	pos_x -8231
-	pos_y 8218
-	scale 10.822
-}
-
