@@ -117,6 +117,10 @@ function Build( event )
 	    unit.LumberCost = lumber_cost
 	    unit.BuildTime = build_time
 
+	    -- Units can't attack while building
+	    unit.original_attack = unit:GetAttackCapability()
+		unit:SetAttackCapability(DOTA_UNIT_CAP_NO_ATTACK)
+
 		-- Give item to cancel
 		local item = CreateItem("item_building_cancel", playersHero, playersHero)
 		unit:AddItem(item)
@@ -125,8 +129,8 @@ function Build( event )
 		FindClearSpaceForUnit(caster, caster:GetAbsOrigin(), true)
 		caster:AddNewModifier(caster, nil, "modifier_phased", {duration=0.03})
 
-    	-- Remove invulnerability on npc_dota_building baseclass (not required as the baseclass should be npc_dota_creature)
-    	-- unit:RemoveModifierByName("modifier_invulnerable")
+    	-- Remove invulnerability on npc_dota_building baseclass
+    	unit:RemoveModifierByName("modifier_invulnerable")
 
     	-- Particle effect
     	ApplyModifier(unit, "modifier_construction")
@@ -144,12 +148,15 @@ function Build( event )
 		
 		-- Play construction complete sound
 
+		-- Give the unit their original attack capability
+		unit:SetAttackCapability(unit.original_attack)
+
+		-- Add the invulnerability modifier
+		--  unit:AddNewModifier(unit, nil, "modifier_invulnerable", nil) 
+		
 		-- Let the building cast abilities
 		unit:RemoveModifierByName("modifier_construction")
-		
-		-- Add the invulnerability modifier
-		unit:AddNewModifier(unit, nil, "modifier_invulnerable", nil) 
-		
+
 		-- Remove item_building_cancel
         for i=0,5 do
             local item = unit:GetItemInSlot(i)
