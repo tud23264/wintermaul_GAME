@@ -33,7 +33,8 @@ function CWintermaulGameMode:InitGameMode()
 
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
-
+	ListenToGameEvent('entity_killed', Dynamic_Wrap(CWintermaulGameMode, 'OnEntityKilled'), self)
+	
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 0.25 )
 
 	-- Gamemode stuff
@@ -149,7 +150,7 @@ function CWintermaulGameMode:OnPlayerPicked( keys )
 
 
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
-		PlayerResource:SetGold(nPlayerID, 50, false)
+		PlayerResource:SetGold(nPlayerID, 500, false)
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
 			for e=0,15 do
 				if (PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e) ==nil) then
@@ -220,22 +221,59 @@ function CWintermaulGameMode:OnThink()
 	end
 
 	-- Call a function that uses the CanFindPath function for each spawner and check it below
-	if self:CreepsCanReachEnd() then
-		if self.CreepsAreAttacking then
-
-			self:SwitchAttackMode()
-			self.CreepsAreAttacking = false
+	if self._currentRound then
+		if self:CreepsCanReachEnd() then
+			if self.CreepsAreAttacking then
+				
+				self:SwitchAttackMode( 0 )
+				self.CreepsAreAttacking = false
+			end
+		elseif self.CreepsAreAttacking == false then
+			-- Then for every enemy entity there is on the map AND all new creeps that are spawned
+			-- Change their AttackCapability to melee/ranged - this should be in a seperate function
+			self:SwitchAttackMode( 1 )
+			self.CreepsAreAttacking = true
 		end
-	else
-		-- Then for every enemy entity there is on the map AND all new creeps that are spawned
-		-- Change their AttackCapability to melee/ranged - this should be in a seperate function
-		self:SwitchAttackMode()
-		self.CreepsAreAttacking = true
 	end
+	
+	return 1
 end
 
-function CWintermaulGameMode:OnEntityKilled()
-	--@todo do something when an entity dies
+function CWintermaulGameMode:OnEntityKilled( event )
+	-- The Unit that was Killed
+	local killedUnit = EntIndexToHScript(event.entindex_killed)
+	-- The Killing entity
+	local killerEntity
+	if event.entindex_attacker then
+		killerEntity = EntIndexToHScript(event.entindex_attacker)
+	end
+
+	-- Player owner of the unit
+	local player = killedUnit:GetPlayerOwner()
+	
+	if IsCustomBuilding(killedUnit) then
+		 -- Building Helper grid cleanup
+		BuildingHelper:RemoveBuilding(killedUnit, true)
+
+		-- Check units for downgrades
+		local building_name = killedUnit:GetUnitName()
+		--[[
+		-- Substract 1 to the player building tracking table for that name
+		if player.buildings[building_name] then
+			player.buildings[building_name] = player.buildings[building_name] - 1
+		end
+
+		-- possible unit downgrades
+		for k,units in pairs(player.units) do
+			CheckAbilityRequirements( units, player )
+		end
+
+		-- possible structure downgrades
+		for k,structure in pairs(player.structures) do
+			CheckAbilityRequirements( structure, player )
+		end
+		]]--
+	end
 end
 
 -- Called whenever a player changes its current selection, it keeps a list of entity indexes
@@ -253,8 +291,10 @@ function CWintermaulGameMode:OnPlayerSelectedEntities( event )
 end
 
 function CWintermaulGameMode:CreepsCanReachEnd()
+	local endPoint = Entities:FindByName( nil, "path_end" )
 	for k, v in pairs(self._vSpawnsList) do
-		if not CanFindPath( GetOrigin( v ), GetOrigin( "path_end") ) then
+		local tempSpawner = Entities:FindByName( nil, v.szSpawnerName )
+		if not GridNav:CanFindPath( tempSpawner:GetOrigin(), endPoint:GetOrigin() ) then
 			return false
 		end
 	end
@@ -262,13 +302,20 @@ function CWintermaulGameMode:CreepsCanReachEnd()
 	return true
 end
 
-function CWintermaulGameMode:SwitchAttackMode( creature )
-	local attackMode
-	attackMode = creature:GetAttackCapability()
-	if attackMode == 0 then
-		attackMode = 1
-	elseif attackMode == 1 then
-		attackMode = 0
+function CWintermaulGameMode:SwitchAttackMode( attackMode )
+
+	-- Detect all creatures in this round:
+	for _, v in pairs(self._currentRound._vSpawners) do
+
+		local allUnits = Entities:FindAllByName( "npc_dota_creature" )
+		
+		for _, unit in pairs(allUnits) do
+
+			if unit:GetUnitLabel() == "waveCreep" then
+				unit:SetAttackCapability(attackMode)
+			end
+		end
+		
 	end
-	creature:SetAttackCapability(attackMode)
+	print("switch good")
 end
