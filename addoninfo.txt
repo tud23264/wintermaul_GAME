@@ -1,10 +1,10 @@
 "AddonInfo" 
 {
-  "TeamCount" "10"
+  "TeamCount" "9"
   "maps"      "wintermaul"
   "IsPlayable"  "1"
   "wintermaul"
   {
-          "MaxPlayers"                    "10"
+          "MaxPlayers"                    "9"
   }
 }
