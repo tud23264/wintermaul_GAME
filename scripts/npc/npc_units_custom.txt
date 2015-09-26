@@ -17,15 +17,15 @@
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 		"Level"						"1"
-		
 		
 		
 		// Abilities
 		//----------------------------------------------------------------
-		
-		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability1"					"ability_building"		// Ability 1.
+		"Ability2"					"sell_building"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -35,7 +35,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -51,19 +51,9 @@
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
-
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"	// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -78,14 +68,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -100,9 +88,7 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
-	
-	
-	
+
 	
 	"flame_dancer"
 	{
@@ -113,15 +99,14 @@
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 		"Level"						"1"
-		
-		
 		
 		// Abilities
 		//----------------------------------------------------------------
-		
-		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability1"					"ability_building"		// Ability 1.
+		"Ability2"					"sell_building"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -131,7 +116,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -147,19 +132,9 @@
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
-
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"	// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -174,14 +149,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -196,7 +169,6 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
-	
 	
 	
 	"meteor_watcher"
@@ -208,15 +180,14 @@
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 		"Level"						"1"
-		
-		
 		
 		// Abilities
 		//----------------------------------------------------------------
-		
-		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability1"					"ability_building"		// Ability 1.
+		"Ability2"					"sell_building"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -226,7 +197,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -241,16 +212,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -269,14 +230,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -291,7 +250,6 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
-	
 	
 	
 	"blast_furnace"
@@ -303,13 +261,14 @@
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
 		//----------------------------------------------------------------
-		
-		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability1"					"ability_building"		// Ability 1.
+		"Ability2"					"sell_building"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -319,7 +278,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -334,16 +293,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -362,14 +311,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -384,7 +331,6 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
-	
 	
 	
 	"incinerator"
@@ -396,13 +342,15 @@
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
 		//----------------------------------------------------------------
 		
-		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability1"					"ability_building"		// Ability 1.
+		"Ability2"					"sell_building"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -412,7 +360,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -427,16 +375,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -455,14 +393,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -479,8 +415,7 @@
 	}
 	
 	
-	
-		"flame_staff"
+	"flame_staff"
 	{
 		// General
 		//
@@ -489,13 +424,14 @@
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
 		//----------------------------------------------------------------
-		
-		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability1"					"ability_building"		// Ability 1.
+		"Ability2"					"sell_building"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -505,7 +441,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -520,16 +456,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -548,14 +474,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -570,6 +494,7 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
+	
 	
 	//=============================================
 	//Crystal Castle===============================
@@ -585,13 +510,15 @@
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
 		//----------------------------------------------------------------
 		
-		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability1"					"ability_building"		// Ability 1.
+		"Ability2"					"sell_building"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -601,7 +528,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -616,16 +543,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -644,14 +561,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -668,8 +583,6 @@
 	}
 	
 	
-	
-	
 	"crystal_blaster"
 	{
 		// General
@@ -679,14 +592,16 @@
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
+		"HasInventory"				"1"
+		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
 		//----------------------------------------------------------------
 		
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -695,7 +610,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -711,15 +626,6 @@
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -738,14 +644,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -778,8 +682,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"tower_crit"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -788,7 +692,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -803,16 +707,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -831,14 +725,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -887,8 +779,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"tower_slow"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -897,7 +789,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -912,16 +804,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -940,14 +822,13 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
+
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -962,11 +843,6 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
-	
-	
-	
-	
-	
 	
 		"crystal_buster"
 	{
@@ -983,8 +859,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -993,7 +869,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1009,16 +885,6 @@
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
-
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"	// Experience earn.
@@ -1036,14 +902,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1058,13 +922,9 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
+
 	
-	
-	
-	
-	
-	
-		"crystal_dissolver"
+	"crystal_dissolver"
 	{
 		// General
 		//
@@ -1079,8 +939,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -1089,7 +949,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1105,16 +965,6 @@
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
-
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"	// Experience earn.
@@ -1132,14 +982,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1164,25 +1012,24 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
-		"Model"						"models/props_structures/good_statue008.vmdl"// Model.
-		"SoundSet"					"Tower.Water"					// Name of sound set.
+		"BaseClass"					"npc_dota_creature"								// Class of entity of link to.
+		"Model"						"models/props_structures/good_statue008.vmdl"	// Model.
+		"SoundSet"					"Tower.Water"									// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
 		"ConsideredHero"			"1"
 		"Level"						"1"
-		
+		"Scale"						"0.5"
 		
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"4"
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					"ability_building"			// Ability 2.
-		"Ability3"					"train_nature_pool_2"						// Ability 3.
-		"Ability4"					"ability_building_queue"						// Ability 4.
-		"Ability5"					"sell_building"						// Ability 5.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
+		"Ability4"					""						// Ability 4.
+		"Ability5"					""						// Ability 5.
 		"Ability6"					""						// Ability 6 - Extra.
 		"Ability7"					""						// Ability 7 - Extra.
 		"Ability8"					""						// Ability 8 - Extra.
@@ -1190,13 +1037,13 @@
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"0"		// Physical protection.
-		"MagicalResistance"			"0"			// Magical protection.
+		"MagicalResistance"			"0"						// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"3"		// Damage range min.
-		"AttackDamageMax"			"6"		// Damage range max.
+		"AttackDamageMin"			"3"			// Damage range min.
+		"AttackDamageMax"			"6"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
@@ -1207,7 +1054,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"	// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1226,8 +1073,8 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"10"		// Base health.
-		"StatusHealthRegen"			"0"			// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1261,8 +1108,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					"ability_building"			// Ability 2.
-		"Ability3"					"ability_building_queue"			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -1271,7 +1118,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1286,16 +1133,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1314,14 +1151,13 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
+
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"600"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1355,8 +1191,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -1365,7 +1201,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1380,16 +1216,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/units/heroes/hero_crystalmaiden/maiden_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1408,14 +1234,13 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
+
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1500"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1451,8 +1276,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -1461,7 +1286,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1476,16 +1301,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/units/heroes/hero_drow/drow_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1504,14 +1319,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1546,8 +1359,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -1556,7 +1369,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1571,16 +1384,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1599,14 +1402,13 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
+
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1635,14 +1437,12 @@
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
-		
-		
 		// Abilities
 		//----------------------------------------------------------------
 
 		"Ability1"					"splash_damage"			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -1651,7 +1451,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1666,16 +1466,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/units/heroes/hero_enchantress/enchantress_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1694,14 +1484,13 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
+
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"6000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1737,8 +1526,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -1747,7 +1536,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1762,16 +1551,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1790,14 +1569,13 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
+
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1831,8 +1609,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -1841,7 +1619,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1856,16 +1634,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1884,14 +1652,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -1923,9 +1689,8 @@
 		// Abilities
 		//----------------------------------------------------------------
 		
-		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -1934,7 +1699,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -1949,16 +1714,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1977,14 +1732,13 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
+
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -2017,8 +1771,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -2027,7 +1781,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -2042,16 +1796,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -2070,14 +1814,12 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -2110,8 +1852,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -2120,7 +1862,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -2135,16 +1877,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -2163,14 +1895,13 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
+
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
-		"StatusStartingMana"		"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"		// Base mana.
+		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
 		// Team
@@ -2203,8 +1934,8 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					""			// Ability 1.
-		"Ability2"					""			// Ability 2.
-		"Ability3"					""			// Ability 3.
+		"Ability2"					"ability_building"		// Ability 2.
+		"Ability3"					"sell_building"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -2213,7 +1944,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"		// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 		"MagicalResistance"			"0"			// Magical protection.
 
 		// Attack
@@ -2228,16 +1959,6 @@
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
-
-		// Attributes
-		//----------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"0"			// Base strength
-		"AttributeStrengthGain"		"0"			// Strength bonus per level.
-		"AttributeBaseIntelligence"	"0"			// Base intelligence
-		"AttributeIntelligenceGain"	"0"			// Intelligence bonus per level.
-		"AttributeBaseAgility"		"0"			// Base agility
-		"AttributeAgilityGain"		"0"			// Agility bonus per level.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -2256,13 +1977,11 @@
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
 		"MovementSpeed"				"0"				// Speed
-		"MovementTurnRate"			"1.0"			// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusHealth"				"10"		// Base health.
+		"StatusMana"				"100"			// Base mana.
 		"StatusStartingMana"		"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
@@ -2305,7 +2024,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -2327,8 +2046,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"1"		// Gold earned min.
+		"BountyGoldMax"				"1"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -2338,8 +2057,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"25"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -2383,7 +2101,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"1"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -2405,8 +2123,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"1"		// Gold earned min.
+		"BountyGoldMax"				"1"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -2416,8 +2134,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"50"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -2476,7 +2193,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"2"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -2498,8 +2215,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"1"		// Gold earned min.
+		"BountyGoldMax"				"1"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -2509,8 +2226,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"113"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -2554,7 +2270,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"2"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -2576,8 +2292,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"1"		// Gold earned min.
+		"BountyGoldMax"				"1"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -2587,8 +2303,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"214"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -2632,7 +2347,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"2"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -2654,8 +2369,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"2"		// Gold earned min.
+		"BountyGoldMax"				"2"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -2665,8 +2380,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"353"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -2711,7 +2425,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"3"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -2733,8 +2447,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"2"		// Gold earned min.
+		"BountyGoldMax"				"2"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -2744,8 +2458,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"530"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -2789,7 +2502,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"4"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -2811,8 +2524,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"2"		// Gold earned min.
+		"BountyGoldMax"				"2"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -2822,8 +2535,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"745"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -2867,7 +2579,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"5"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -2889,8 +2601,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"2"		// Gold earned min.
+		"BountyGoldMax"				"2"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -2900,8 +2612,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"998"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -2930,7 +2641,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
-		"ModelScale" 					"1"
+		"ModelScale" 				"1"
 		"IsNeutralUnitType"			"1"
 		"PathfindingSearchDepthScale" "0.5"
 		"UnitLabel"					"waveCreep"
@@ -2945,7 +2656,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"7"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -2967,8 +2678,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"2"		// Gold earned min.
+		"BountyGoldMax"				"2"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -2978,8 +2689,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"1289"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3023,7 +2733,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"7"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3045,8 +2755,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"2"		// Gold earned min.
+		"BountyGoldMax"				"2"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -3056,8 +2766,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"1618"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3101,7 +2810,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"8"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3123,8 +2832,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"2"		// Gold earned min.
+		"BountyGoldMax"				"2"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -3134,8 +2843,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"1985"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3179,7 +2887,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"10"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3201,8 +2909,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"2"		// Gold earned min.
+		"BountyGoldMax"				"2"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -3212,8 +2920,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"2390"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3257,7 +2964,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"10"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3279,8 +2986,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"5"		// Gold earned min.
-		"BountyGoldMax"				"5"		// Gold earned max.
+		"BountyGoldMin"				"2"		// Gold earned min.
+		"BountyGoldMax"				"2"		// Gold earned max.
 
 		// Movement
 		//----------------------------------------------------------------
@@ -3290,8 +2997,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"2833"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3335,7 +3041,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"12"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3368,8 +3074,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"3314"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3413,7 +3118,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"12"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3446,8 +3151,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"3833"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3491,7 +3195,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"14"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3524,8 +3228,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"4390"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3569,7 +3272,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"10"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3602,8 +3305,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"4985"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3647,7 +3349,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"10"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3680,8 +3382,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"5618"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3725,7 +3426,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"15"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3758,8 +3459,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"6289"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3803,7 +3503,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"15"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3836,8 +3536,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"6998"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3881,7 +3580,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"16"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3914,8 +3613,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"7745"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -3959,7 +3657,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"17"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -3992,8 +3690,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"8350"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -4037,7 +3734,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -4070,8 +3767,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"9353"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -4115,7 +3811,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"18"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -4148,8 +3844,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"10214"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -4193,7 +3888,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"18"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -4226,8 +3921,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"11113"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -4271,7 +3965,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"19"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -4304,8 +3998,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"12050"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -4349,7 +4042,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"19"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -4382,8 +4075,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"13025"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -4427,7 +4119,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -4460,8 +4152,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"14038"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -4505,7 +4196,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -4538,8 +4229,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"15089"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision
@@ -4573,7 +4263,6 @@
 		"PathfindingSearchDepthScale" "0.5"
 		"UnitLabel"					"waveCreep"
 		
-
 		// Abilities
 		//----------------------------------------------------------------
 		"Ability1"					"unholy_aura"			// Ability 1
@@ -4583,7 +4272,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"15"			// Physical protection.
+		"ArmorPhysical"				"0"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -4616,8 +4305,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"16178"		// Base health.
-		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
-		"StatusMana"				"0"			// Base mana.
+		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
 		// Vision

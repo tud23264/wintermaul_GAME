@@ -12,215 +12,310 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_flare_tower"
 		"MaxLevel"						"1"
 
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"nature_pool"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"10"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"flare_tower"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_flame_dancer"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_flame_dancer"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"flame_dancer"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"50"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"50"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"flame_dancer"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_meteor_watcher"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"build_meteor_watcher"
+		"AbilityTextureName"			"build_nature_pool"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"meteor_watcher"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"200"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"meteor_watcher"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_blast_furnace"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_blast_furnace"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"blast_furnace"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"250"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"250"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"blast_furnace"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_incinerator"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_incinerator"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"incinerator"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"400"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"incinerator"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_flame_staff"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_flame_staff"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"flame_staff"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"650"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"650"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"flame_staff"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 
@@ -233,7 +328,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"nature_pool"
+		"AbilityTextureName"			"build_nature_pool"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -245,7 +340,6 @@
 		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
 	
 		"UnitName"						"nature_pool"
@@ -379,26 +473,23 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"terran_protector"
+		"AbilityTextureName"			"build_terran_protector"
 		"MaxLevel"						"1"
 		
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
-		
-		"AbilityGoldCost"				"40"
-		"AbilityChannelTime"			"5"
 		
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"3"
+		"BuildingSize"					"2"
 		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
 	
 		"UnitName"						"terran_protector"
 		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"40"
 		
 		"AbilitySpecial"
 		{
@@ -434,26 +525,23 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"gaias_box"
+		"AbilityTextureName"			"build_gaias_box"
 		"MaxLevel"						"1"
 		
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
-		
-		"AbilityGoldCost"				"100"
-		"AbilityChannelTime"			"5"
 		
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"4"
+		"BuildingSize"					"2"
 		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
 	
 		"UnitName"						"gaias_box"
 		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"100"
 		
 		"AbilitySpecial"
 		{
@@ -489,26 +577,23 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"earths_soul"
+		"AbilityTextureName"			"build_earths_soul"
 		"MaxLevel"						"1"
 		
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
-		
-		"AbilityGoldCost"				"200"
-		"AbilityChannelTime"			"5"
 		
 		// BuildingHelper info
 		"Building"						"1" //bool
-		"BuildingSize"					"5"
+		"BuildingSize"					"2"
 		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
 	
 		"UnitName"						"earths_soul"
 		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"200"
 		
 		"AbilitySpecial"
 		{
@@ -544,14 +629,11 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"ground_pounder"
+		"AbilityTextureName"			"build_ground_pounder"
 		"MaxLevel"						"1"
 		
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
-		
-		"AbilityGoldCost"				"250"
-		"AbilityChannelTime"			"5"
 		
 		// BuildingHelper info
 		"Building"						"1" //bool
@@ -559,11 +641,11 @@
 		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
 	
 		"UnitName"						"ground_pounder"
 		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"250"
 		
 		"AbilitySpecial"
 		{
@@ -596,17 +678,14 @@
 	}
 	"build_gaia"
 	{
-				// General
+		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"gaia"
+		"AbilityTextureName"			"build_gaia"
 		"MaxLevel"						"1"
 		
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
-		
-		"AbilityGoldCost"				"350"
-		"AbilityChannelTime"			"5"
 		
 		// BuildingHelper info
 		"Building"						"1" //bool
@@ -614,11 +693,11 @@
 		"BuildTime"						"5.0"
 		"AbilityCastRange"				"200"
 		"UpdateHealth"					"1" //bool
-		"Scale"							"0" //bool
 		"PlayerCanControl"				"1" //bool
 	
 		"UnitName"						"gaia"
 		"AbilityCooldown"				"0"
+		"AbilityGoldCost"				"350"
 		
 		"AbilitySpecial"
 		{
@@ -658,215 +737,312 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_crystal_shooter"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"crystal_shooter"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"10"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"crystal_shooter"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_crystal_blaster"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_crystal_blaster"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"crystal_blaster"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"50"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"50"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"crystal_blaster"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_crystal_fury"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"build_crystal_fury"
+		"AbilityTextureName"			"build_crystal_shooter"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"flame_staff"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"200"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"crystal_fury"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_crystal_slower"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_crystal_slower"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"flame_staff"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"250"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"250"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"crystal_slower"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_crystal_buster"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_crystal_buster"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"crystal_buster"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"400"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"crystal_buster"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_crystal_dissolver"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_crystal_dissolver"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"crystal_dissolver"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"650"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"650"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"cyrstal_disolver"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 
@@ -877,221 +1053,314 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1868"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"shock_tower"
+		"AbilityTextureName"			"build_shock_tower"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"shock_tower"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"10"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"shock_tower"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_storm_caller"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1868"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"storm_caller"
+		"AbilityTextureName"			"build_storm_caller"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"storm_caller"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"40"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"40"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"storm_caller"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_chain_lightning_caster"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1868"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"chain_lightning_caster"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"build_chain_lightning_caster"
+		"AbilityTextureName"			"build_flame_staff"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"chain_lightning_caster"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"100"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"gaias_box"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_thunder_rod"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1868"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"thunder_rod"
+		"AbilityTextureName"			"build_thunder_rod"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"thunder_rod"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"200"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"thunder_rod"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_sparkler"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1868"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"ground_pounder"
+		"AbilityTextureName"			"build_sparkler"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"sparkler"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"285"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"285"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"sparkler"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 	"build_battery"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"1868"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"battery"
+		"AbilityTextureName"			"build_battery"
 		"MaxLevel"						"1"
-
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"120"
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
+		
+		// BuildingHelper info
+		"Building"						"1" //bool
+		"BuildingSize"					"2"
+		"BuildTime"						"5.0"
+		"AbilityCastRange"				"200"
+		"UpdateHealth"					"1" //bool
+		"PlayerCanControl"				"1" //bool
+	
+		"UnitName"						"battery"
 		"AbilityCooldown"				"0"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityGoldCost"				"350"
-
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"build_time"			"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"350"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+		}
+	
 		"OnSpellStart"
 		{
 			"RunScript"
 			{
-				"Target"				"POINT"
-				"ScriptFile"			"scripts/vscripts/custom_tower_ability.lua"
-				"Function"				"getBuildingPoint"
-				"Tower"					"gaia"
+				"ScriptFile"	"builder.lua"
+				"Function"		"Build"
+				
 			}
-		}
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
 		}
 	}
 
@@ -1111,7 +1380,7 @@
 	        "01"
 	        {
 	        	"var_type"					"FIELD_INTEGER"
-	        	"radius"					"650"
+	        	"radius"					"300"
 	        }
 	    }
 		
@@ -1166,7 +1435,6 @@
 			}
 		}
 	}
-
 
 
 	"tower_slow"
