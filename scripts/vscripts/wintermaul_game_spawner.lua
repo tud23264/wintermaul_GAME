@@ -299,9 +299,27 @@ function CWintermaulGameSpawner:_DoSpawn()
 						entUnit:SetAttackCapability(1)
 					end
 				end
-				local entWp = self:_GetSpawnWaypoint()
+				
+				
+				if entUnit:HasGroundMovementCapability() then
+					local entPos = entUnit:GetOrigin()
 
-				if entWp ~= nil then
+					if entPos.y > 2560 then
+						local tempWaypoint
+						if entPos.x > -2670 then
+							tempWaypoint = "pc_pink_top"
+						else
+							tempWaypoint = "pc_green_top"
+						end
+						
+						local entTempWaypoint = Entities:FindByName( nil, tempWaypoint )
+						entUnit:SetInitialGoalEntity( entTempWaypoint )
+					else
+						local entTempWaypoint =  Entities:FindByName( nil, "path_end" )
+						entUnit:SetInitialGoalEntity( entTempWaypoint )
+					end
+				else
+					local entWp = self:_GetSpawnWaypoint()
 					entUnit:SetInitialGoalEntity( entWp )
 				end
 
