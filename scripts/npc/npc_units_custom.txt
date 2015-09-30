@@ -13,13 +13,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/buildings/building_plain_reference.vmdl"// Model.
+		"Model"						"models/items/wards/dire_ward_eye/dire_ward_eye.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
-		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
+		"ModelScale"				"1.2"
 		
 		
 		// Abilities
@@ -48,7 +47,7 @@
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/base_attacks/ranged_badguy.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Bounty
@@ -95,13 +94,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/buildings/building_racks_melee_reference.vmdl"// Model.
+		"Model"						"models/items/wards/esl_wardchest_four_armed_observer/esl_wardchest_four_armed_observer.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
-		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
+		"ModelScale"				"1.2"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -122,14 +120,14 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"38"		// Damage range min.
+		"AttackDamageMax"			"47"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_jakiro/jakiro_macropyre_projectile.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Bounty
@@ -176,13 +174,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/buildings/building_racks_ranged_reference.vmdl"// Model.
+		"Model"						"models/items/wards/sea_dogs_watcher/sea_dogs_watcher.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
-		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
+		"ModelScale"				"1.2"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -203,15 +200,15 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"76"		// Damage range min.
+		"AttackDamageMax"			"100"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1"			// Speed of attack.
+		"AttackRate"				"2"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"750"		// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_luna/luna_eclipse_impact.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"2000"		// Speed of projectile.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -257,13 +254,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/aegis.mdl"// Model.
+		"Model"						"models/items/wards/esl_wardchest_direling_ward/esl_wardchest_direling_ward.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
-		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
+		"ModelScale"				"1.2"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -284,15 +280,15 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"300"		// Damage range min.
+		"AttackDamageMax"			"300"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1"			// Speed of attack.
+		"AttackRate"				"0.5"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
-		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"750"		// Speed of projectile.
+		"AttackRange"				"100"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire_b.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"950"		// Speed of projectile.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -338,13 +334,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/aegis.mdl"// Model.
+		"Model"						"models/items/wards/warlock_hells_sight/warlock_hells_sight.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
-		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
+		"ModelScale"				"1.2"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -366,15 +361,15 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"350"		// Damage range min.
+		"AttackDamageMax"			"450"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"750"		// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_lina/lina_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1000"		// Speed of projectile.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -420,13 +415,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/cheese.mdl"// Model.
+		"Model"						"models/items/shadowshaman/serpent_ward/dotapit_s3_wild_tempest_wards/dotapit_s3_wild_tempest_wards.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
-		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
+		"ModelScale"				"2"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -447,14 +441,14 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"10"		// Damage range min.
-		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageMin"			"999"		// Damage range min.
+		"AttackDamageMax"			"999"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_invoker/invoker_chaos_meteor.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Bounty
@@ -929,7 +923,7 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/clarity.mdl"// Model.
+		"Model"						"models/heroes/ancient_apparition/ancient_apparition.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
@@ -959,11 +953,11 @@
 		"AttackDamageMax"			"425"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.1"			// Speed of attack.
-		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
+		"AttackAnimationPoint"		"0.1"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"750"		// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_tinker/tinker_laser.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"2000"		// Speed of projectile.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1013,14 +1007,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_creature"								// Class of entity of link to.
-		"Model"						"models/props_structures/good_statue008.vmdl"	// Model.
+		"Model"						"models/props_structures/wooden_sentry_tower001.vmdl"	// Model.
 		"SoundSet"					"Tower.Water"									// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
-		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
-		"Scale"						"0.5"
+		"ModelScale"						"0.4"
 		
 		
 		// Abilities
@@ -1077,7 +1069,7 @@
 		"StatusHealthMana"			"0"			// Health regeneration rate.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
-		// Team
+		// Team 
 		//----------------------------------------------------------------
 		"TeamName"					"DOTA_TEAM_GOODGUYS"			// Team name.
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_SIEGE"
@@ -1096,11 +1088,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_structures/good_base_wall006.vmdl"// Model.
+		"Model"						"models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		"ModelScale"						"0.6"
 		
 		
 		
@@ -1124,15 +1117,15 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"38"		// Damage range min.
-		"AttackDamageMax"			"47"		// Damage range max.
+		"AttackDamageMin"			"1"		// Damage range min.
+		"AttackDamageMax"			"1"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1"			// Speed of attack.
-		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
+		"AttackRate"				"0.1"			// Speed of attack.
+		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
-		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"750"		// Speed of projectile.
+		"AttackRange"				"700"		// Range within a target can be attacked. 
+		"ProjectileModel"			"particles/units/heroes/hero_rattletrap/rattletrap_rocket_flare.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"2000"		// Speed of projectile.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1184,6 +1177,7 @@
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		"ModelScale"						"1.8"
 		
 		
 		
@@ -1214,7 +1208,7 @@
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/units/heroes/hero_crystalmaiden/maiden_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/base_attacks/fountain_attack_attack_trail_b.vpcf"// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Bounty
@@ -1268,6 +1262,7 @@
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		"ModelScale"						"0.6"
 		
 		
 		
@@ -1349,9 +1344,10 @@
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
 		"Model"						"models/props_structures/good_base_wall006.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
-		"MinimapIconSize"			"200"
+		"MinimapIcon"				"minimap_tower"
+		"MinimapIconSize"			"100"
 		"Level"						"1"
+		"ModelScale"						"1.5"
 		
 		
 		
@@ -1431,11 +1427,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_structures/good_ancient001.vmdl"// Model.
+		"Model"						"models/props_structures/good_statue008.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		"ModelScale"						"0.8"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -2074,7 +2071,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 		
 	}
@@ -2156,7 +2153,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 			
 			"AttachWearables"
 			{
@@ -2243,7 +2240,15 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+   			{
+			    "Wearable1" { "ItemDef" "75" }
+			    "Wearable2" { "ItemDef" "76" } 
+			    "Wearable3" { "ItemDef" "77" } 
+			    "Wearable4" { "ItemDef" "78" } 
+			    "Wearable5" { "ItemDef" "79" } 
+			    "Wearable6" { "ItemDef" "80" } 
+			}
 		}
 	}
 	//wave 4 barbarian
@@ -2320,7 +2325,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	} 
 	//wave 5 drake
@@ -2398,7 +2403,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 6 stalker
@@ -2475,7 +2480,11 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			{
+				"Wearable1"	{ "ItemDef" "443" }
+				"Wearable2" { "ItemDef" "444" }
+			}
 		}
 	}
 	//wave 7 Water runner
@@ -2552,7 +2561,13 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			{
+				"Wearable1"	{ "ItemDef" "353" }
+				"Wearable2" { "ItemDef" "354" }
+				"Wearable3" { "ItemDef" "355" }
+				"Wearable4"	{ "ItemDef" "356" }
+			}
 		}
 	}
 	//wave 8 Ice troll
@@ -2629,7 +2644,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 9 Wolf rider
@@ -2706,7 +2721,15 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			 "AttachWearables"
+			   {
+			    "Wearable1" { "ItemDef" "142" }
+			    "Wearable2" { "ItemDef" "143" } 
+			    "Wearable3" { "ItemDef" "144" }
+			    "Wearable4" { "ItemDef" "145" }
+			    "Wearable5" { "ItemDef" "146" }
+			    "Wearable6" { "ItemDef" "147" }
+			   }
 		}
 	}
 	//wave 10 Hovercraft
@@ -2783,7 +2806,13 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			   {
+			    "Wearable1" { "ItemDef" "176" }
+			    "Wearable2" { "ItemDef" "177" } 
+			    "Wearable3" { "ItemDef" "178" }
+			    "Wearable4" { "ItemDef" "179" }
+			   }
 		}
 	}
 	//wave 11 Goblin machines
@@ -2860,7 +2889,13 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			   {
+			    "Wearable1" { "ItemDef" "386" }
+			    "Wearable2" { "ItemDef" "388" } 
+			    "Wearable3" { "ItemDef" "389" }
+			    "Wearable4" { "ItemDef" "390" }
+			   }
 		}
 	}
 	//wave 12 Frosty reptile
@@ -2937,7 +2972,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 13 Demonic pets
@@ -3014,7 +3049,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 14 Matured dragons
@@ -3091,7 +3126,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 15 Matured Ice shard golem - recieve an extra 1000 gold here (the lumber)
@@ -3168,7 +3203,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 16 Eternal spirit
@@ -3245,7 +3280,14 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			   {
+			    "Wearable1" { "ItemDef" "168" }
+			    "Wearable2" { "ItemDef" "169" } 
+			    "Wearable3" { "ItemDef" "170" }
+			    "Wearable4" { "ItemDef" "171" }
+			    "Wearable5" { "ItemDef" "172" }
+			   }
 		}
 	}
 	//wave 17 Supply tank
@@ -3257,7 +3299,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
-		"ModelScale" 					"2"
+		"ModelScale" 					"1.5"
 		"IsNeutralUnitType"			"1"
 		"PathfindingSearchDepthScale" "0.5"
 		"UnitLabel"					"waveCreep"
@@ -3322,7 +3364,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 18 Walking corpse
@@ -3399,7 +3441,14 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			   {
+			    "Wearable1" { "ItemDef" "258" }
+			    "Wearable2" { "ItemDef" "259" } 
+			    "Wearable3" { "ItemDef" "260" }
+			    "Wearable4" { "ItemDef" "261" }
+			    "Wearable5" { "ItemDef" "262" }
+			   }
 		}
 	}
 	//wave 19 Totem carriers
@@ -3476,7 +3525,12 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			   {
+			    "Wearable1" { "ItemDef" "459" }
+			    "Wearable2" { "ItemDef" "460" } 
+			    "Wearable3" { "ItemDef" "461" }
+			   }
 		}
 	}
 	//wave 20 Unholy knight
@@ -3553,7 +3607,13 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			   {
+			    "Wearable1" { "ItemDef" "183" }
+			    "Wearable2" { "ItemDef" "184" } 
+			    "Wearable3" { "ItemDef" "185" }
+			    "Wearable4" { "ItemDef" "186" }
+			   }
 		}
 	}
 	//wave 21 Crystal mages
@@ -3630,7 +3690,14 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			   {
+			    "Wearable1" { "ItemDef" "252" }
+			    "Wearable2" { "ItemDef" "253" } 
+			    "Wearable3" { "ItemDef" "254" }
+			    "Wearable4" { "ItemDef" "255" }
+			    "Wearable5" { "ItemDef" "256" }
+			   }
 		}
 	}
 	//wave 22 Frozen infernals
@@ -3642,7 +3709,7 @@
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
-		"ModelScale" 					"1.5"
+		"ModelScale" 					"1.3"
 		"IsNeutralUnitType"			"1"
 		"PathfindingSearchDepthScale" "0.5"
 		"UnitLabel"					"waveCreep"
@@ -3707,7 +3774,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 23 Dragons
@@ -3784,7 +3851,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 24 Polar bears
@@ -3861,7 +3928,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 25 Possessed hunters
@@ -3938,7 +4005,14 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			   {
+			    "Wearable1" { "ItemDef" "335" }
+			    "Wearable2" { "ItemDef" "215" } 
+			    "Wearable3" { "ItemDef" "216" }
+			    "Wearable4" { "ItemDef" "217" }
+			    "Wearable5" { "ItemDef" "218" }
+			   }
 		}
 	}
 	//wave 26 Corrupt Chieftain
@@ -4015,7 +4089,14 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			   {
+			    "Wearable1" { "ItemDef" "426" }
+			    "Wearable2" { "ItemDef" "427" } 
+			    "Wearable3" { "ItemDef" "428" }
+			    "Wearable4" { "ItemDef" "429" }
+			    "Wearable5" { "ItemDef" "430" }
+			   }
 		}
 	}
 	//wave 27 Ancient dragon
@@ -4092,7 +4173,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 28 Spider fiends
@@ -4169,7 +4250,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 29 Armored wisps -- WISP DOESNT WORK --
@@ -4246,7 +4327,7 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			
 		}
 	}
 	//wave 30 Duke Wintermaul
@@ -4322,9 +4403,14 @@
 		
 		"creature"
 		{
-			"DisableClumpingBehavior"   "1"
+			"AttachWearables"
+			{
+			    "Wearable1" { "ItemDef" "454" }
+			    "Wearable2" { "ItemDef" "455" } 
+			    "Wearable3" { "ItemDef" "456" }
+			    "Wearable4" { "ItemDef" "457" }
+			    "Wearable5" { "ItemDef" "458" }
+		   }
 		}
 	}
-
-	
 }

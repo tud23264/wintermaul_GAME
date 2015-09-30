@@ -1,0 +1,15 @@
+"addon"
+{
+	"Language"		"English"
+	"Tokens"
+	{	
+		"addon_game_name"	"BuildingHelper"
+	
+		// Error Messages
+		"error_invalid_build_position"			"You can't build there"
+		"error_not_enough_gold"					"Not Enough Gold"
+		"error_not_enough_lumber"				"Not Enough Lumber"
+		"error_full_health"						"Already on full health"
+		"error_queue_full"						"Queue is full"
+	}
+}

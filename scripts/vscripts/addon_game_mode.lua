@@ -37,7 +37,27 @@ function Precache( context )
 	PrecacheUnitByNameSync("nature_pool", context)
 	PrecacheUnitByNameSync("terran_protector", context)
 	PrecacheItemByNameSync("item_apply_modifiers", context)
-	print( "Precaching is complete." )
+	
+
+	--Fire towers
+	PrecacheUnitByNameSync("flare_tower", context)
+	PrecacheUnitByNameSync("flame_dancer", context)
+	PrecacheUnitByNameSync("meteor_watcher", context)
+	PrecacheUnitByNameSync("blast_furnace", context)
+	PrecacheUnitByNameSync("incinerator", context)
+	PrecacheUnitByNameSync("flame_staff", context)
+
+	PrecacheResource("particle","particles/base_attacks/ranged_badguy.vpcf", context)
+	PrecacheResource("particle","particles/units/heroes/hero_jakiro/jakiro_macropyre_projectile.vpcf", context)
+	PrecacheResource("particle","particles/units/heroes/hero_luna/luna_eclipse_impact.vpcf", context)
+	PrecacheResource("particle","particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire_b.vpcf", context)
+	PrecacheResource("particle","particles/units/heroes/hero_lina/lina_base_attack.vpcf", context)
+	PrecacheResource("particle","particles/units/heroes/hero_invoker/invoker_chaos_meteor.vpcf", context)
+	
+	--Crystal towers
+	PrecacheUnitByNameSync("crystal_dissolver",context)
+	PrecacheResource("particle","particles/units/heroes/hero_tinker/tinker_laser.vpcf",context)
+	print( "Precaching is complete, bitches." )
 end
 
 function Activate()
