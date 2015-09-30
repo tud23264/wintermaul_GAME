@@ -18,3 +18,6 @@ http://cdn.dota2.com/apps/570/scripts/items/items_game.bc84af67b0b1aceb03b48a506
 
 Dont forget to post changes to the changelog and add things todo in the todo section.
 https://docs.google.com/document/d/1jHjd_MYtDy00Yr-jK5lZwLeG6AvUA7XUo3hV8VMWlIg/edit
+
+New spreadsheet for balancing purposes
+https://docs.google.com/spreadsheets/d/1qsGuLgSRBkONYaFAbC731Atq0tJ87Al-oobraLPY7DM/edit#gid=0
