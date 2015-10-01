@@ -56,7 +56,29 @@ function Precache( context )
 	
 	--Crystal towers
 	PrecacheUnitByNameSync("crystal_dissolver",context)
+	PrecacheUnitByNameSync("crystal_buster",context)
+	PrecacheUnitByNameSync("crystal_slower",context)
+	PrecacheUnitByNameSync("crystal_fury",context)
+	PrecacheUnitByNameSync("crystal_blaster",context)
+	PrecacheUnitByNameSync("crystal_shooter",context)
+
 	PrecacheResource("particle","particles/units/heroes/hero_tinker/tinker_laser.vpcf",context)
+	PrecacheResource("particle","particles/units/heroes/hero_oracle/oracle_base_attack.vpcf",context)
+	PrecacheResource("particle","particles/econ/items/enigma/enigma_geodesic/enigma_base_attack_eidolon_geodesic.vpcf",context)
+	PrecacheResource("particle","particles/base_attacks/fountain_attack.vpcf",context)
+
+	--Earth towers
+	PrecacheUnitByNameSync("nature_pool",context)
+	PrecacheUnitByNameSync("terran_protector",context)
+	PrecacheUnitByNameSync("gaias_box",context)
+	PrecacheUnitByNameSync("earths_soul",context)
+	PrecacheUnitByNameSync("ground_pounder",context)
+	PrecacheUnitByNameSync("gaia",context)
+
+	PrecacheResource("particle","particles/units/heroes/hero_morphling/morphling_base_attack.vpcf",context)
+	PrecacheResource("particle","particles/base_attacks/ranged_hero.vpcf",context)
+	PrecacheResource("particle","particles/units/heroes/hero_enchantress/enchantress_base_attack.vpcf",context)
+
 	print( "Precaching is complete, bitches." )
 end
 

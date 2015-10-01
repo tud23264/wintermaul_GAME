@@ -500,7 +500,7 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/magic_wand.mdl"// Model.
+		"Model"						"models/items/wards/eyeofforesight/eyeofforesight.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
@@ -536,7 +536,7 @@
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"750"		// Speed of projectile.
+		"ProjectileSpeed"			"950"		// Speed of projectile.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -582,13 +582,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/gem01.mdl"// Model.
+		"Model"						"models/particle/sphere.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
-		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
+		"ModelScale"				"10"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -657,6 +656,19 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"100 200 250"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"100 75 50"
+			}
+		}
 	}
 	
 	
@@ -666,11 +678,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/frog.mdl"// Model.
+		"Model"						"models/particle/lion_attack_sphere.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		"ModelScale"				"1.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -692,15 +705,15 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"100"		// Damage range min.
-		"AttackDamageMax"			"100"		// Damage range max.
+		"AttackDamageMin"			"91"		// Damage range min.
+		"AttackDamageMax"			"110"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.3"			// Speed of attack.
-		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
+		"AttackRate"				"0.2"			// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"750"		// Speed of projectile.
+		"ProjectileModel"			"particles/base_attacks/fountain_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1500"		// Speed of projectile.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -746,12 +759,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"splash_radius"				"100 200 250"
+				"blade_dance_crit_mult"		"200"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"splash_damage_percent"		"100 75 50"
+				"blade_dance_crit_chance"	"20"
 			}
 		}
 	}
@@ -763,19 +776,20 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/aegis.mdl"// Model.
+		"Model"						"models/items/crystal_maiden/ward_staff/ward_staff_crystal.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		"ModelScale"				"8"
 		
 		// Abilities
 		//----------------------------------------------------------------
 		
 		"Ability1"					"tower_slow"			// Ability 1.
-		"Ability2"					"ability_building"		// Ability 2.
-		"Ability3"					"sell_building"			// Ability 3.
-		"Ability4"					""			// Ability 4.
+		"Ability2"					"splash_damage"		// Ability 2.
+		"Ability3"					"ability_building"			// Ability 3.
+		"Ability4"					"sell_building"			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
@@ -796,8 +810,8 @@
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"750"		// Speed of projectile.
+		"ProjectileModel"			"particles/econ/items/enigma/enigma_geodesic/enigma_base_attack_eidolon_geodesic.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"950"		// Speed of projectile.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -836,6 +850,36 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"4.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed"			"-10"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"100 200 250"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"100 75 50"
+			}
+		}
+
 	}
 	
 		"crystal_buster"
@@ -843,11 +887,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_gameplay/cheese.mdl"// Model.
+		"Model"						"models/heroes/oracle/crystal_ball.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
+		"ModelScale"				"3.2"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -876,8 +921,8 @@
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"750"		// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_oracle/oracle_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"950"		// Speed of projectile.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -915,6 +960,19 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"100 200 250"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"100 75 50"
+			}
+		}
 	}
 
 	
@@ -949,8 +1007,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"425"		// Damage range min.
-		"AttackDamageMax"			"425"		// Damage range max.
+		"AttackDamageMin"			"401"		// Damage range min.
+		"AttackDamageMax"			"401"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.1"		// Normalized time in animation cycle to attack.
@@ -1007,12 +1065,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_creature"								// Class of entity of link to.
-		"Model"						"models/props_structures/wooden_sentry_tower001.vmdl"	// Model.
+		"Model"						"models/items/furion/treant/eternalseasons_treant/eternalseasons_treant.vmdl"	// Model.
 		"SoundSet"					"Tower.Water"									// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
-		"ModelScale"						"0.4"
+		"ModelScale"						"1"
 		
 		
 		// Abilities
@@ -1041,7 +1099,7 @@
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/neutral_fx/ghost_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_morphling/morphling_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Bounty
@@ -1080,6 +1138,20 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"100 200 250"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"100 75 50"
+			}
+		}
+
 	}
 	
 	
@@ -1088,12 +1160,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"// Model.
+		"Model"						"models/props_structures/wooden_sentry_tower001.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
-		"ModelScale"						"0.6"
+		"ModelScale"				"0.4"
 		
 		
 		
@@ -1117,15 +1189,15 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"1"		// Damage range min.
-		"AttackDamageMax"			"1"		// Damage range max.
+		"AttackDamageMin"			"50"		// Damage range min.
+		"AttackDamageMax"			"60"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.1"			// Speed of attack.
-		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
+		"AttackRate"				"1"			// Speed of attack.
+		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked. 
 		"ProjectileModel"			"particles/units/heroes/hero_rattletrap/rattletrap_rocket_flare.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"2000"		// Speed of projectile.
+		"ProjectileSpeed"			"1000"		// Speed of projectile.
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -1164,6 +1236,19 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"100 200 250"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"100 75 50"
+			}
+		}
 		
 	}
 	
@@ -1177,7 +1262,7 @@
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
-		"ModelScale"						"1.8"
+		"ModelScale"				"1.8"
 		
 		
 		
@@ -1208,7 +1293,7 @@
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/fountain_attack_attack_trail_b.vpcf"// Particle system model for projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_morphling/morphling_base_attack.vpcf"// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Bounty
@@ -1248,6 +1333,19 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"100 200 250"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"100 75 50"
+			}
+		}
 	}
 	
 	
@@ -1257,12 +1355,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_structures/tower_good.vmdl"// Model.
+		"Model"						"models/items/furion/treant/father_treant/father_treant.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
-		"ModelScale"						"0.6"
+		"ModelScale"				"1.5"
 		
 		
 		
@@ -1333,6 +1431,20 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"100 200 250"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"100 75 50"
+			}
+		}
+
 	}
 	
 	
@@ -1342,7 +1454,7 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_structures/good_base_wall006.vmdl"// Model.
+		"Model"						"models/items/furion/treant/shroomling_treant/shroomling_treant.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"100"
@@ -1378,7 +1490,7 @@
 		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_enchantress/enchantress_base_attack.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"750"		// Speed of projectile.
 
 		// Bounty
@@ -1418,6 +1530,19 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"100 200 250"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"100 75 50"
+			}
+		}
 	}
 	
 	
@@ -1427,12 +1552,12 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_structures/good_statue008.vmdl"// Model.
+		"Model"						"models/props_tree/tree_pine_03b_sfm.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
-		"ModelScale"						"0.8"
+		"ModelScale"						"1.5"
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1501,6 +1626,19 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_radius"				"100 200 250"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"splash_damage_percent"		"100 75 50"
+			}
+		}
 	}
 
 	//==========================================================
