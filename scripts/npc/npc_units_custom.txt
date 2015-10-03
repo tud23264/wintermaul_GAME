@@ -12,13 +12,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/buildings/building_plain_reference.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		
@@ -94,13 +93,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/buildings/building_racks_melee_reference.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
@@ -175,13 +173,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/buildings/building_racks_ranged_reference.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
@@ -256,13 +253,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/aegis.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
@@ -337,13 +333,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/aegis.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
@@ -419,13 +414,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/cheese.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
@@ -505,13 +499,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/magic_wand.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
@@ -587,13 +580,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/gem01.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
@@ -671,10 +663,10 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/frog.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -768,10 +760,10 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/aegis.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -848,10 +840,10 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/cheese.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -928,10 +920,10 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/clarity.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -1015,12 +1007,11 @@
 		"BaseClass"					"npc_dota_creature"								// Class of entity of link to.
 		"Model"						"models/props_structures/good_statue008.vmdl"	// Model.
 		"SoundSet"					"Tower.Water"									// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
-		"Scale"						"0.5"
+		"ModelScale"				"0.7"
 		
 		
 		// Abilities
@@ -1095,14 +1086,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_structures/good_base_wall006.vmdl"// Model.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"						"models/heroes/lone_druid/lone_druid.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
-		
-		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1172,24 +1161,35 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 		
+		"creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1" { "ItemDef" "5187" }
+				"Wearable2" { "ItemDef" "5188" }
+				"Wearable3" { "ItemDef" "5189" }
+				"Wearable4" { "ItemDef" "5190" }
+				"Wearable5" { "ItemDef" "5191" }
+				"Wearable6" { "ItemDef" "5192" }
+			}
+		}			
 	}
 	
 	"gaias_box"
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/red_box.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
-		
+		"ModelScale"				"1.8"
 		
 		
 		// Abilities
 		//----------------------------------------------------------------
-		
 		"Ability1"					"splash_damage"			// Ability 1.
 		"Ability2"					"ability_building"		// Ability 2.
 		"Ability3"					"sell_building"			// Ability 3.
@@ -1219,7 +1219,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"	// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1262,14 +1262,13 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_structures/tower_good.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
-		
-		
+		"ModelScale"				"0.7"
 		
 		
 		// Abilities
@@ -1346,10 +1345,10 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_structures/good_base_wall006.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -1424,16 +1423,14 @@
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
 	
-	
-	
 		"gaia"
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_structures/good_ancient001.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -1515,10 +1512,10 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/buildings/building_plain_reference.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -1590,18 +1587,16 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
-	
-	
-	
-	
+
+
 	"storm_caller"
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/buildings/building_racks_melee_reference.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -1679,10 +1674,10 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/buildings/building_racks_ranged_reference.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -1760,10 +1755,10 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/aegis.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -1841,10 +1836,10 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/aegis.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -1923,10 +1918,10 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/cheese.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower90"
+		"MinimapIcon"				"minimap_tower"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		
@@ -2052,11 +2047,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"25"		// Base health.
+		"StatusHealth"				"100"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2129,11 +2124,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"50"		// Base health.
+		"StatusHealth"				"153"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2221,11 +2216,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"113"		// Base health.
+		"StatusHealth"				"246"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2298,11 +2293,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"214"		// Base health.
+		"StatusHealth"				"379"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2379,7 +2374,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"353"		// Base health.
+		"StatusHealth"				"552"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2453,11 +2448,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"530"		// Base health.
+		"StatusHealth"				"765"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2530,11 +2525,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"745"		// Base health.
+		"StatusHealth"				"1018"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2607,11 +2602,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"998"		// Base health.
+		"StatusHealth"				"1311"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2684,11 +2679,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1289"		// Base health.
+		"StatusHealth"				"1644"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2761,11 +2756,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1618"		// Base health.
+		"StatusHealth"				"2017"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2838,11 +2833,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1985"		// Base health.
+		"StatusHealth"				"2430"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2915,11 +2910,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2390"		// Base health.
+		"StatusHealth"				"2883"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2992,11 +2987,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2833"		// Base health.
+		"StatusHealth"				"3376"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3073,7 +3068,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3314"		// Base health.
+		"StatusHealth"				"3909"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3146,11 +3141,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3833"		// Base health.
+		"StatusHealth"				"4482"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3223,11 +3218,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4390"		// Base health.
+		"StatusHealth"				"5095"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3300,11 +3295,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4985"		// Base health.
+		"StatusHealth"				"5748"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3377,11 +3372,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5618"		// Base health.
+		"StatusHealth"				"6441"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3454,11 +3449,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"6289"		// Base health.
+		"StatusHealth"				"7174"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3531,11 +3526,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"6998"		// Base health.
+		"StatusHealth"				"7947"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3608,11 +3603,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"7745"		// Base health.
+		"StatusHealth"				"8760"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3685,11 +3680,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"8350"		// Base health.
+		"StatusHealth"				"9613"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3766,7 +3761,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"9353"		// Base health.
+		"StatusHealth"				"10506"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3839,11 +3834,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"10214"		// Base health.
+		"StatusHealth"				"11439"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3916,11 +3911,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"11113"		// Base health.
+		"StatusHealth"				"12412"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3993,11 +3988,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"12050"		// Base health.
+		"StatusHealth"				"13425"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4074,7 +4069,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"13025"		// Base health.
+		"StatusHealth"				"14478"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4147,11 +4142,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"14038"		// Base health.
+		"StatusHealth"				"15571"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4224,11 +4219,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"15089"		// Base health.
+		"StatusHealth"				"16704"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4300,11 +4295,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"16178"		// Base health.
+		"StatusHealth"				"17877"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4325,6 +4320,4 @@
 			"DisableClumpingBehavior"   "1"
 		}
 	}
-
-	
 }
