@@ -1,6 +1,6 @@
 "dota_wintermaul"
 {
-	"PrepTimeBetweenRounds"			"5"
+	"PrepTimeBetweenRounds"			"10"
 	"ItemExpireTime"				"10"
 	"RestoreHPAfterRound"			"0"
 	"RestoreMPAfterRound"			"0"

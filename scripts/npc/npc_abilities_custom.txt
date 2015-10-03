@@ -27,7 +27,7 @@
 		"UpdateHealth"					"1" //bool
 		"PlayerCanControl"				"1" //bool
 	
-		"UnitName"						"nature_pool"
+		"UnitName"						"flare_tower"
 		"AbilityCooldown"				"0"
 		"AbilityGoldCost"				"10"
 		
@@ -1160,7 +1160,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"build_chain_lightning_caster"
-		"AbilityTextureName"			"build_flame_staff"
+		"AbilityTextureName"			"build_chain_lightning_caster"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -1372,7 +1372,7 @@
 	{
 		"AbilityBehavior"           	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"splash_damage"
+		"AbilityTextureName"			"sven_great_cleave"
 		"MaxLevel"                      "1"
 
 		"AbilitySpecial"
@@ -1498,6 +1498,7 @@
 			}
 		}		
 	}
+	
 	
 	"ability_building_queue"
 	{
