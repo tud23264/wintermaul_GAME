@@ -842,7 +842,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"build_crystal_shooter"
+		"AbilityTextureName"			"build_crystal_fury"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -856,7 +856,7 @@
 		"UpdateHealth"					"1" //bool
 		"PlayerCanControl"				"1" //bool
 	
-		"UnitName"						"flame_staff"
+		"UnitName"						"crystal_fury"
 		"AbilityCooldown"				"0"
 		"AbilityGoldCost"				"200"
 		
@@ -908,7 +908,7 @@
 		"UpdateHealth"					"1" //bool
 		"PlayerCanControl"				"1" //bool
 	
-		"UnitName"						"flame_staff"
+		"UnitName"						"crystal_slower"
 		"AbilityCooldown"				"0"
 		"AbilityGoldCost"				"250"
 		
@@ -1372,7 +1372,7 @@
 	{
 		"AbilityBehavior"           	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"sven_great_cleave"
+		"AbilityTextureName"			"splash_damage"
 		"MaxLevel"                      "1"
 
 		"AbilitySpecial"
