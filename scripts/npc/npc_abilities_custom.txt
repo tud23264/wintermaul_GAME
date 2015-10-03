@@ -1159,7 +1159,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"build_chain_lightning_caster"
+		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"build_chain_lightning_caster"
 		"MaxLevel"						"1"
 		
