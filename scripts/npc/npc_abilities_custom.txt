@@ -13,7 +13,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"flare_tower"
+		"AbilityTextureName"			"build_flare_tower"
 		"MaxLevel"						"1"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -65,7 +65,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"flame_dancer"
+		"AbilityTextureName"			"build_flame_dancer"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -115,7 +115,7 @@
 	"build_meteor_watcher"
 	{
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"meteor_watcher"
+		"AbilityTextureName"			"build_nature_pool"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -167,7 +167,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"blast_furnace"
+		"AbilityTextureName"			"build_blast_furnace"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -219,7 +219,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"incinerator"
+		"AbilityTextureName"			"build_incinerator"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -271,7 +271,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"flame_staff"
+		"AbilityTextureName"			"build_flame_staff"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -328,7 +328,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"nature_pool"
+		"AbilityTextureName"			"build_nature_pool"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -473,7 +473,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"terran_protector"
+		"AbilityTextureName"			"build_terran_protector"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -525,7 +525,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"gaias_box"
+		"AbilityTextureName"			"build_gaias_box"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -577,7 +577,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"earths_soul"
+		"AbilityTextureName"			"build_earths_soul"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -629,7 +629,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"ground_pounder"
+		"AbilityTextureName"			"build_ground_pounder"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -681,7 +681,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"gaia"
+		"AbilityTextureName"			"build_gaia"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -738,7 +738,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"crystal_shooter"
+		"AbilityTextureName"			"build_crystal_shooter"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -790,7 +790,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"crystal_blaster"
+		"AbilityTextureName"			"build_crystal_blaster"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -842,7 +842,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"crystal_fury"
+		"AbilityTextureName"			"build_crystal_fury"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -894,7 +894,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"crystal_slower"
+		"AbilityTextureName"			"build_crystal_slower"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -946,7 +946,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"crystal_buster"
+		"AbilityTextureName"			"build_crystal_buster"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -998,7 +998,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"crystal_dissolver"
+		"AbilityTextureName"			"build_crystal_dissolver"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -1054,7 +1054,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"shock_tower"
+		"AbilityTextureName"			"build_shock_tower"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -1106,7 +1106,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"storm_caller"
+		"AbilityTextureName"			"build_storm_caller"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -1159,8 +1159,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"build_chain_lightning_caster"
-		"AbilityTextureName"			"chain_lightning_caster"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"build_chain_lightning_caster"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -1212,7 +1212,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"thunder_rod"
+		"AbilityTextureName"			"build_thunder_rod"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -1264,7 +1264,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"sparkler"
+		"AbilityTextureName"			"build_sparkler"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
@@ -1316,7 +1316,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityTextureName"			"battery"
+		"AbilityTextureName"			"build_battery"
 		"MaxLevel"						"1"
 		
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"

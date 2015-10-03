@@ -68,6 +68,7 @@ function PlayerHasEnoughGold( player, gold_cost )
 	local gold = hero:GetGold()
 
 	if gold < gold_cost then
+		SendErrorMessage(pID, "#error_not_enough_gold")
 		--SendErrorMessage(pID, "#error_not_enough_gold")
 		SendErrorMessage(pID, "Not enough gold")
 		return false
@@ -81,6 +82,7 @@ function PlayerHasEnoughLumber( player, lumber_cost )
 	local pID = player:GetAssignedHero():GetPlayerID()
 
 	if player.lumber < lumber_cost then
+		SendErrorMessage(pID, "#error_not_enough_lumber")
 		--SendErrorMessage(pID, "#error_not_enough_lumber")
 		SendErrorMessage(pID, "Not enough lumber")
 		return false

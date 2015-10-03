@@ -307,9 +307,9 @@ function CWintermaulGameSpawner:_DoSpawn()
 					if entPos.y > 2560 then
 						local tempWaypoint
 						if entPos.x > -2670 then
-							tempWaypoint = "pc_pink_top"
+							tempWaypoint = "pc_water_right"
 						else
-							tempWaypoint = "pc_green_top"
+							tempWaypoint = "pc_water_left"
 						end
 						
 						local entTempWaypoint = Entities:FindByName( nil, tempWaypoint )

@@ -12,7 +12,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/wards/dire_ward_eye/dire_ward_eye.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -93,7 +93,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/wards/esl_wardchest_four_armed_observer/esl_wardchest_four_armed_observer.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -173,7 +173,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/wards/sea_dogs_watcher/sea_dogs_watcher.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -253,7 +253,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/wards/esl_wardchest_direling_ward/esl_wardchest_direling_ward.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -333,7 +333,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/wards/warlock_hells_sight/warlock_hells_sight.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -414,7 +414,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/shadowshaman/serpent_ward/dotapit_s3_wild_tempest_wards/dotapit_s3_wild_tempest_wards.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -499,13 +499,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/wards/eyeofforesight/eyeofforesight.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"HasInventory"				"1"
-		"ConsideredHero"			"1"
 		"Level"						"1"
 		
 		// Abilities
@@ -581,7 +580,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/particle/sphere.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -656,19 +655,6 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_radius"				"100 200 250"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_damage_percent"		"100 75 50"
-			}
-		}
 	}
 	
 	
@@ -677,7 +663,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/particle/lion_attack_sphere.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -751,31 +737,14 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-
-		//Special
-		//------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"blade_dance_crit_mult"		"200"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"blade_dance_crit_chance"	"20"
-			}
-		}
 	}
-	
 	
 	
 	"crystal_slower"
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/crystal_maiden/ward_staff/ward_staff_crystal.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -850,43 +819,13 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"4.0"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"5"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"movement_speed"			"-10"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_radius"				"100 200 250"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_damage_percent"		"100 75 50"
-			}
-		}
-
 	}
 	
 		"crystal_buster"
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/heroes/oracle/crystal_ball.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -960,19 +899,6 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_radius"				"100 200 250"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_damage_percent"		"100 75 50"
-			}
-		}
 	}
 
 	
@@ -980,7 +906,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/heroes/ancient_apparition/ancient_apparition.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -1070,7 +996,7 @@
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
-		"ModelScale"						"1"
+		"ModelScale"				"0.7"
 		
 		
 		// Abilities
@@ -1138,20 +1064,6 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_radius"				"100 200 250"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_damage_percent"		"100 75 50"
-			}
-		}
-
 	}
 	
 	
@@ -1159,15 +1071,12 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
-		"Model"						"models/props_structures/wooden_sentry_tower001.vmdl"// Model.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"						"models/heroes/lone_druid/lone_druid.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower"
+		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
-		"ModelScale"				"0.4"
-		
-		
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -1236,27 +1145,26 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_radius"				"100 200 250"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_damage_percent"		"100 75 50"
-			}
-		}
 		
+		"creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1" { "ItemDef" "5187" }
+				"Wearable2" { "ItemDef" "5188" }
+				"Wearable3" { "ItemDef" "5189" }
+				"Wearable4" { "ItemDef" "5190" }
+				"Wearable5" { "ItemDef" "5191" }
+				"Wearable6" { "ItemDef" "5192" }
+			}
+		}			
 	}
 	
 	"gaias_box"
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/red_box.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -1265,10 +1173,8 @@
 		"ModelScale"				"1.8"
 		
 		
-		
 		// Abilities
 		//----------------------------------------------------------------
-		
 		"Ability1"					"splash_damage"			// Ability 1.
 		"Ability2"					"ability_building"		// Ability 2.
 		"Ability3"					"sell_building"			// Ability 3.
@@ -1298,7 +1204,7 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"	// Experience earn.
+		"BountyXP"					"0"		// Experience earn.
 		"BountyGoldMin"				"0"		// Gold earned min.
 		"BountyGoldMax"				"0"		// Gold earned max.
 
@@ -1333,19 +1239,6 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_radius"				"100 200 250"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_damage_percent"		"100 75 50"
-			}
-		}
 	}
 	
 	
@@ -1354,15 +1247,13 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/furion/treant/father_treant/father_treant.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
 		"MinimapIconSize"			"200"
 		"Level"						"1"
 		"ModelScale"				"1.5"
-		
-		
 		
 		
 		// Abilities
@@ -1431,20 +1322,6 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_radius"				"100 200 250"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_damage_percent"		"100 75 50"
-			}
-		}
-
 	}
 	
 	
@@ -1453,11 +1330,11 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/items/furion/treant/shroomling_treant/shroomling_treant.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
-		"MinimapIcon"				"minimap_tower"
-		"MinimapIconSize"			"100"
+		"MinimapIcon"				"minimap_tower90"
+		"MinimapIconSize"			"200"
 		"Level"						"1"
 		"ModelScale"						"1.5"
 		
@@ -1530,28 +1407,13 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_radius"				"100 200 250"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_damage_percent"		"100 75 50"
-			}
-		}
 	}
-	
-	
 	
 		"gaia"
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_tree/tree_pine_03b_sfm.vmdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -1626,19 +1488,6 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_radius"				"100 200 250"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"splash_damage_percent"		"100 75 50"
-			}
-		}
 	}
 
 	//==========================================================
@@ -1650,7 +1499,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/buildings/building_plain_reference.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -1725,15 +1574,13 @@
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
 	}
-	
-	
-	
-	
+
+
 	"storm_caller"
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/buildings/building_racks_melee_reference.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -1814,7 +1661,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/buildings/building_racks_ranged_reference.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -1895,7 +1742,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/aegis.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -1976,7 +1823,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/aegis.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -2058,7 +1905,7 @@
 	{
 		// General
 		//
-		"BaseClass"					"npc_dota_tower"	// Class of entity of link to.
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
 		"Model"						"models/props_gameplay/cheese.mdl"// Model.
 		"SoundSet"					"Tower.Water"					// Name of sound set.
 		"MinimapIcon"				"minimap_tower90"
@@ -2187,11 +2034,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"25"		// Base health.
+		"StatusHealth"				"100"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2209,7 +2056,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 		
 	}
@@ -2264,11 +2111,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"50"		// Base health.
+		"StatusHealth"				"153"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2291,7 +2138,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 			
 			"AttachWearables"
 			{
@@ -2356,11 +2203,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"113"		// Base health.
+		"StatusHealth"				"246"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2378,6 +2225,7 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
    			{
 			    "Wearable1" { "ItemDef" "75" }
@@ -2441,11 +2289,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"214"		// Base health.
+		"StatusHealth"				"379"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2463,7 +2311,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	} 
 	//wave 5 drake
@@ -2522,7 +2370,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"353"		// Base health.
+		"StatusHealth"				"552"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2541,7 +2389,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 6 stalker
@@ -2596,11 +2444,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"530"		// Base health.
+		"StatusHealth"				"765"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2618,6 +2466,7 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
 			{
 				"Wearable1"	{ "ItemDef" "443" }
@@ -2677,11 +2526,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"745"		// Base health.
+		"StatusHealth"				"1018"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2699,6 +2548,7 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
 			{
 				"Wearable1"	{ "ItemDef" "353" }
@@ -2760,11 +2610,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"998"		// Base health.
+		"StatusHealth"				"1311"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2782,6 +2632,7 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			
 		}
 	}
@@ -2837,11 +2688,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1289"		// Base health.
+		"StatusHealth"				"1644"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2859,6 +2710,7 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			 "AttachWearables"
 			   {
 			    "Wearable1" { "ItemDef" "142" }
@@ -2867,7 +2719,7 @@
 			    "Wearable4" { "ItemDef" "145" }
 			    "Wearable5" { "ItemDef" "146" }
 			    "Wearable6" { "ItemDef" "147" }
-			   }
+			}
 		}
 	}
 	//wave 10 Hovercraft
@@ -2922,11 +2774,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1618"		// Base health.
+		"StatusHealth"				"2017"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -2944,13 +2796,14 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
 			   {
 			    "Wearable1" { "ItemDef" "176" }
 			    "Wearable2" { "ItemDef" "177" } 
 			    "Wearable3" { "ItemDef" "178" }
 			    "Wearable4" { "ItemDef" "179" }
-			   }
+			}
 		}
 	}
 	//wave 11 Goblin machines
@@ -3005,11 +2858,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1985"		// Base health.
+		"StatusHealth"				"2430"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3027,13 +2880,14 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
 			   {
 			    "Wearable1" { "ItemDef" "386" }
 			    "Wearable2" { "ItemDef" "388" } 
 			    "Wearable3" { "ItemDef" "389" }
 			    "Wearable4" { "ItemDef" "390" }
-			   }
+			}
 		}
 	}
 	//wave 12 Frosty reptile
@@ -3088,11 +2942,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2390"		// Base health.
+		"StatusHealth"				"2883"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3110,7 +2964,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 13 Demonic pets
@@ -3165,11 +3019,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2833"		// Base health.
+		"StatusHealth"				"3376"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3187,7 +3041,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 14 Matured dragons
@@ -3246,7 +3100,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3314"		// Base health.
+		"StatusHealth"				"3909"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3264,7 +3118,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 15 Matured Ice shard golem - recieve an extra 1000 gold here (the lumber)
@@ -3319,11 +3173,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"3833"		// Base health.
+		"StatusHealth"				"4482"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3341,7 +3195,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 16 Eternal spirit
@@ -3396,11 +3250,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4390"		// Base health.
+		"StatusHealth"				"5095"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3418,6 +3272,7 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
 			   {
 			    "Wearable1" { "ItemDef" "168" }
@@ -3425,7 +3280,7 @@
 			    "Wearable3" { "ItemDef" "170" }
 			    "Wearable4" { "ItemDef" "171" }
 			    "Wearable5" { "ItemDef" "172" }
-			   }
+			}
 		}
 	}
 	//wave 17 Supply tank
@@ -3480,11 +3335,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4985"		// Base health.
+		"StatusHealth"				"5748"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3502,7 +3357,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 18 Walking corpse
@@ -3557,11 +3412,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"5618"		// Base health.
+		"StatusHealth"				"6441"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3579,6 +3434,7 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
 			   {
 			    "Wearable1" { "ItemDef" "258" }
@@ -3586,7 +3442,7 @@
 			    "Wearable3" { "ItemDef" "260" }
 			    "Wearable4" { "ItemDef" "261" }
 			    "Wearable5" { "ItemDef" "262" }
-			   }
+			}
 		}
 	}
 	//wave 19 Totem carriers
@@ -3641,11 +3497,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"6289"		// Base health.
+		"StatusHealth"				"7174"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3663,12 +3519,13 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
-			   {
+			{
 			    "Wearable1" { "ItemDef" "459" }
 			    "Wearable2" { "ItemDef" "460" } 
 			    "Wearable3" { "ItemDef" "461" }
-			   }
+			}
 		}
 	}
 	//wave 20 Unholy knight
@@ -3723,11 +3580,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"6998"		// Base health.
+		"StatusHealth"				"7947"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3745,13 +3602,14 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
-			   {
+			{
 			    "Wearable1" { "ItemDef" "183" }
 			    "Wearable2" { "ItemDef" "184" } 
 			    "Wearable3" { "ItemDef" "185" }
 			    "Wearable4" { "ItemDef" "186" }
-			   }
+			}
 		}
 	}
 	//wave 21 Crystal mages
@@ -3806,11 +3664,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"7745"		// Base health.
+		"StatusHealth"				"8760"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3828,14 +3686,15 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
-			   {
+			{
 			    "Wearable1" { "ItemDef" "252" }
 			    "Wearable2" { "ItemDef" "253" } 
 			    "Wearable3" { "ItemDef" "254" }
 			    "Wearable4" { "ItemDef" "255" }
 			    "Wearable5" { "ItemDef" "256" }
-			   }
+			}
 		}
 	}
 	//wave 22 Frozen infernals
@@ -3890,11 +3749,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"8350"		// Base health.
+		"StatusHealth"				"9613"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3912,6 +3771,7 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			
 		}
 	}
@@ -3971,7 +3831,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"9353"		// Base health.
+		"StatusHealth"				"10506"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -3989,7 +3849,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 24 Polar bears
@@ -4044,11 +3904,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"10214"		// Base health.
+		"StatusHealth"				"11439"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4066,7 +3926,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 25 Possessed hunters
@@ -4121,11 +3981,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"11113"		// Base health.
+		"StatusHealth"				"12412"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4143,14 +4003,15 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
-			   {
+			{
 			    "Wearable1" { "ItemDef" "335" }
 			    "Wearable2" { "ItemDef" "215" } 
 			    "Wearable3" { "ItemDef" "216" }
 			    "Wearable4" { "ItemDef" "217" }
 			    "Wearable5" { "ItemDef" "218" }
-			   }
+			}
 		}
 	}
 	//wave 26 Corrupt Chieftain
@@ -4205,11 +4066,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"12050"		// Base health.
+		"StatusHealth"				"13425"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4227,14 +4088,15 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
-			   {
+			{
 			    "Wearable1" { "ItemDef" "426" }
 			    "Wearable2" { "ItemDef" "427" } 
 			    "Wearable3" { "ItemDef" "428" }
 			    "Wearable4" { "ItemDef" "429" }
 			    "Wearable5" { "ItemDef" "430" }
-			   }
+			}
 		}
 	}
 	//wave 27 Ancient dragon
@@ -4293,7 +4155,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"13025"		// Base health.
+		"StatusHealth"				"14478"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4311,7 +4173,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 28 Spider fiends
@@ -4366,11 +4228,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"14038"		// Base health.
+		"StatusHealth"				"15571"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4388,7 +4250,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 29 Armored wisps -- WISP DOESNT WORK --
@@ -4443,11 +4305,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"15089"		// Base health.
+		"StatusHealth"				"16704"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4465,7 +4327,7 @@
 		
 		"creature"
 		{
-			
+			"DisableClumpingBehavior"   "1"
 		}
 	}
 	//wave 30 Duke Wintermaul
@@ -4519,11 +4381,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"500"		// Speed.
+		"MovementSpeed"				"350"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"16178"		// Base health.
+		"StatusHealth"				"17877"		// Base health.
 		"StatusMana"				"100"			// Base mana.
 		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
 		
@@ -4541,6 +4403,7 @@
 		
 		"creature"
 		{
+			"DisableClumpingBehavior"   "1"
 			"AttachWearables"
 			{
 			    "Wearable1" { "ItemDef" "454" }
@@ -4548,7 +4411,7 @@
 			    "Wearable3" { "ItemDef" "456" }
 			    "Wearable4" { "ItemDef" "457" }
 			    "Wearable5" { "ItemDef" "458" }
-		   }
+			}
 		}
 	}
 }
