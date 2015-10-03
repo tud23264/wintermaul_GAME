@@ -454,7 +454,7 @@
 			"round_description"			"#DOTA_Wintermaul_Round_Corrupt_Chieftain_Description"
 			"Scouts_1a"
 			{
-				"NPCName"					"npc_dota_wintermaul_currupt_chieftain"
+				"NPCName"					"npc_dota_wintermaul_corrupt_chieftain"
 				"TotalUnitsToSpawn"			"5"
 				"UnitsPerSpawn"				"1"
 				"SpawnInterval"				"1"
