@@ -79,6 +79,14 @@ function Precache( context )
 	PrecacheResource("particle","particles/base_attacks/ranged_hero.vpcf",context)
 	PrecacheResource("particle","particles/units/heroes/hero_enchantress/enchantress_base_attack.vpcf",context)
 
+	--Powerplant towers
+	PrecacheUnitByNameSync("shock_tower",context)
+	PrecacheUnitByNameSync("",context)
+	PrecacheUnitByNameSync("",context)
+	PrecacheUnitByNameSync("",context)
+	PrecacheUnitByNameSync("",context)
+	PrecacheUnitByNameSync("",context)
+
 	print( "Precaching is complete, bitches." )
 end
 
