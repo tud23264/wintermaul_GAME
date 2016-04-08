@@ -756,25 +756,6 @@
 		"AbilityCooldown"				"0"
 		"AbilityGoldCost"				"10"
 		
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"build_time"			"5.0"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"10"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
-			}
-		}
-	
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -785,6 +766,7 @@
 			}
 		}
 	}
+	
 	"build_crystal_blaster"
 	{
 		// General

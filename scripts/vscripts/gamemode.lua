@@ -2,13 +2,11 @@
 DEBUG_SPEW = 1
 
 function CWintermaulGameMode:InitGameMode()
-
 	self._nRoundNumber = 1
 	self._currentRound = nil
 	self._flLastThinkGameTime = nil
 	self._nCurrentSpawnerID = 1
 	self.CreepsAreAttacking = false
-	print("id: %d", self._nCurrentSpawnerID)
 	self:_ReadGameConfiguration()
 	GameRules:SetTimeOfDay( 0.75 )
 	GameRules:SetHeroRespawnEnabled( false )
@@ -33,7 +31,7 @@ function CWintermaulGameMode:InitGameMode()
 
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
-	ListenToGameEvent('entity_killed', Dynamic_Wrap(CWintermaulGameMode, 'OnEntityKilled'), self)
+	ListenToGameEvent( "entity_killed", Dynamic_Wrap(CWintermaulGameMode, "OnEntityKilled"), self)
 	
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 0.25 )
 
@@ -53,10 +51,28 @@ function CWintermaulGameMode:InitGameMode()
   	GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
   	GameRules.HeroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt")
   	GameRules.ItemKV = LoadKeyValues("scripts/npc/npc_items_custom.txt")
-  	GameRules.Requirements = LoadKeyValues("scripts/kv/tech_tree.kv")
+  	-- GameRules.Requirements = some tech tree
 
-  	-- Store and update selected units of each pID
-	GameRules.SELECTED_UNITS = {}
+  	-- Setup the Wintermaul Quest.
+  	self.MainQuest = SpawnEntityFromTableSynchronous( "quest", {
+  	 name = "QuestName",
+  	 title = self._sWintermaulQuestTitle -- Survive till the Duke arrives. X Lives remaining.
+  	 })
+
+  	-- Create the survival subquest.
+  	surviveSubQuest = SpawnEntityFromTableSynchronous( "subquest_base", { 
+           show_progress_bar = true, 
+           progress_bar_hue_shift = -119 
+         } )
+
+  	MainQuest:AddSubquest(surviveSubQuest)
+
+  	-- Text on the quest timer at start.
+  	Quest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 0 )
+
+  	-- Value on the progress bar.
+  	surviveSubQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 0 )
+	surviveSubQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 30 )
 	print( "Wintermaul is loaded." )
 end
 
@@ -99,9 +115,9 @@ function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
 			szFirstWaypoint = sp.Waypoint or ""
 		} )
 	end
-	for k,v in pairs( self._vSpawnsList ) do
-		print("key: ", k, "val: ", v.szSpawnerName, v.szFirstWaypoint)
-	end
+	-- for k,v in pairs( self._vSpawnsList ) do
+	-- 	print("key: ", k, "val: ", v.szSpawnerName, v.szFirstWaypoint)
+	-- end
 end
 
 -- Set number of rounds without requiring index in text file
@@ -129,7 +145,6 @@ end
 
 -- sets ability points to 0 and sets skills to lvl1 at start.
 function CWintermaulGameMode:OnPlayerPicked( keys )
-
 	local player = EntIndexToHScript(keys.player)
 
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
