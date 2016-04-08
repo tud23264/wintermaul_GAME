@@ -8,7 +8,6 @@ function OnStartTouch(key)
 end
 
 function killEntity(key)
-
     unitName = key:GetUnitName() -- Retrieves the name that the unit has, such as listed in "npc_units_custom.txt"
 
     print("Unit '" .. unitName .. "' has entered the killbox")
@@ -19,6 +18,7 @@ function killEntity(key)
     else
         print("Is not owned by player - Terminate")
         key:ForceKill(true) -- Kills the unit
+        CWintermaulGameRound:LivesLost()
     end
 
 end

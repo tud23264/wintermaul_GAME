@@ -86,6 +86,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 
 	
@@ -166,6 +170,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -246,6 +254,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -326,6 +338,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -407,6 +423,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -487,6 +507,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -659,6 +683,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -741,6 +769,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -823,6 +855,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 		"crystal_buster"
@@ -903,6 +939,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 
 	
@@ -983,6 +1023,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	//==========================================================
@@ -1068,6 +1112,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -1161,7 +1209,11 @@
 				"Wearable5" { "ItemDef" "5191" }
 				"Wearable6" { "ItemDef" "5192" }
 			}
-		}			
+		}
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"			
 	}
 	
 	"gaias_box"
@@ -1243,6 +1295,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -1326,6 +1382,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -1411,6 +1471,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 		"gaia"
@@ -1492,6 +1556,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 
 	//==========================================================
@@ -1577,6 +1645,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 
 
@@ -1657,6 +1729,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -1738,6 +1814,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -1819,6 +1899,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -1901,6 +1985,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
@@ -1982,6 +2070,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	//=================================================================================
 	// Wave creeps

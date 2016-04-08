@@ -2,7 +2,6 @@
 DEBUG_SPEW = 1
 
 function CWintermaulGameMode:InitGameMode()
-
 	self._nRoundNumber = 1
 	self._currentRound = nil
 	self._flLastThinkGameTime = nil
@@ -14,8 +13,8 @@ function CWintermaulGameMode:InitGameMode()
 	GameRules:SetHeroRespawnEnabled( false )
 	GameRules:SetUseUniversalShopMode( true )
 	GameRules:SetHeroSelectionTime( 30.0 )
-	GameRules:SetPreGameTime( 10.0 )
-	GameRules:SetPostGameTime( 60.0 )
+	GameRules:SetPreGameTime( 20.0 )
+	GameRules:SetPostGameTime( 30.0 )
 	GameRules:SetTreeRegrowTime( 60.0 )
 
 	GameRules:SetCreepMinimapIconScale( 0.7 )

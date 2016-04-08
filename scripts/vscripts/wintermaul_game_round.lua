@@ -6,8 +6,9 @@ if CWintermaulGameRound == nil then
 	CWintermaulGameRound = class({})
 end
 
-
+lives = 100
 function CWintermaulGameRound:ReadConfiguration( kv, gameMode, roundNumber )
+	
 	self._gameMode = gameMode
 	self._nRoundNumber = roundNumber
 	self._szRoundQuestTitle = "#DOTA_Quest_Wintermaul_Round_Subtext"
@@ -74,6 +75,7 @@ end
 
 
 function CWintermaulGameRound:End()
+	
 	for _, eID in pairs( self._vEventHandles ) do
 		StopListeningToGameEvent( eID )
 	end
@@ -115,6 +117,7 @@ function CWintermaulGameRound:End()
 		end
 	end
 	-- Fire in game event (eg summary of last round)
+	print(lives, " Lives left")
 end
 
 
@@ -205,5 +208,13 @@ function CWintermaulGameRound:StatusReport( )
 	print( string.format( "Spawners: %d", #self._vSpawners ) )
 	for _,s in pairs( self._vSpawners ) do
 		s:StatusReport()
+	end
+end
+
+function CWintermaulGameRound:LivesLost()
+	lives = lives - 1
+	print("Ouch! Lost one life! ", lives, " lives remaining." )
+	if lives < 1 then
+		GameRules:MakeTeamLose( DOTA_TEAM_GOODGUYS )
 	end
 end
