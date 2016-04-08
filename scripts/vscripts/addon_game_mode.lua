@@ -14,17 +14,16 @@ if CWintermaulGameMode == nil then
 	_G.CWintermaulGameMode = class({})		-- I believe the _G prefix specifies a global class
 end
 
-require('utilities')
-require('upgrades')
-require('mechanics')
-require('orders')
+-- require('utilities')
+-- require('upgrades')
+-- require('mechanics')
+-- require('orders')
 require('builder')
-require('buildinghelper')
 
-require('libraries/timers')
-require('libraries/popups')
+require('libraries/buildinghelper')
+require('libraries/selection')
 require('libraries/notifications')
-
+require('libraries/timers')
 
 require("wintermaul_game_round")
 require("wintermaul_game_spawner")
