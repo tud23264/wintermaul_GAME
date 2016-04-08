@@ -45,15 +45,6 @@ function CWintermaulGameMode:InitGameMode()
 	-- DebugPrint
 	Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 1)
 
-	-- Filters
-    GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( CWintermaulGameMode, "FilterExecuteOrder" ), self )
-
-    -- Register Listener
-    CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(CWintermaulGameMode, 'OnPlayerSelectedEntities'))
-   	CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(CWintermaulGameMode, "RepairOrder"))
-    CustomGameEventManager:RegisterListener( "building_helper_build_command", Dynamic_Wrap(BuildingHelper, "BuildCommand"))
-	CustomGameEventManager:RegisterListener( "building_helper_cancel_command", Dynamic_Wrap(BuildingHelper, "CancelCommand"))
-
 	-- Register Listeners
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap(CWintermaulGameMode, "onNPCSpawn"), self)
 
@@ -141,19 +132,11 @@ function CWintermaulGameMode:OnPlayerPicked( keys )
 
 	local player = EntIndexToHScript(keys.player)
 
-	-- Initialize Variables for Tracking
-	player.units = {} -- This keeps the handle of all the units of the player, to iterate for unlocking upgrades
-	player.structures = {} -- This keeps the handle of the constructed units, to iterate for unlocking upgrades
-	player.buildings = {} -- This keeps the name and quantity of each building
-	player.upgrades = {} -- This kees the name of all the upgrades researched
-	player.lumber = 0 -- Secondary resource of the player
-
-
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
 		PlayerResource:SetGold(nPlayerID, 500, false)
 		if (PlayerResource:IsValidPlayer( nPlayerID ) ) then
 			for e=0,15 do
-				if (PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e) ==nil) then
+				if (PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e)==nil) then
 					break
 				else
 					PlayerResource:GetPlayer(nPlayerID):GetAssignedHero():GetAbilityByIndex(e):SetLevel(1)
@@ -276,20 +259,6 @@ function CWintermaulGameMode:OnEntityKilled( event )
 	end
 end
 
--- Called whenever a player changes its current selection, it keeps a list of entity indexes
-function CWintermaulGameMode:OnPlayerSelectedEntities( event )
-	local pID = event.pID
-
-	GameRules.SELECTED_UNITS[pID] = event.selected_entities
-
-	-- This is for Building Helper to know which is the currently active builder
-	local mainSelected = GetMainSelectedEntity(pID)
-	if IsValidEntity(mainSelected) and IsBuilder(mainSelected) then
-		local player = PlayerResource:GetPlayer(pID)
-		player.activeBuilder = mainSelected
-	end
-end
-
 function CWintermaulGameMode:CreepsCanReachEnd()
 	local endPoint = Entities:FindByName( nil, "path_end" )
 	for k, v in pairs(self._vSpawnsList) do
@@ -317,5 +286,5 @@ function CWintermaulGameMode:SwitchAttackMode( attackMode )
 		end
 		
 	end
-	print("switch good")
+	print("The creeps have switched attack mode.")
 end

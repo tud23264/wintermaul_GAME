@@ -573,6 +573,10 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"1900"		// Range of vision during day light.
 		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+		
+		// Size
+		"ConstructionSize"		"2"
+		"BlockPathingSize"		"2"
 	}
 	
 	
