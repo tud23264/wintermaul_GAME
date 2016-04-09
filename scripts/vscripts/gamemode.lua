@@ -7,7 +7,9 @@ function CWintermaulGameMode:InitGameMode()
 	self._flLastThinkGameTime = nil
 	self._nCurrentSpawnerID = 1
 	self.CreepsAreAttacking = false
+	self._nLivesLeft = 100
 	self:_ReadGameConfiguration()
+	self._szMainQuestTitle = "#DOTA_Quest_Wintermaul_Main_Title"
 	GameRules:SetTimeOfDay( 0.75 )
 	GameRules:SetHeroRespawnEnabled( false )
 	GameRules:SetUseUniversalShopMode( true )
@@ -55,24 +57,13 @@ function CWintermaulGameMode:InitGameMode()
 
   	-- Setup the Wintermaul Quest.
   	self.MainQuest = SpawnEntityFromTableSynchronous( "quest", {
-  	 name = "QuestName",
-  	 title = self._sWintermaulQuestTitle -- Survive till the Duke arrives. X Lives remaining.
+  	 name = "MainQuest",
+  	 title = self._szMainQuestTitle
   	 })
 
-  	-- Create the survival subquest.
-  	surviveSubQuest = SpawnEntityFromTableSynchronous( "subquest_base", { 
-           show_progress_bar = true, 
-           progress_bar_hue_shift = -119 
-         } )
-
-  	MainQuest:AddSubquest(surviveSubQuest)
-
   	-- Text on the quest timer at start.
-  	Quest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 0 )
+  	self.MainQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, self._nLivesLeft)
 
-  	-- Value on the progress bar.
-  	surviveSubQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, 0 )
-	surviveSubQuest:SetTextReplaceValue( SUBQUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, 30 )
 	print( "Wintermaul is loaded." )
 end
 
@@ -302,4 +293,14 @@ function CWintermaulGameMode:SwitchAttackMode( attackMode )
 		
 	end
 	print("The creeps have switched attack mode.")
+end
+
+function CWintermaulGameMode:LifeLost()
+	self._nLivesLeft = self._nLivesLeft - 1
+	print("Ouch! Lost one life! ", self._nLivesLeft, " lives remaining." )
+	-- Update Quest UI
+	self.MainQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, self._nLivesLeft)
+	if self._nLivesLeft == 0 then
+		GameRules:MakeTeamLose( DOTA_TEAM_GOODGUYS )
+	end
 end
