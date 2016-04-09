@@ -6,7 +6,6 @@ if CWintermaulGameRound == nil then
 	CWintermaulGameRound = class({})
 end
 
-lives = 100
 function CWintermaulGameRound:ReadConfiguration( kv, gameMode, roundNumber )
 	
 	self._gameMode = gameMode
@@ -195,7 +194,6 @@ function CWintermaulGameRound:OnEntityKilled( event )
 	end
 end
 
-
 function CWintermaulGameRound:StatusReport( )
 	print( string.format( "Enemies remaining: %d", #self._vEnemiesRemaining ) )
 	for _,e in pairs( self._vEnemiesRemaining ) do
@@ -208,13 +206,5 @@ function CWintermaulGameRound:StatusReport( )
 	print( string.format( "Spawners: %d", #self._vSpawners ) )
 	for _,s in pairs( self._vSpawners ) do
 		s:StatusReport()
-	end
-end
-
-function CWintermaulGameRound:LivesLost()
-	lives = lives - 1
-	print("Ouch! Lost one life! ", lives, " lives remaining." )
-	if lives < 1 then
-		GameRules:MakeTeamLose( DOTA_TEAM_GOODGUYS )
 	end
 end

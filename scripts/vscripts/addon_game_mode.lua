@@ -14,10 +14,6 @@ if CWintermaulGameMode == nil then
 	_G.CWintermaulGameMode = class({})		-- I believe the _G prefix specifies a global class
 end
 
--- require('utilities')
--- require('upgrades')
--- require('mechanics')
--- require('orders')
 require('builder')
 
 require('libraries/buildinghelper')
@@ -94,5 +90,4 @@ function Activate()
 	GameRules.CWintermaulGameMode = CWintermaulGameMode()
 	--calls InitGameMode
 	GameRules.CWintermaulGameMode:InitGameMode()
-	
 end

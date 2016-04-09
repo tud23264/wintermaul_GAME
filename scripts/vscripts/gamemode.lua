@@ -7,8 +7,9 @@ function CWintermaulGameMode:InitGameMode()
 	self._flLastThinkGameTime = nil
 	self._nCurrentSpawnerID = 1
 	self.CreepsAreAttacking = false
-	print("id: %d", self._nCurrentSpawnerID)
+	self._nLivesLeft = 100
 	self:_ReadGameConfiguration()
+	self._szMainQuestTitle = "#DOTA_Quest_Wintermaul_Main_Title"
 	GameRules:SetTimeOfDay( 0.75 )
 	GameRules:SetHeroRespawnEnabled( false )
 	GameRules:SetUseUniversalShopMode( true )
@@ -32,7 +33,7 @@ function CWintermaulGameMode:InitGameMode()
 
 	ListenToGameEvent( "dota_player_pick_hero", Dynamic_Wrap( CWintermaulGameMode, "OnPlayerPicked" ), self )
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CWintermaulGameMode, "OnGameRulesStateChange" ), self )
-	ListenToGameEvent('entity_killed', Dynamic_Wrap(CWintermaulGameMode, 'OnEntityKilled'), self)
+	ListenToGameEvent( "entity_killed", Dynamic_Wrap(CWintermaulGameMode, "OnEntityKilled"), self)
 	
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 0.25 )
 
@@ -52,10 +53,17 @@ function CWintermaulGameMode:InitGameMode()
   	GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
   	GameRules.HeroKV = LoadKeyValues("scripts/npc/npc_heroes_custom.txt")
   	GameRules.ItemKV = LoadKeyValues("scripts/npc/npc_items_custom.txt")
-  	GameRules.Requirements = LoadKeyValues("scripts/kv/tech_tree.kv")
+  	-- GameRules.Requirements = some tech tree
 
-  	-- Store and update selected units of each pID
-	GameRules.SELECTED_UNITS = {}
+  	-- Setup the Wintermaul Quest.
+  	self.MainQuest = SpawnEntityFromTableSynchronous( "quest", {
+  	 name = "MainQuest",
+  	 title = self._szMainQuestTitle
+  	 })
+
+  	-- Text on the quest timer at start.
+  	self.MainQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, self._nLivesLeft)
+
 	print( "Wintermaul is loaded." )
 end
 
@@ -98,9 +106,9 @@ function CWintermaulGameMode:_ReadSpawnsConfiguration( kvSpawns )
 			szFirstWaypoint = sp.Waypoint or ""
 		} )
 	end
-	for k,v in pairs( self._vSpawnsList ) do
-		print("key: ", k, "val: ", v.szSpawnerName, v.szFirstWaypoint)
-	end
+	-- for k,v in pairs( self._vSpawnsList ) do
+	-- 	print("key: ", k, "val: ", v.szSpawnerName, v.szFirstWaypoint)
+	-- end
 end
 
 -- Set number of rounds without requiring index in text file
@@ -128,7 +136,6 @@ end
 
 -- sets ability points to 0 and sets skills to lvl1 at start.
 function CWintermaulGameMode:OnPlayerPicked( keys )
-
 	local player = EntIndexToHScript(keys.player)
 
 	for nPlayerID = 0, DOTA_MAX_PLAYERS-1 do
@@ -286,4 +293,14 @@ function CWintermaulGameMode:SwitchAttackMode( attackMode )
 		
 	end
 	print("The creeps have switched attack mode.")
+end
+
+function CWintermaulGameMode:LifeLost()
+	self._nLivesLeft = self._nLivesLeft - 1
+	print("Ouch! Lost one life! ", self._nLivesLeft, " lives remaining." )
+	-- Update Quest UI
+	self.MainQuest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_CURRENT_VALUE, self._nLivesLeft)
+	if self._nLivesLeft == 0 then
+		GameRules:MakeTeamLose( DOTA_TEAM_GOODGUYS )
+	end
 end
