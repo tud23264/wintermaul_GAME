@@ -21,3 +21,6 @@ https://docs.google.com/document/d/1jHjd_MYtDy00Yr-jK5lZwLeG6AvUA7XUo3hV8VMWlIg/
 
 New spreadsheet for balancing purposes
 https://docs.google.com/spreadsheets/d/1qsGuLgSRBkONYaFAbC731Atq0tJ87Al-oobraLPY7DM/edit#gid=0
+
+Go here to know what to do:
+https://trello.com/b/mD1ILeVg/wintermaul-reborn
